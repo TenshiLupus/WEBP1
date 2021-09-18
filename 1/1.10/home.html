@@ -76,37 +76,81 @@
                 <ul></ul>
                 <section>
                     <h3>Contact</h3>
-                    <form>
+                    <form method="post" enctype="multipart/form-data" action="https://people.dsv.su.se/~pierre/i/05_ass/ip3/1/1.10/example.php">
                         <!-- The fielset tag encapsulates related form elements in a group-->
                         <fieldset>
                             <!-- Legend tag gives a description of the content of the form-->
                             <legend>Provide contact information</legend>
                             <!-- As the name implies, gives a label to an input tag, attrbiutes can be manipulated to specify input tag. -->
+
                             <label>Name</label>
                             <!-- Input tag gives the option for the user to write down data for usage, what the content is then used for is up to the user.-->
                             <input type="text" placeholder="michael" autofocus>
                             <br>
-                            <label>Email</label>
-                            <input type="email" placeholder="email">
                             <br>
-                            <label>Homepage link</label>
-                            
-                            <input type="url" placeholder="webpage">
 
-                            
+                            <label>Email</label>
+                            <!-- Since an email is necessary if the user wnat to be contanced. Then it is reasonable to deman an email to reply to-->
+                            <input name="Email" list="email domains" type="email" placeholder="email"
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" required>
+                            <br>
+                            <br>
+                            <datalist id="email domains">
+                                <option value="@gmail.com">
+                                <option value="@yahoo.com">
+                                <option value="@hotmail.com">
+                            </datalist>
+                            <label>Homepage link</label>
+                            <input name="URL"type="url" placeholder="webpage">
+                            <br>
+                            <br>
                             <!-- Break tags give space inbetween the rows in the document-->
-                            <br>
-                            <br>
+                            
                             <label>Message content</label>
                             <br>
-                            <textarea>
-
+                            <textarea name="message" pattern="[A-z]{1}" title="Used to write the main content of the message" required>
                             </textarea>
                             <br>
-                            
-                            <input type="checkbox">
+                            <br>
 
-                            <input type="radio">
+                            <!-- Response field goes here-->
+                            <label>Response?</label>
+                            <input title="checked if you want to hear a response back" type="checkbox">
+                            <br>
+                            <br>
+
+                            <fieldset >
+                                <label>Recieve a copy of the message?</label>
+                                <br>
+                                <label>yes</label>
+                                <!-- Title attribute is being used to explain differences between the 2 radio buttons-->
+                                <input title="Press, when wanting a copy of the sent message" type="radio" name="copys" value="yes">
+                                <label>no</label>
+                                <input title="Ignore, when not seeking a copy of the sent message" type="radio" name="copys" value="no" checked>
+                                <br>
+                                <br>
+                            </fieldset>
+
+                            <!-- Message field goes here-->
+                            <label>Theme of message</label>
+                            <select>
+                                <optgroup label="Critique">
+                                    <option value="ugly">looks ugly</option>
+                                    <option value="weird">looks weird</option>
+                                </optgroup>
+                                <optgroup label="Suggestion">
+                                    <option value="add">add something</option>
+                                    <option value="remove">remove something</option>
+                                </optgroup>
+                            </select>
+                            <br>
+                            <br>
+
+                            <!-- This section uploads a file, can be an txt file for example-->
+                            <label>Upload file</label>
+                            <input type="file" name="file">
+                            <input type="submit" value="ok">
+
                         </fieldset>
                     </form>
                 </section>
