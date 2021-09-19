@@ -1,0 +1,15 @@
+body{
+    background-color:yellowgreen;
+    color: 555555px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:16px;
+    font-weight: normal;
+
+    /* Same as above */
+    font: normal 16px 'Times New Roman', serif;
+    /* EM is a unit used for more response type websites */
+    line-height:  1.6em;
+}
+.topbar{
+     position: top;
+ };
