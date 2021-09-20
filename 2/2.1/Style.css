@@ -1,33 +1,55 @@
+/*padding adds space away form the nested elements under the root tag. */
+*{
+    padding: 9px ;
+    margin:0;
+}
+
+
 body{
-    background-color:yellowgreen;
-    color: 555555px;
-    font-family: 'Times New Roman', Times, serif;
-    font-size:16px;
-    font-weight: normal;
+    background-color:#18191c;
+    color: #a1afc8;
+    font-family: 'georgia', Times, serif;
+    font: 12px;
+    
 
     /* Same as above */
     font: normal 16px 'Times New Roman', serif;
     /* EM is a unit used for more response type websites */
     line-height:  1.6em;
-    margin:0;
+    margin:20px;
 }
+
+
 
 /* This is the syntax to change the styling of classes: . followed by the name of the class.*/
 /* Use % when dealing with something like containers or something like that*/
 .topbar{
-     position: top;
-     background-color: white;
-     z-index: 1;
-     width: 80%;
-     margin: auto;
-     border:5px red solid;
+     
+     background-color: #18191c;
+     text-align:center;
+     color:#a1afc8;
+     width: 560px;
+     border:none;
+     margin-bottom: 20px;
+     height:123px;
+     margin:0px auto;
+     padding-top: 2px;
     
  }
 
- .bordermarg{
-     background-color:#333;
-     color:#fff;
-     border:5px red solid;
-     padding: 5px;
-     margin:auto;
- }
+.sites{
+    width: 560px;
+    border:none;
+    margin-bottom: 20px;
+    height:123px;
+    padding-top:2px;
+    margin:0px;
+
+}
+.projects{
+    margin:0px auto;
+    background-color: #18191c;
+    padding: 10%;
+    line-height: 20px;
+    text-align:center;
+}
