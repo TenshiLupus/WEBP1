@@ -9,7 +9,25 @@ body{
     font: normal 16px 'Times New Roman', serif;
     /* EM is a unit used for more response type websites */
     line-height:  1.6em;
+    margin:0;
 }
+
+/* This is the syntax to change the styling of classes: . followed by the name of the class.*/
+/* Use % when dealing with something like containers or something like that*/
 .topbar{
      position: top;
- };
+     background-color: white;
+     z-index: 1;
+     width: 80%;
+     margin: auto;
+     border:5px red solid;
+    
+ }
+
+ .bordermarg{
+     background-color:#333;
+     color:#fff;
+     border:5px red solid;
+     padding: 5px;
+     margin:auto;
+ }

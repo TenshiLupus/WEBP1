@@ -10,9 +10,12 @@
 </head>
 
 <body>
-    <header>
+    <!-- Think of id's as elements that aren't going to be used anywhere else. -->
+    <!-- classes can be used to apply styling to similar components in the document, but id's are meant to be specifically unique.-->
+    <!-- Frameworks like bootstrap don't use id for anything. Its all classes -->
+    <header class="topbar">
         <h1>This is Future </h1>
-        <nav>
+        <nav class="bordermarg">
             <ul>
                 <li>
                     <a href="home.html">Home</a>
@@ -26,11 +29,11 @@
                 <li>
                     <a href="now.html">now</a>
                 </li>
-
+ 
             </ul>
         </nav>
     </header>
-    <details>
+    <details class="bordermarg">
         <summary>items</summary>
         <p>
             this part is hidden under a details tag
