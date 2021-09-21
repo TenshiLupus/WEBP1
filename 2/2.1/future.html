@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head id="topbar">
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +15,7 @@
     <!-- Frameworks like bootstrap don't use id for anything. Its all classes -->
     <header class="topbar">
         <h1>This is Future </h1>
-        <nav class="topbar">
+        <nav>
             <ul>
                 <li>
                     <a href="home.html">Home</a>
@@ -33,7 +33,7 @@
             </ul>
         </nav>
     </header>
-    <details class="projects">
+    <details>
         <summary>items</summary>
         <p>
             this part is hidden under a details tag
@@ -51,7 +51,8 @@
             <h2>Plans/WIP</h2>
             <article>
                 <h3>Ongoing working projects</h3>
-                <table>
+                <div>
+                <table class="tablecenter">
                     <caption>Below is a list of WIP projects and its intended learning outcomes</caption>
                     <thead>
                         <tr>
@@ -71,21 +72,24 @@
                     </tbody>
                     <tfoot>
                         <tr>
-                            <td colspan="1" rowspan="1">total time spent in projects</td>
+                            <td>total time spent in projects</td>
                             <td> x hours</td>
                         </tr>
                     </tfoot>
                 </table>
+                </div>
             </article>
         </article>
-        <article>
+
+        <article class="projects">
             <h2>Inspirations and style</h2>
         </article>
 
         <!-- Content that will usually be at the side of the page-->
-        <aside>The projects reflect the areas that i focus on</aside>
-        <footer>
-            Copyright Angel Cardenas Martinez 2021
+        <aside class="projects">The projects reflect the areas that i focus on</aside>
+        
+        <footer class="bottombar">
+            <p>Copyright Angel Cardenas Martinez 2021</p>
             <a href="mailto:angelcardenasmartinez00@gmail.com">My email</a>
         </footer>
     </section>

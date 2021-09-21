@@ -1,6 +1,6 @@
 /*padding adds space away form the nested elements under the root tag. */
 *{
-    padding: 9px ;
+    padding: 0px ;
     margin:0;
 }
 
@@ -10,42 +10,78 @@ body{
     color: #a1afc8;
     font-family: 'georgia', Times, serif;
     font: 12px;
-    
+    align-items: center;
+    text-align: center; 
 
     /* Same as above */
     font: normal 16px 'Times New Roman', serif;
     /* EM is a unit used for more response type websites */
+    
     line-height:  1.6em;
-    margin:20px;
+    margin:15px auto 15px auto;
+    padding: 20%;
+    
+
 }
 
 
 
 /* This is the syntax to change the styling of classes: . followed by the name of the class.*/
 /* Use % when dealing with something like containers or something like that*/
-.topbar{
+.topbar ul{
      
      background-color: #18191c;
      text-align:center;
      color:#a1afc8;
-     width: 560px;
+     width: 80%;
      border:none;
-     margin-bottom: 20px;
+     margin-bottom: 10px;
      height:123px;
      margin:0px auto;
-     padding-top: 2px;
+     padding-top: 5px;
+     list-style: none;
+    
+ }
+.bottombar{
+     
+     background-color: #18191c;
+     text-align:center;
+     color:#a1afc8;
+     width: 80%;
+     border:none;
+     margin-top: 10px;
+     height:123px;
+     margin:0px auto;
+     padding-bottom: 5px;
     
  }
 
 .sites{
-    width: 560px;
+    width: auto;
     border:none;
     margin-bottom: 20px;
     height:123px;
-    padding-top:2px;
+    padding-top:1px;
     margin:0px;
 
 }
+
+.tablecenter{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+table{
+    align-self: center;
+    text-align: center;
+    margin:20%;
+    padding: 20%;
+
+}
+
 .projects{
     margin:0px auto;
     background-color: #18191c;
