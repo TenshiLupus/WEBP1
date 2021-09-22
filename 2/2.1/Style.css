@@ -58,8 +58,35 @@ body{
     padding: 20px;
 }
 
+#main_section{
+    float:left;
+    width: 660;
+    margin: 30px;
+}
+
+#side_info{
+    float:left;
+    width:220px;
+    margin:20px 0px;
+    padding: 30px;
+    background-color: #191416;
+}
+
+#footer_bottom{
+    clear:both;
+    text-align:center;
+    padding:20px;
+    border-top:2px solid #faecee;
+}
+
 #top_menu li{
     display:inline-block;
+}
+
+article{
+    background: #191416;
+    padding:20px;
+    border: 1px solid #faecee;
 }
 
 
