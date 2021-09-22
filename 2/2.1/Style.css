@@ -4,30 +4,68 @@
     margin:0;
 }
 
-
-body{
-    background-color:#18191c;
-    color: #a1afc8;
-    font-family: 'georgia', Times, serif;
-    font: 12px;
-    align-items: center;
-    text-align: center; 
-
-    /* Same as above */
-    font: normal 16px 'Times New Roman', serif;
-    /* EM is a unit used for more response type websites */
-    
-    line-height:  1.6em;
-    margin:15px auto 15px auto;
-    padding: 20%;
-    
-
+header,section, footer, aside, nav, article, hgroup{
+    display:block;
 }
 
+a:link{
+    text-decoration: underline;
+    color: #a1afc8;
+    
+}
+
+a:visited{
+    text-decoration: underline;
+    color: #a1afc8;    
+}
+
+
+/* Refactoring the code */
+
+body{
+    text-align: center; 
+}
+
+#big_wrapper{
+    /* Color palette */
+    background-color:#18191c;
+    color: #a1afc8;
+
+    /*Font styling*/
+    font-family: 'georgia', Times, serif;
+    font: normal 16px 'Times New Roman', serif;
+    font: 12px;
+    list-style: none;
+    
+    /* Alignment */
+    align-items: center;
+    text-align: left; 
+
+    /* Same as above */
+    /* EM is a unit used for more response type websites */
+    
+    /* layout styling */
+    width: 1000px;
+    line-height:  1.6em;
+    margin:20px auto;
+    padding: 20%;  
+}
+
+#top_header{
+    background: #191416;
+    color: #faecee;
+    border: 1px solid #faecee;
+    padding: 20px;
+}
+
+#top_menu li{
+    display:inline-block;
+}
 
 
 /* This is the syntax to change the styling of classes: . followed by the name of the class.*/
 /* Use % when dealing with something like containers or something like that*/
+/*
 .topbar ul{
      
      background-color: #18191c;
@@ -40,8 +78,11 @@ body{
      margin:0px auto;
      padding-top: 5px;
      list-style: none;
-    
+     position: relative;  
  }
+ */
+
+ /*
 .bottombar{
      
      background-color: #18191c;
@@ -55,7 +96,9 @@ body{
      padding-bottom: 5px;
     
  }
+ */
 
+/*
 .sites{
     width: auto;
     border:none;
@@ -65,7 +108,9 @@ body{
     margin:0px;
 
 }
+*/
 
+/*
 .tablecenter{
     margin-left: auto;
     margin-right: auto;
@@ -73,7 +118,9 @@ body{
     margin-top: 10px;
     margin-bottom: 10px;
 }
+*/
 
+/*
 table{
     align-self: center;
     text-align: center;
@@ -81,7 +128,8 @@ table{
     padding: 20%;
 
 }
-
+*/
+/*
 .projects{
     margin:0px auto;
     background-color: #18191c;
@@ -89,3 +137,4 @@ table{
     line-height: 20px;
     text-align:center;
 }
+*/

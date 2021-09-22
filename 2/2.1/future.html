@@ -10,12 +10,14 @@
 </head>
 
 <body>
-    <!-- Think of id's as elements that aren't going to be used anywhere else. -->
-    <!-- classes can be used to apply styling to similar components in the document, but id's are meant to be specifically unique.-->
-    <!-- Frameworks like bootstrap don't use id for anything. Its all classes -->
-    <header class="topbar">
-        <h1>This is Future </h1>
-        <nav>
+    <div id="big_wrapper">
+        <!-- Think of id's as elements that aren't going to be used anywhere else. -->
+        <!-- classes can be used to apply styling to similar components in the document, but id's are meant to be specifically unique.-->
+        <!-- Frameworks like bootstrap don't use id for anything. Its all classes -->
+        <header id="top_header">
+            <h1>This is Future </h1>    
+        </header>
+        <nav id="top_menu">
             <ul>
                 <li>
                     <a href="home.html">Home</a>
@@ -29,70 +31,70 @@
                 <li>
                     <a href="now.html">now</a>
                 </li>
- 
+
             </ul>
         </nav>
-    </header>
-    <details>
-        <summary>items</summary>
-        <p>
-            this part is hidden under a details tag
-        </p>
+        <details>
+            <summary>items</summary>
+            <p>
+                this part is hidden under a details tag
+            </p>
 
-    </details>
+        </details>
 
-    <!-- Content has to be unique-->
-    
-    <!--This is where the main content is supposed to go apparently. Maybe read some old documentation -->
-    <!-- Tags nested withing the sectoin tag will be section tag will be following the example given on the tsak page.-->
-    <section class="projects">
-        <article>
-            <!-- this article is meant to individually describe the status and additional information of the current projects that im working on-->
-            <h2>Plans/WIP</h2>
+        <!-- Content has to be unique-->
+
+        <!--This is where the main content is supposed to go apparently. Maybe read some old documentation -->
+        <!-- Tags nested withing the sectoin tag will be section tag will be following the example given on the tsak page.-->
+        <section>
             <article>
-                <h3>Ongoing working projects</h3>
-                <div>
-                <table class="tablecenter">
-                    <caption>Below is a list of WIP projects and its intended learning outcomes</caption>
-                    <thead>
-                        <tr>
-                            <td>Project name</td>
-                            <td>Learning outcome</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Website development</td>
-                            <td>To learn to create modern websites, and workflow</td>
-                        </tr>
-                        <tr>
-                            <td>Hard surface Prop</td>
-                            <td>To improve current 3D asset creation workflow</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td>total time spent in projects</td>
-                            <td> x hours</td>
-                        </tr>
-                    </tfoot>
-                </table>
-                </div>
+                <!-- this article is meant to individually describe the status and additional information of the current projects that im working on-->
+                <h2>Plans/WIP</h2>
+                <article>
+                    <h3>Ongoing working projects</h3>
+                    <div>
+                        <table>
+                            <caption>Below is a list of WIP projects and its intended learning outcomes</caption>
+                            <thead>
+                                <tr>
+                                    <td>Project name</td>
+                                    <td>Learning outcome</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Website development</td>
+                                    <td>To learn to create modern websites, and workflow</td>
+                                </tr>
+                                <tr>
+                                    <td>Hard surface Prop</td>
+                                    <td>To improve current 3D asset creation workflow</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td>total time spent in projects</td>
+                                    <td> x hours</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </article>
             </article>
-        </article>
 
-        <article class="projects">
-            <h2>Inspirations and style</h2>
-        </article>
+            <article>
+                <h2>Inspirations and style</h2>
+            </article>
 
-        <!-- Content that will usually be at the side of the page-->
-        <aside class="projects">The projects reflect the areas that i focus on</aside>
-        
-        <footer class="bottombar">
-            <p>Copyright Angel Cardenas Martinez 2021</p>
-            <a href="mailto:angelcardenasmartinez00@gmail.com">My email</a>
-        </footer>
-    </section>
+            <!-- Content that will usually be at the side of the page-->
+            <aside>The projects reflect the areas that i focus on</aside>
+
+            <footer>
+                <p>Copyright Angel Cardenas Martinez 2021</p>
+                <a href="mailto:angelcardenasmartinez00@gmail.com">My email</a>
+            </footer>
+        </section>
+    </div>
 </body>
 
 </html>
