@@ -56,6 +56,8 @@ body{
     color: #faecee;
     border: 1px solid #faecee;
     padding: 20px;
+    min-width:20px;
+    max-width: 200px;
 }
 
 #main_section{
@@ -69,6 +71,7 @@ body{
     width:220px;
     margin:20px 0px;
     padding: 30px;
+    border: 1px solid #faecee;
     background-color: #191416;
 }
 
@@ -80,6 +83,7 @@ body{
 }
 
 #top_menu li{
+    position:top;
     display:inline-block;
 }
 
@@ -87,6 +91,12 @@ article{
     background: #191416;
     padding:20px;
     border: 1px solid #faecee;
+    margin-bottom: 15px;
+}
+
+article footer{
+    margin-top: 50px;
+    text-align:right;
 }
 
 
