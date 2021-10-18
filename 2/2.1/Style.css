@@ -1,105 +1,53 @@
 /*padding adds space away form the nested elements under the root tag. */
+:root{
+    --text-color: #a1afc8;
+    --bg-color: #18191c;
+}
+
 *{
-    padding: 0px ;
+    box-sizing: border-box;
+    padding: 0px;
     margin:0;
 }
 
-header,section, footer, aside, nav, article, hgroup{
-    display:block;
-}
-
-a:link{
-    text-decoration: underline;
-    color: #a1afc8;
-    
-}
-
-a:visited{
-    text-decoration: underline;
-    color: #a1afc8;    
-}
-
-
-/* Refactoring the code */
-
 body{
-    text-align: center; 
+    background-color: whitesmoke;
 }
 
-#big_wrapper{
-    /* Color palette */
+fieldset{
+    border-style:none;
+
+}
+
+.home-page{
     background-color:#18191c;
-    color: #a1afc8;
-
-    /*Font styling*/
-    font-family: 'georgia', Times, serif;
-    font: normal 16px 'Times New Roman', serif;
-    font: 12px;
-    list-style: none;
-    
-    /* Alignment */
-    align-items: center;
-    text-align: left; 
-
-    /* Same as above */
-    /* EM is a unit used for more response type websites */
-    
-    /* layout styling */
-    width: 1000px;
-    line-height:  1.6em;
-    margin:20px auto;
-    padding: 20%;  
+    z-index: 5;
+    text-align: center;
+    color: var(--text-color);
+    max-width: 1200px;
+    float: left;
 }
 
-#top_header{
-    background: #191416;
-    color: #faecee;
-    border: 1px solid #faecee;
-    padding: 20px;
-    min-width:20px;
-    max-width: 200px;
-}
-
-#main_section{
-    float:left;
-    width: 660;
-    margin: 30px;
-}
-
-#side_info{
-    float:left;
-    width:220px;
-    margin:20px 0px;
-    padding: 30px;
-    border: 1px solid #faecee;
-    background-color: #191416;
-}
-
-#footer_bottom{
-    clear:both;
-    text-align:center;
-    padding:20px;
-    border-top:2px solid #faecee;
-}
-
-#top_menu li{
-    position:top;
-    display:inline-block;
-}
-
-article{
-    background: #191416;
-    padding:20px;
-    border: 1px solid #faecee;
-    margin-bottom: 15px;
-}
-
-article footer{
-    margin-top: 50px;
-    text-align:right;
+.aside-section{
+    float: right;
+    clear: both;
 }
 
 
+/* Format for devices lower than a 992px */
+@media screen and (max-width: 992px){
+    .home-page{
+        width: 100%;
+    }
+
+}
+
+/* Format for devices with a width lower than 600px */
+@media screen and (max-width: 600px){
+    .home-page{
+        width: 100%;
+    }
+}
 /* This is the syntax to change the styling of classes: . followed by the name of the class.*/
 /* Use % when dealing with something like containers or something like that*/
 /*
