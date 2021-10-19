@@ -5,16 +5,23 @@
 }
 
 *{
-    box-sizing: border-box;
+    
     padding: 0px;
     margin:0;
 }
 
 body{
     background-color: whitesmoke;
+    font-size: 16px;    
 }
 
 nav{
+    clear: both;
+    display:inline-block;
+}
+
+ul li{
+    list-style: none;
     display: inline-block;
 }
 
@@ -28,12 +35,14 @@ fieldset{
     z-index: 5;
     text-align: center;
     color: var(--text-color);
-    width:70%;
+    width:100%;
+    margin: 0 auto;
 }
 
 .aside-section{
     float: right;
-    width:25%;
+    width:30%;
+    margin-bottom: 2em;
 }
 
 .project-section{
@@ -41,9 +50,25 @@ fieldset{
     width: 70%;
 }
 
-.footer{
-    margin-top: 100vh;
+.contact-section{
+    display: column;
+    clear:both;
+    width:50%
+}
 
+footer{
+
+    clear: both;
+    position:relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.pre-align{
+    background-color: yellow;
+    clear:both;
+    margin: 3em 0;
 }
 
 
