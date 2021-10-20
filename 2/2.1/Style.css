@@ -2,22 +2,43 @@
 :root{
     --text-color: #a1afc8;
     --bg-color: #18191c;
-}
+    --text-color: #5a6770;
+    --bg-color: #d9d8d6;
+}   
 
 *{
     
     padding: 0px;
     margin:0;
+    box-sizing: border-box;
 }
 
-body{
-    background-color: whitesmoke;
+body,html{
+    background-color: var(--bg-color);
     font-size: 16px;    
 }
 
 nav{
     clear: both;
     display:inline-block;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.nav-bucket{
+    text-transform: uppercase;
+    
+}
+
+nav li{
+    margin:2em;
+    padding: 1em;
+    line-height: 1.5em;
+}
+
+a{
+    cursor: pointer;
+    text-decoration: none;
 }
 
 ul li{
@@ -31,17 +52,20 @@ fieldset{
 }
 
 .home-page{
-    background-color:#18191c;
+    background-color: var(--bg-color);
     z-index: 5;
     text-align: center;
     color: var(--text-color);
-    width:100%;
+    height: 100vh;
     margin: 0 auto;
+
 }
 
 .project-items{
-    width: 70%;
+    width: 65%;
     float: left;
+    text-align: left;
+    margin-left: 2em;
 }
 
 .aside-section{
@@ -52,6 +76,8 @@ fieldset{
 
 .project-section{
     width: 100%;
+    height: 20%;
+    margin-bottom: 3em;
 }
 
 
@@ -60,12 +86,15 @@ fieldset{
 }
 
 .contact-information{
+  
     margin-top: 2em;
     clear:both
 }
 .contact-form{
     width:50%;
     float: left;
+    text-align: left;
+    margin-left: 2em;
 }
 
 .social-section{
@@ -75,12 +104,13 @@ fieldset{
 }
 
 footer{
-
+    background-color: inherit;
     clear: both;
-    position:relative;
+    position:absolute;
     bottom: 0;
     width: 100%;
     text-align: center;
+    margin-bottom: 2em;
 }
 
 .pre-align{
