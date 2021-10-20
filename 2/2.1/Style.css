@@ -70,7 +70,9 @@ fieldset{
 }
 
 .aside-section{
+    position: absolute;
     float: right;
+    right: 0;
     width:30%;
     margin-bottom: 2em;
 }
@@ -87,9 +89,9 @@ fieldset{
 }
 
 .contact-information{
-  
     margin-top: 2em;
     clear:both
+
 }
 .contact-form{
     width:50%;
