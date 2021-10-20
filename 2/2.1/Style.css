@@ -39,6 +39,11 @@ fieldset{
     margin: 0 auto;
 }
 
+.project-items{
+    width: 70%;
+    float: left;
+}
+
 .aside-section{
     float: right;
     width:30%;
@@ -46,14 +51,27 @@ fieldset{
 }
 
 .project-section{
-    float:left;
-    width: 70%;
+    width: 100%;
 }
 
-.contact-section{
-    display: column;
-    clear:both;
-    width:50%
+
+.project-item{
+
+}
+
+.contact-information{
+    margin-top: 2em;
+    clear:both
+}
+.contact-form{
+    width:50%;
+    float: left;
+}
+
+.social-section{
+    width: 50%;
+    float: right;
+    background-color: red;
 }
 
 footer{
