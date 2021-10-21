@@ -84,6 +84,7 @@ fieldset{
 }
 
 .aside-section{
+    position: absolute;
     float: right;
     width:40%;
     margin-bottom: 2em;
@@ -91,17 +92,12 @@ fieldset{
     background-color: red;
 }
 
-h2{
 
-}
 
 label{
     padding: 3em 0;
 }
 
-.project-item{
-
-}
 
 .contact-information{
     clear: both;
