@@ -13,10 +13,16 @@
     box-sizing: border-box;
 }
 
+div{
+    display: block;
+}
+
 body,html{
     background-color: var(--bg-color);
     font-size: 16px; 
     background-size: cover;   
+    max-width: 1080px;
+    margin: 0 auto;
 }
 
 nav{
@@ -32,8 +38,9 @@ nav{
 }
 
 nav li{
-    margin:2em;
-    padding: 1em;
+    float: left;
+    margin:0;
+    padding: 0em;
     line-height: 1.5em;
 }
 
@@ -57,60 +64,77 @@ fieldset{
     z-index: 5;
     text-align: center;
     color: var(--text-color);
-    height: 100vh;
-    margin: 0 auto;
+    padding: 1.5em;
+
+}
+
+.project-section{
+    display: block;
+    width: auto;
+    height: 20%;
+    margin-bottom: 3em;
 
 }
 
 .project-items{
-    width: 65%;
+    width: 60%;
     float: left;
     text-align: left;
-    margin-left: 2em;
+    background-color: green;
 }
 
 .aside-section{
     float: right;
-    width:30%;
+    width:40%;
     margin-bottom: 2em;
+    text-align:right;
+    background-color: red;
 }
 
-.project-section{
-    width: 100%;
-    height: 20%;
-    margin-bottom: 3em;
+h2{
+
 }
 
+label{
+    padding: 3em 0;
+}
 
 .project-item{
 
 }
 
 .contact-information{
-  
-    margin-top: 2em;
-    clear:both
+    clear: both;
+    margin-top: 5em;
+    width: 100%;
+    height: 10em;
+    line-height: 1.2em;
+    background-color:azure;
 }
+
 .contact-form{
-    width:50%;
-    float: left;
+    display: block;
+    margin-top: 5em;
+    width:100%;
     text-align: left;
-    margin-left: 2em;
+
+    line-height: 1.2em;
+    column-width:15em;
 }
 
 .social-section{
     width: 50%;
     float: right;
     background-color: red;
+    margin-right: 2em;
 }
 
 footer{
     background-color: inherit;
     clear: both;
-    position:absolute;
-    width: 100%;
     text-align: center;
     margin-top: 100vh;
+    margin-bottom: 2em;
 }
 
 .pre-align{
@@ -118,20 +142,51 @@ footer{
     clear:both;
     margin: 3em 0;
 }
+@media screen and (max-width: 1080px){
+    body, html{
+        width: 100%;
+    }
+}
 
 
 /* Format for devices lower than a 992px */
 @media screen and (max-width: 992px){
-    .home-page{
+    body,html{
         width: 100%;
+    }
+
+    .aside-section{
+        float: left;
+        width: 100%;
+        text-align: center;
+    }
+
+    .project-section{
+        width: 100%;
+        text-align: center;
+    }
+
+    .project-items{
+        width: 100%;
+        text-align: center;
     }
 
 }
 
 /* Format for devices with a width lower than 600px */
 @media screen and (max-width: 600px){
-    .home-page{
+    body,html{
         width: 100%;
+        min-width: 500px;
+    }
+
+    nav{
+        column-count: 1;
+        
+    }
+
+    nav li{
+        float: left;
     }
 }
 /* This is the syntax to change the styling of classes: . followed by the name of the class.*/
