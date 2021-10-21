@@ -39,8 +39,8 @@ nav{
 
 nav li{
     float: left;
-    margin:0;
-    padding: 0em;
+    margin:2em 0;
+    padding: 1em;
     line-height: 1.5em;
 }
 
@@ -84,10 +84,9 @@ fieldset{
 }
 
 .aside-section{
-    position: absolute;
     float: right;
-    width:40%;
     margin-bottom: 2em;
+    width:40%;
     text-align:right;
     background-color: red;
 }
@@ -102,22 +101,23 @@ label{
 .contact-information{
     clear: both;
     margin-top: 5em;
-    width: 100%;
-    height: 10em;
+    width: auto;
     line-height: 1.2em;
     background-color:azure;
+    column-count: 1;
 }
 
 .contact-form{
-    display: block;
     margin-top: 5em;
     width:100%;
-    text-align: left;
-
+    text-align: center;
     line-height: 1.2em;
-    column-width:15em;
+    float: left;
 }
 
+.contact-form label{
+    clear: both;
+}
 .social-section{
     width: 50%;
     float: right;
@@ -138,11 +138,11 @@ footer{
     clear:both;
     margin: 3em 0;
 }
-@media screen and (max-width: 1080px){
+/* @media screen and (max-width: 1080px){
     body, html{
         width: 100%;
     }
-}
+} */
 
 
 /* Format for devices lower than a 992px */
@@ -152,7 +152,6 @@ footer{
     }
 
     .aside-section{
-        float: left;
         width: 100%;
         text-align: center;
     }
@@ -165,6 +164,10 @@ footer{
     .project-items{
         width: 100%;
         text-align: center;
+    }
+
+    nav li{
+        clear: none;
     }
 
 }
@@ -183,7 +186,19 @@ footer{
 
     nav li{
         float: left;
+        clear: both;
     }
+
+    .contact-information{
+        column-count: 1;
+        float: left;
+        height: auto;
+        vertical-align: top;
+    }
+
+    .contact-form 
+
+
 }
 /* This is the syntax to change the styling of classes: . followed by the name of the class.*/
 /* Use % when dealing with something like containers or something like that*/
