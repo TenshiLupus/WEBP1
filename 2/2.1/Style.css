@@ -1,3 +1,4 @@
+
 /*padding adds space away form the nested elements under the root tag. */
 :root{
     --text-color: #a1afc8;
@@ -15,7 +16,7 @@
 
 h2{
     text-align: left;
-    margin-left: 1em;
+    margin: 2em 1em;
 }
 
 div{
@@ -27,6 +28,8 @@ body,html{
     font-size: 18px; 
     max-width: 1300px;
     margin: 0 auto;
+    /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
+    font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
 }
 
 details{
@@ -39,6 +42,7 @@ nav{
     column-count: 1;
     margin: 0 auto;
     text-align: center;
+    text-transform: uppercase;
 }
 
 nav li{
@@ -62,6 +66,46 @@ fieldset{
 
 }
 
+caption{
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+table{
+    padding: 0 0.5em;
+    margin: 1em auto 0;
+}
+
+.table-container{
+    float: left;
+    width:50%;
+}
+
+table thead{
+    text-transform: uppercase;
+}
+
+.table-heading{
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+table thead tr th{
+    padding: 0.8em;
+    vertical-align: top;
+    border: 0.05em solid black;
+}
+
+table tbody tr td{
+    font-size: 0.9em;
+    letter-spacing: ´0.01em;
+    font-weight: normal;
+    padding: 0.5em;
+    text-align: center;
+    border: 1px solid black;
+}
+
 .home-page{
     background-color: var(--bg-color);
     z-index: 5;
@@ -83,7 +127,7 @@ fieldset{
     width: 60%;
     float: left;
     text-align: center;
-    background-color: green;
+    /* background-color: green; */
 }
 
 .aside-section{
@@ -91,7 +135,7 @@ fieldset{
     margin-bottom: 2em;
     width: 40%;
     text-align: center;
-    background-color: red;
+    /* background-color: red; */
 }
 
 
@@ -219,6 +263,7 @@ footer{
 
 
 
+
 /* @media screen and (max-width: 1080px){
     body, html{
         width: 100%;
@@ -257,8 +302,59 @@ footer{
         column-count: 1;
         margin-bottom: 10em;
     }
+
+    .table-container{
+        width:100%;
+        margin: 0 auto;
+        margin-left: 1em;
+    
+    }
+
+    table thead{
+        display: none;
+    }
+
+    caption{
+        display:none;
+    }
+
+    table, table tbody, table tr, table td{
+        display: block;
+        width: 100%;
+        font-size: 1.1em;
+    }
+
+    table tr{
+        margin-bottom: 1em;
+    }
+
+    table tbody tr td{
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+    
+    table td::before{
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        text-align: left;
+        padding-left: 1em;
+        font-weight: 600;
+        font-size: 1em;
+    }
 }
 
+.inspiration{
+    text-align: center;
+    width: 100;
+    margin: 0 auto;
+}
+
+.inspiration h2{
+    text-align: ce;
+}
 
 /* Format for devices with a width lower than 600px */
 @media screen and (max-width: 600px){
@@ -307,7 +403,13 @@ footer{
         float: left;
     }
 
+    .table-container{
+        text-align: center;
+    }
 
+    caption{
+        display: none;
+    }
 }
 /* This is the syntax to change the styling of classes: . followed by the name of the class.*/
 /* Use % when dealing with something like containers or something like that*/
