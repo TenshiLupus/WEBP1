@@ -6,54 +6,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Future</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="Style.css">
 </head>
 
 <body>
-    <div id="big_wrapper">
+    <div class="home-page">
         <!-- Think of id's as elements that aren't going to be used anywhere else. -->
         <!-- classes can be used to apply styling to similar components in the document, but id's are meant to be specifically unique.-->
         <!-- Frameworks like bootstrap don't use id for anything. Its all classes -->
-        <header id="top_header">
+        <header >
             <h1>This is Future </h1>    
+            
+            <nav>
+                <ul>
+                    <li>
+                        <a href="home.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="future.html">Future</a>
+                    </li>
+                    <li>
+                        <a href="history.html">history</a>
+                    </li>
+                    <li>
+                        <a href="now.html">now</a>
+                    </li>
+                    
+                </ul>
+            </nav>
+            
+            <details>
+                <summary>items</summary>
+                <p>
+                    this part is hidden under a details tag
+                </p>
+                
+            </details>
         </header>
-        
-        <nav id="top_menu">
-            <ul>
-                <li>
-                    <a href="home.html">Home</a>
-                </li>
-                <li>
-                    <a href="future.html">Future</a>
-                </li>
-                <li>
-                    <a href="history.html">history</a>
-                </li>
-                <li>
-                    <a href="now.html">now</a>
-                </li>
-
-            </ul>
-        </nav>
-        
-        <details>
-            <summary>items</summary>
-            <p>
-                this part is hidden under a details tag
-            </p>
-
-        </details>
-
-        <!-- Content has to be unique-->
+            
+            <!-- Content has to be unique-->
 
         <!--This is where the main content is supposed to go apparently. Maybe read some old documentation -->
         <!-- Tags nested withing the sectoin tag will be section tag will be following the example given on the tsak page.-->
-        <section id="main_section">
+        <section class="">
             <article>
                 <!-- this article is meant to individually describe the status and additional information of the current projects that im working on-->
                 <h2>Plans/WIP</h2>
               
-                    <h3>Ongoing working projects</h3>
+                    <p>Ongoing working projects<p>
                    
                     <div>
 
