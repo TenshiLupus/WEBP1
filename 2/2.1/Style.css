@@ -16,7 +16,7 @@
 
 h2{
     text-align: left;
-    margin: 2em 1em;
+    margin: 1em 1em;
 }
 
 div{
@@ -25,11 +25,11 @@ div{
 
 body,html{
     background-color: var(--bg-color);
-    font-size: 18px; 
+    font: 18px Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
     max-width: 1300px;
     margin: 0 auto;
     /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
-    font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+    letter-spacing: 0.1em;
 }
 
 details{
@@ -49,6 +49,10 @@ nav li{
     margin:0.5em 0.5em;;
     padding: 1em;
     line-height: 1.5em;
+}
+
+p{
+    margin: 1em;
 }
 
 a{
