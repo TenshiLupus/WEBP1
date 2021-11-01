@@ -145,7 +145,7 @@ table thead tr th{
 
 table tbody tr td{
     font-size: 0.9em;
-    letter-spacing: ´0.01em;
+    letter-spacing: 0.01em;
     font-weight: normal;
     padding: 0.5em;
     text-align: center;
@@ -394,12 +394,12 @@ footer{
 
 .inspiration{
     text-align: center;
-    width: 100;
+    width: 100%;
     margin: 0 auto;
 }
 
 .inspiration h2{
-    text-align: ce;
+    text-align: center;
 }
 
 /* Format for devices with a width lower than 600px */
