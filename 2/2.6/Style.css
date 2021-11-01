@@ -30,10 +30,14 @@ body,html{
     background-color: var(--bg-color);
     font: 18px Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", sans-serif;
     max-width: 1300px;
-    margin: 0 auto;
+    margin: auto;
     /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
     letter-spacing: 0.1em;
     background: url("Media/Bilder/tiling\ background.png") repeat;
+}
+
+article{
+    margin: 6em;
 }
 
 details{
@@ -191,6 +195,13 @@ table tbody tr td{
     /* background-color: red; */
 }
 
+.project-item img{
+    clear: both;
+    width: 100%;
+    height:auto;
+}
+
+
 
 .contact-information{
     position: relative;
@@ -203,6 +214,7 @@ table tbody tr td{
 }
 
 .contact-form{
+    clear: both;
     margin-left: 1em;
     width:100%;
     line-height: 1.2em;
@@ -358,9 +370,10 @@ footer{
     }
 
     .aside-section{
+        float: right;
         margin-top: 2em;
         width: 100%;
-        text-align: center;
+        right: 0;
     }
 
     .project-section{
