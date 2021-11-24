@@ -1,6 +1,9 @@
+//load content on load of page
 document.addEventListener('DOMContentLoaded', function () {
     let promptValue = ''
     alert("This is a repeater program")
+    
+    //input form event block
     document.querySelector('#input-form').onsubmit = e => {
         e.preventDefault()
         do {
@@ -16,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
         return false
     }
 
+    //seperate timeouts for different queries, 
     document.querySelector("#rain-form").onsubmit = e => {
         e.preventDefault()
         var rainWindow = window.open("https://rainymood.com/")
@@ -28,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 clearTimeout(closingWindow)
                 rainWindow.document.write("\nWindow has been stopped from closing")
             }
-
+            
         }, 1000)
         return false; 
     }
