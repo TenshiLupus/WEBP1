@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
     xhr.send(null);
     xhr.onload = function(){
         if(xhr.status == 200){
-            alert("succesful");
+            alert("succesful"); 
             document.getElementById("server-response").innerHTML = xhr.responseText;
         }
     }
