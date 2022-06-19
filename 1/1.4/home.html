@@ -2,65 +2,76 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="application-name" content="Personal homepage"   >
+    <meta name="author" content="Angel Cardenas Martinez">
+    <meta name="description" content="site that describes me">
+    <meta name="generator" content="Visual Studio Code">
+    <meta name="keywords" content="webprog,site">
+    
+    <title>Angel Portfolio</title>
 </head>
 <body>
     <header> 
-        <h1>This is my site </h1>
-        <h2><mark>Projects</mark>, and <mark>Thoughts</mark> about them will be displayed in this site.</h2>
+        <nav>
+            <ul>
+                <li>
+                    Home
+                </li>
+                <li>
+                    Future
+                </li>
+                <li>history</li>
+                <li>now</li>
+                
+            </ul>
+        </nav>
     </header>
-    <details>
-        <summary>items</summary>
-        <p>
-            this part is hidden under a details tag
-        </p>
-        
-    </details>
-    <nav>
-        <ul>
-            <li>
-                Home
-            </li>
-            <li>
-                Future
-            </li>
-            <li>history</li>
-            <li>now</li>
-            
-        </ul>
-    </nav>
-    <!-- Content has to be unique-->
+
+
+    <!-- Main used for non repeated content-->
     <main>
-        <p>this is Home</p>
+
+    <details open="open">
+        
+        <summary><mark>Status</mark></summary>
+        
         <pre>
-            This is being formatted by a pre tag
-            like ;> this hopefully are being formated corretly. 
-            third row in format
+            Digital art: Improving PBR workdlow
+
+            Software development: Learning better software design practices.
         </pre>
-    </main>
-    <!--This is where the main content is supposed to go apparently. Maybe read some old documentation -->
-    <section> 
-        <h2>Individual projects</h2>
-        <article> <h3>Project 1</h3> </article>
-        <article> <h3>Project 2</h3> </article>
+
+       
+
+    </details>
+    
+    <section>
+
+        <h2>Software Development projects</h2>
+
+        <article> 
+            <h3>SD 1</h3> 
+        </article>
+     
     </section>
     
     <section>
-        <h2>Group Projects</h2>
-        <article><h3>Group Project 1</h3></article>
-        <article><h3>Group Project 2</h3></article>
+
+        <h2>Digital Art projects</h2>
+        
+        <article> 
+            <h3>DA 1</h3> 
+        </article>
+    
     </section>
 
 
-    <!-- Content that will usually be at the side of the page-->
-    <aside>The projects reflect the areas that i focus on</aside>
-    <footer>
-        Copyright Angel Cardenas Martinez 2021
-        <blockquote cite="https://www.youtube.com/c/lexfridman"> In life you won't have time to do everything you want.</blockquote>
-    </footer>
-    
+    <!-- Contains its own information -->
 
+    </main>
+    <!-- Content that will usually be at the side of the page/ may be repeated content-->
+    <aside>Information hub</aside>
+    <footer>Copyright Angel Cardenas Martinez 2021</footer>
 </body> 
 </html>
