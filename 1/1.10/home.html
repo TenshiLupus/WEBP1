@@ -1,169 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="application-name" content="Personal homepage"   >
+    <meta name="author" content="Angel Cardenas Martinez">
+    <meta name="description" content="site that describes me">
+    <meta name="generator" content="Visual Studio Code">
+    <meta name="keywords" content="webprog,site">
+    
+    <title>Angel Portfolio</title>
 </head>
-
 <body>
-    <header>
-        <h1>This is my site </h1>
-        <h2><mark>Projects</mark>, and <mark>Thoughts</mark> about them will be displayed in this site.</h2>
+    <header> 
+        <nav>
+            <ul>        
+                <li>
+                    <a href="home.html">Home</a>
+                </li>
+                <li>
+                    <a href="future.html">Future</a>
+                </li>
+                <li>
+                    <a href="history.html">History</a>
+                </li>
+                <li>
+                    <a href="now.html">Now</a>
+                </li>
+                
+            </ul>
+        </nav>
     </header>
-    <details>
-        <summary>items</summary>
-        <p>
-            this part is hidden under a details tag
-        </p>
+
+
+    <!-- Main used for non repeated content-->
+    <main>
+
+    <details open="open">
+        
+        <summary><mark>Status</mark></summary>
+        
+        <pre>
+            Digital art: Improving PBR workdlow
+
+            Software development: Learning better software design practices.
+        </pre>
+
+       
 
     </details>
-    <nav>
-        <ul>
-            <li>
-                <a href="home.html">Home</a>
-            </li>
-            <li>
-                <a href="future.html">Future</a>
-            </li>
-            <li>
-                <a href="history.html">history</a>
-            </li>
-            <li>
-                <a href="now.html">now</a>
-            </li>
-
-        </ul>
-    </nav>
-    <!-- Content has to be unique-->
-    <main>
-        <p>this is Home</p>
-        <pre>
-            This is being formatted by a pre tag
-            like ;> this hopefully are being formated corretly. 
-            third row in format
-        </pre>
-    </main>
-    <!--This is where the main content is supposed to go apparently. Maybe read some old documentation -->
-    <article>
-        <h2>Projects</h2>
-        <section>
-            <h2>Individual projects</h2>
-            <article>
-                <h3>Project 1</h3>
-            </article>
-            <article>
-                <h3>Project 2</h3>
-            </article>
-        </section>
-    </article>
-
-    <!-- This section is meant for individual projects-->
+    
     <section>
-        <h2>Group Projects</h2>
-        <article>
-            <h3>Group Project 1</h3>
+        <h2>Software Development projects</h2>
+
+        <dl>
+            <dt>Vanilla javascript</dt>
+            <dd>Library</dd>
+
+            <dt>Java</dt>
+            <dd>transportation map marker</dd>
+        </dl>
+     
+    </section>
+    
+    <section>
+
+        <h2>Digital Art projects</h2>
+        <!-- Image properties manipulated in photoshop-->
+        <article> 
+            <h3>DA 1</h3> 
         </article>
         <article>
-            <h3>Group Project 2</h3>
+            <h3>Logos</h3>  
+            <figure>
+                <img src="Bilder/Emblem.png"> 
+                <figcaption>fictional emblem PNG</figcaption>
+            </figure>
+            <figure>
+                <img src="Bilder/Logo.jpg"> 
+                <figcaption>Main logo JPG</figcaption>
+            </figure>
         </article>
+    
     </section>
 
-    <!-- Content that will usually be at the side of the page-->
+
+    <!-- Contains its own information -->
+
+    </main>
+    <!-- Content that will usually be at the side of the page/ may be repeated content-->
     <aside>
-        <h2>Software proficiency<h2>
-                <ul></ul>
-                <section>
-                    <h3>Contact</h3>
-                    <form method="post" enctype="multipart/form-data" action="https://people.dsv.su.se/~pierre/i/05_ass/ip3/1/1.10/example.php">
-                        <!-- The fielset tag encapsulates related form elements in a group-->
-                        <fieldset>
-                            <!-- Legend tag gives a description of the content of the form-->
-                            <legend>Provide contact information</legend>
-                            <!-- As the name implies, gives a label to an input tag, attrbiutes can be manipulated to specify input tag. -->
 
-                            <label>Name</label>
-                            <!-- Input tag gives the option for the user to write down data for usage, what the content is then used for is up to the user.-->
-                            <input type="text" placeholder="michael" autofocus>
-                            <br>
-                            <br>
+        <article>
+            <h3>Short audio track</h3>
+            <audio controls>
+                <source src="Media/Ljud/synth.mp3">
+            </audio>
+        </article>
 
-                            <label>Email</label>
-                            <!-- Since an email is necessary if the user wnat to be contanced. Then it is reasonable to deman an email to reply to-->
-                            <input name="Email" list="email domains" type="email" placeholder="email"
-                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" required>
-                            <br>
-                            <br>
-                            <datalist id="email domains">
-                                <option value="@gmail.com">
-                                <option value="@yahoo.com">
-                                <option value="@hotmail.com">
-                            </datalist>
-                            <label>Homepage link</label>
-                            <input name="URL"type="url" placeholder="webpage">
-                            <br>
-                            <br>
-                            <!-- Break tags give space inbetween the rows in the document-->
-                            
-                            <label>Message content</label>
-                            <br>
-                            <textarea name="message" pattern="[A-z]{1}" title="Used to write the main content of the message" required>
-                            </textarea>
-                            <br>
-                            <br>
+        <article>
+            <h3>Rain video</h3>
+            <video width="360" controls>
+                <source src="Media/video/Rain.mp4">
+            </video>
+        </article>
 
-                            <!-- Response field goes here-->
-                            <label>Response?</label>
-                            <input title="checked if you want to hear a response back" type="checkbox">
-                            <br>
-                            <br>
-
-                            <fieldset >
-                                <label>Recieve a copy of the message?</label>
-                                <br>
-                                <label>yes</label>
-                                <!-- Title attribute is being used to explain differences between the 2 radio buttons-->
-                                <input title="Press, when wanting a copy of the sent message" type="radio" name="copys" value="yes">
-                                <label>no</label>
-                                <input title="Ignore, when not seeking a copy of the sent message" type="radio" name="copys" value="no" checked>
-                                <br>
-                                <br>
-                            </fieldset>
-
-                            <!-- Message field goes here-->
-                            <label>Theme of message</label>
-                            <select>
-                                <optgroup label="Critique">
-                                    <option value="ugly">looks ugly</option>
-                                    <option value="weird">looks weird</option>
-                                </optgroup>
-                                <optgroup label="Suggestion">
-                                    <option value="add">add something</option>
-                                    <option value="remove">remove something</option>
-                                </optgroup>
-                            </select>
-                            <br>
-                            <br>
-
-                            <!-- This section uploads a file, can be an txt file for example-->
-                            <label>Upload file</label>
-                            <input type="file" name="file">
-                            <input type="submit" value="ok">
-
-                        </fieldset>
-                    </form>
-                </section>
     </aside>
 
     <footer>
-        Copyright Angel Cardenas Martinez 2021
-        <a href="mailto:angelcardenasmartinez00@gmail.com">My email</a>
-        <blockquote cite="https://www.youtube.com/c/lexfridman"> In life you won't have time to do everything you want.
-        </blockquote>
+        <pre>
+<a href="mailto:tenshilupus@hotmail.com">Send an email</a>
+Copyright Angel Cardenas Martinez 2021
+        </pre>
     </footer>
-
-</body>
-
+</body> 
 </html>
