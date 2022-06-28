@@ -5,50 +5,52 @@
     --bg-color: #18191c;
     --text-color: #5a6770;
     --bg-color: #d9d8d6;
+    font-size: 16px;
 }   
 
-*{
-    
+*{ 
     padding: 0px;
     margin:0;
     box-sizing: border-box;
 }
 
-h2{
-    text-align: left;
-    margin: 1em 1em;
-}
+body{
+    /* Positioning */
+    display: flex;
+    flex-wrap: wrap;
 
-div{
-    display: block;
-}
 
-body,html{
+    /* font / styling */
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1rem;
     background-color: var(--bg-color);
-    font: 18px Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
-    max-width: 1300px;
-    margin: 0 auto;
-    /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
-    letter-spacing: 0.1em;
+ 
 }
 
-details{
-    float:left;
-    clear:both;
+
+
+header{
+    display: flex;
+    flex-grow: 1;
 }
+
+.semantic-section{
+    margin: 0 200px;
+}
+
+.section-padding {
+    padding: 0 200px;
+}
+
 
 nav{
-    width: 100%;
-    column-count: 1;
-    margin: 0 auto;
-    text-align: center;
-    text-transform: uppercase;
+    
 }
 
 nav li{
-    margin:0.5em 0.5em;;
-    padding: 1em;
-    line-height: 1.5em;
+    margin:0.5rem 0.5rem;;
+    padding: 1rem;
+    line-height: 1.5rem;
 }
 
 p{
