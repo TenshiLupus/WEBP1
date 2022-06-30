@@ -22,40 +22,47 @@ Managed to implement the layout with float, but i feel flexbox is more effective
 <body>
 
     <header>
-        <nav>
-            <ul>
-                <li>
-                    <a href="home.html">Home</a>
-                </li>
-                <li>
-                    <a href="future.html">Future</a>
-                </li>
-                <li>
-                    <a href="history.html">History</a>
-                </li>
-                <li>
-                    <a href="now.html">Now</a>
-                </li>
+        <section>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="home.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="future.html">Future</a>
+                    </li>
+                    <li>
+                        <a href="history.html">History</a>
+                    </li>
+                    <li>
+                        <a href="now.html">Now</a>
+                    </li>
 
-            </ul>
-        </nav>
+                </ul>
+            </nav>
+
+            <section>
+                <details open="open">
+
+                    <summary><mark>Status</mark></summary>
+
+                    <pre>Digital art: Improving PBR workdlow
+Software development: Learning better software design practices.</pre>
+
+                </details>
+            </section>
+
+        </section>
+
+
+
     </header>
 
 
     <!-- Main used for non repeated content-->
     <main class="semantic-section">
-        <section>
-            <details open="open">
 
-                <summary><mark>Status</mark></summary>
-
-                <pre>Digital art: Improving PBR workdlow
-Software development: Learning better software design practices.</pre>
-
-            </details>
-        </section>
-
-        <section>
+        <section class="content-section">
             <h2>Digital Art projects</h2>
             <!-- Image properties manipulated in photoshop-->
             <article>
@@ -81,7 +88,39 @@ Software development: Learning better software design practices.</pre>
 
         </section>
 
+
+
         <section>
+            <h2>Definitions</h2>
+            <dl>
+                <dt>PBR</dt>
+                <dd>physically based rendering</dd>
+            </dl>
+        </section>
+
+    </main>
+    <!-- Content that will usually be at the side of the page may be repeated content-->
+    <aside class="semantic-section ">
+        <section class="content-section">
+            <article>
+                <h3>Short audio track</h3>
+                <audio controls>
+                    <source src="Media/Ljud/synth.mp3">
+                </audio>
+            </article>
+
+            <article>
+                <h3>Rain video</h3>
+                <video controls>
+                    <source src="Media/video/Rain.mp4">
+                </video>
+            </article>
+        </section>
+
+    </aside>
+
+    <footer class="semantic-section">
+        <section class="content-section">
             <article>
                 <h3>Contact form</h3>
                 <form method="post" enctype="multipart/form-data"
@@ -122,15 +161,15 @@ Software development: Learning better software design practices.</pre>
                             <!-- Title attribute is being used to explain differences between the 2 radio buttons-->
                             <section class="horizontal-radio-buttons">
                                 <div>
-                            <label for="yes">yes</label>
-                            <input id="yes" title="Press when wanting a copy of the sent message" type="radio"
-                                name="copy" value="yes">
-                            </div>
-                            <div>
-                            <label for="no">no</label>
-                            <input id="no" title="Ignore when not seeking a copy of the sent message" type="radio"
-                                name="copy" value="no" checked>
-                            </div>
+                                    <label for="yes">yes</label>
+                                    <input id="yes" title="Press when wanting a copy of the sent message" type="radio"
+                                        name="copy" value="yes">
+                                </div>
+                                <div>
+                                    <label for="no">no</label>
+                                    <input id="no" title="Ignore when not seeking a copy of the sent message"
+                                        type="radio" name="copy" value="no" checked>
+                                </div>
                             </section>
                         </fieldset>
 
@@ -159,36 +198,6 @@ Software development: Learning better software design practices.</pre>
             </article>
         </section>
 
-        <section>
-            <h2>Definitions</h2>
-            <dl>
-                <dt>PBR</dt>
-                <dd>physically based rendering</dd>
-            </dl>
-        </section>
-
-    </main>
-    <!-- Content that will usually be at the side of the page may be repeated content-->
-    <aside class="semantic-section">
-        <section>
-            <article>
-                <h3>Short audio track</h3>
-                <audio controls>
-                    <source src="Media/Ljud/synth.mp3">
-                </audio>
-            </article>
-
-            <article>
-                <h3>Rain video</h3>
-                <video controls>
-                    <source src="Media/video/Rain.mp4">
-                </video>
-            </article>
-        </section>
-
-    </aside>
-
-    <footer class="semantic-section">
         <pre>
 <a href="mailto:tenshilupus@hotmail.com">Send an email</a>  Copyright Angel Cardenas Martinez 2022
         </pre>
