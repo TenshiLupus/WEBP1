@@ -1,422 +1,318 @@
 
 /*padding adds space away form the nested elements under the root tag. */
-:root{
-    --text-color: #a1afc8;
-    --bg-color: #18191c;
-    --text-color: #5a6770;
-    --bg-color: #d9d8d6;
-    font-size: 16px;
-}   
+:root, *{
+
+    --text-color: #fff;
+    --background-color: #000;
+    --h-orange: #ffb254;
+    --white-grey: #bcbcbc;
+    --h-grey: #d4cac8;
+    --greyish: #454545;
+} 
 
 *{ 
-    padding: 0px;
-    margin:0;
+    font-size: 14px;
+    outline: none !important;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
+}
+
+/* Primary tags using flexbox */
+body, header, main, aside, footer{
+    display: flex;
 }
 
 body{
     /* Positioning */
     display: flex;
     flex-wrap: wrap;
-
-
+    max-width: 1920px;
     /* font / styling */
     font-family: Helvetica, Arial, sans-serif;
     font-size: 1rem;
-    background-color: var(--bg-color);
- 
+    background-color: var(--h-grey);
+    color: var(--greyish);
+    margin: 0 100px;
 }
-
-
 
 header{
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-grow: 1;
+    width:100%;
+    height: 5rem;
+}
+nav{
+   
+}
+
+ul {
+    display: flex;
+    font-size: 1.5rem;
+    gap: 20px;
+    list-style-type: none;
+}
+
+li{
+    letter-spacing: 0.12em;
+    border-bottom: 1px solid white;
 }
 
 .semantic-section{
-    margin: 0 200px;
+    margin: 0 auto;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 70%;
+}
+
+h2, h3{
+    margin: 20px 0px 10px 0px;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+figcaption{
+    font-style: italic;
+    margin-top: 10px;
+}
+
+form{
+    height: 100vh;
+    max-width: 500px;
+}
+
+fieldset{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 20px;
+    border: none;
+  
+}
+
+aside{
+    width: 30%;
+    flex:1;
+}
+
+footer{
+    display: flex;
+    justify-content: stretch;
+    width: 100%;
+    flex-grow: 1;
 }
 
 .section-padding {
     padding: 0 200px;
 }
 
-
-nav{
-    
+video,audio{
+    max-width: 100%;
 }
 
-nav li{
-    margin:0.5rem 0.5rem;;
-    padding: 1rem;
-    line-height: 1.5rem;
-}
-
-p{
-    margin: 1em;
-}
-
-a{
-    cursor: pointer;
+a:link,
+a:visited {
     text-decoration: none;
+    color: var(--link-color);
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
-ul li{
-    list-style: none;
-    display: inline-block;
-}
-
-fieldset{
-    border-style:none;
-
-}
-
-caption{
-    font-size: 2em;
-    margin-bottom: 1em;
-}
-
-table{
-    padding: 0 0.5em;
-    margin: 1em auto 0;
-}
-
-.table-container{
-    float: left;
-    width:50%;
-}
-
-table thead{
-    text-transform: uppercase;
-}
-
-.table-heading{
-    font-size: 2em;
-    text-align: center;
-    margin-bottom: 2em;
-}
-
-table thead tr th{
-    padding: 0.8em;
-    vertical-align: top;
-    border: 0.05em solid black;
-}
-
-table tbody tr td{
-    font-size: 0.9em;
-    letter-spacing: ´0.01em;
-    font-weight: normal;
-    padding: 0.5em;
-    text-align: center;
-    border: 1px solid black;
-}
-
-.home-page{
-    background-color: var(--bg-color);
-    z-index: 5;
-    color: var(--text-color);
-    padding: 1.5em;
-
-}
-
-.project-section{
-    display: block;
-    width: auto;
-    height: 20em;
-    margin-bottom: 3em;
+legend{
+    position: relative; 
+    top:1.5rem;
+    padding: 0;
     width: 100%;
+    text-align: center;
+}
+
+label {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+
+}
+
+form>input{ 
+  
+    padding: 0.5rem;
+    flex: 0;
+    background-color: var(--text-color);
+    border: none;
+    border-radius: 1px;
+    padding: 10px 0;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    font-size: 1rem;
+    font-weight: 600;
     
+    color: var(--background-color);
+    box-shadow: -0.01rem 0.6rem 0.6rem black;
 }
 
-.project-items{
-    width: 60%;
-    float: left;
-    text-align: center;
-    background-color: green;
-}
-
-.aside-section{
-    float: right;
-    margin-bottom: 2em;
-    width: 40%;
-    text-align: center;
-    background-color: red;
-}
-
-
-.contact-information{
-    position: relative;
-    transform:translateY(5em);
-    margin-top: 5em;
-    clear: both;
-    line-height: 1.2em;
-    background-color:azure;
-    column-count: 1;
-}
-
-.contact-form{
-    margin-left: 1em;
-    width:100%;
-    line-height: 1.2em;
-    background-color: red;
-}
-
-.contact-form label{
-    clear: both;
-}
-
-.forms{
-    margin: 0.5em auto;
-}
-
-.form-item{
-    background-color:pink;
-    text-align: center;
-    padding: 0.5em; 
-    clear: both;
-}
-
-label{
-    vertical-align: top;
-}
-
-
-.input-fields{
-    float: left;
-    width: 50%;
-    background-color: red;
-}
-
-input[type="file"]{
-    display: none;
-}
-
-#ok-button{
-    width:5em;
-    margin:0 auto;
-
-}
-
-#submitter{
+form>input:hover{
     cursor: pointer;
 }
 
-.input-button{
-    margin: 1em;
-    
+input:required {
+    border: 3px solid var(--greyish);
 }
 
-.input-button label{
-    height: 4em;
-    width: 10em;
-    padding: 1em;
-    background-color: white;
-    border: 0.5em solid;
-    cursor: pointer;
+fieldset input{
+    align-self: flex-start;
+    text-decoration: none;
+    border: 2.2px solid var(--greyish);
+    border-radius: 2px;
+    margin-bottom: 1rem;
 }
 
-input{
-    padding: 15px;
-    width: 100%;
-    margin: 0 auto;
+fieldset input:focus{
+    border-color: var(--h-orange);
 }
 
-.separator{
-    height:10em;
-    clear:both;
+textarea{
+    resize: none;
 }
 
-.social-section{
-    width: 50%;
-    float: right;
-    background-color: red;
-    margin-right: 2em;
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200, 200, 200);
+    letter-spacing: 1px;
+    font-size: 0.8rem;
 }
 
-footer{
-    background-color: inherit;
-    clear: both;
+td,th {
+    border: 1px solid rgb(190, 190, 190);
+    padding: 10px 20px;
+}
+
+th {
+    background-color: rgb(235, 235, 235);
+}
+
+td {
     text-align: center;
-    margin-top: 100vh;
-    margin-bottom: 2em;
 }
 
-.pre-align{
-    background-color: yellow;
-    clear:both;
-    margin: 3em 0;
+tr:nth-child(even) td {
+    background-color: rgb(250, 250, 250);
 }
 
-.message{
-    text-align: left;
-    float:right;
-    width: 50%;
-    background-color: blue;
+tr:nth-child(odd) td {
+    background-color: rgb(245, 245, 245);
 }
 
-.message textarea{
-    width: 100%;
-    height: 6em;
+dl{
+    margin: 20px 0;
 }
 
-.boxes{
+dt{
+    margin: 20px 0;
+    font-weight: 600;
+}
+
+dd{
+    margin-left: 40px;
+    max-width: 20rem;
+}
+
+section{
+    max-width: 100%;
+    margin: 20px;
+}
+
+.horizontal-radio-buttons{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 150px;
+
+}
+.horizontal-radio-buttons div{
+    display: flex;
+    flex-direction: column;
+}
+
+.image-container{
+    object-fit: cover;
+    max-width: 100%;
+}
+
+#logos{
+    display: flex;
+}
+
+#logos figure{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 50px;
     text-align: center;
-    background-color: yellow;
-    width: 100%;
-
 }
 
 
-
-
-/* @media screen and (max-width: 1080px){
-    body, html{
-        width: 100%;
-    }
-} */
-
-
-/* Format for devices lower than a 992px */
-@media screen and (max-width: 992px){
-    body,html{
-        width: 100%;
-    }
-
-    .aside-section{
-        margin-top: 2em;
-        width: 100%;
-        text-align: center;
-    }
-
-    .project-section{
-        width: 100%;
-        text-align: center;
-    }
-
-
-    .project-items{
-        width: 100%;
-        text-align: center;
-    }
-
-    nav li{
-        clear: none;
-    }
-
-    .forms{
-        column-count: 1;
-        margin-bottom: 10em;
-    }
-
-    .table-container{
-        width:100%;
-        margin: 0 auto;
-        margin-left: 1em;
-    
-    }
-
-    table thead{
-        display: none;
-    }
-
-    caption{
-        display:none;
-    }
-
-    table, table tbody, table tr, table td{
-        display: block;
-        width: 100%;
-        font-size: 1.1em;
-    }
-
-    table tr{
-        margin-bottom: 1em;
-    }
-
-    table tbody tr td{
-        text-align: right;
-        padding-left: 50%;
-        position: relative;
-    }
-    
-    table td::before{
-        content: attr(data-label);
-        position: absolute;
-        left: 0;
-        width: 50%;
-        text-align: left;
-        padding-left: 1em;
-        font-weight: 600;
-        font-size: 1em;
-    }
-}
-
-.inspiration{
-    text-align: center;
-    width: 100;
-    margin: 0 auto;
-}
-
-.inspiration h2{
-    text-align: ce;
-}
 
 /* Format for devices with a width lower than 600px */
-@media screen and (max-width: 600px){
-    body,html{
-        width: 100%;
-        min-width: 500px;
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 600px){
+    .semantic-section{
     }
 
-    nav{
-        width: 10em;;
-        column-count: 1;
+    body{
+        font-size: 2rem;
+    }
+
+    main, aside{
+        width: 100%;
+    }
+    video, audio{
+        max-width: 200px ;
         margin: 0 auto;
+    }
+
+    pre{
         text-align: center;
-    }
-
-    .project-section{
-        width: auto;
-        text-align: center;
-    }
-
-    .contact-information{
-        column-count: 1;
-        float: left;
-        height: auto;
-        vertical-align: top;
-    }
-
-    .message{
-        float: left;
-        width: 100%;
-    }
-
-    .input-fields{
-        width:100%;
-    }
-
-    .project-items{
-        width: 100%;
-    }
-
-    input{
-        width:100%;
-    }
-
-    .boxes{
-        float: left;
-    }
-
-    .table-container{
-        text-align: center;
-    }
-
-    caption{
-        display: none;
+        font-size: 1rem;
+        overflow: auto;
+        white-space: normal;
     }
 }
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    
+}
+
 /* This is the syntax to change the styling of classes: . followed by the name of the class.*/
 /* Use % when dealing with something like containers or something like that*/
 /*
@@ -435,60 +331,3 @@ footer{
      position: relative;  
  }
  */
-
- /*
-.bottombar{
-     
-     background-color: #18191c;
-     text-align:center;
-     color:#a1afc8;
-     width: 80%;
-     border:none;
-     margin-top: 10px;
-     height:123px;
-     margin:0px auto;
-     padding-bottom: 5px;
-    
- }
- */
-
-/*
-.sites{
-    width: auto;
-    border:none;
-    margin-bottom: 20px;
-    height:123px;
-    padding-top:1px;
-    margin:0px;
-
-}
-*/
-
-/*
-.tablecenter{
-    margin-left: auto;
-    margin-right: auto;
-    padding: 5px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-*/
-
-/*
-table{
-    align-self: center;
-    text-align: center;
-    margin:20%;
-    padding: 20%;
-
-}
-*/
-/*
-.projects{
-    margin:0px auto;
-    background-color: #18191c;
-    padding: 10%;
-    line-height: 20px;
-    text-align:center;
-}
-*/

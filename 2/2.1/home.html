@@ -21,7 +21,7 @@ Managed to implement the layout with float, but i feel flexbox is more effective
 
 <body>
 
-    <header class="semantic-section">
+    <header>
         <nav>
             <ul>
                 <li>
@@ -44,27 +44,15 @@ Managed to implement the layout with float, but i feel flexbox is more effective
 
     <!-- Main used for non repeated content-->
     <main class="semantic-section">
+        <section>
+            <details open="open">
 
-        <details open="open">
+                <summary><mark>Status</mark></summary>
 
-            <summary><mark>Status</mark></summary>
-
-            <pre>Digital art: Improving PBR workdlow
+                <pre>Digital art: Improving PBR workdlow
 Software development: Learning better software design practices.</pre>
 
-        </details>
-
-        <section>
-            <h2>Software Development projects</h2>
-
-            <dl>
-                <dt>Vanilla javascript</dt>
-                <dd>Library</dd>
-
-                <dt>Java</dt>
-                <dd>transportation map marker</dd>
-            </dl>
-
+            </details>
         </section>
 
         <section>
@@ -72,17 +60,23 @@ Software development: Learning better software design practices.</pre>
             <!-- Image properties manipulated in photoshop-->
             <article>
                 <h3>DA 1</h3>
+                <figure>
+                    <img class="image-container" src="Media/Bilder/angel-cardenas-martinez-highresscreenshot00004.jpg">
+                    <figcaption>Mountains</figcaption>
+                </figure>
             </article>
             <article>
                 <h3>Logos</h3>
-                <figure>
-                    <img src="Bilder/Emblem.png">
-                    <figcaption>fictional emblem PNG</figcaption>
-                </figure>
-                <figure>
-                    <img src="Bilder/Logo.jpg">
-                    <figcaption>Main logo JPG</figcaption>
-                </figure>
+                <section id="logos">
+                    <figure>
+                        <img class="image-container" src="Media/Bilder/Emblem.png">
+                        <figcaption>fictional emblem PNG</figcaption>
+                    </figure>
+                    <figure>
+                        <img class="image-container" src="Media/Bilder/Logo.jpg">
+                        <figcaption>Main logo JPG</figcaption>
+                    </figure>
+                </section>
             </article>
 
         </section>
@@ -126,14 +120,18 @@ Software development: Learning better software design practices.</pre>
 
                             <legend>Receive a copy of the message</legend>
                             <!-- Title attribute is being used to explain differences between the 2 radio buttons-->
-
+                            <section class="horizontal-radio-buttons">
+                                <div>
                             <label for="yes">yes</label>
                             <input id="yes" title="Press when wanting a copy of the sent message" type="radio"
                                 name="copy" value="yes">
-                            <label>no</label>
+                            </div>
+                            <div>
+                            <label for="no">no</label>
                             <input id="no" title="Ignore when not seeking a copy of the sent message" type="radio"
                                 name="copy" value="no" checked>
-
+                            </div>
+                            </section>
                         </fieldset>
 
                         <!-- Message field goes here-->
@@ -161,30 +159,38 @@ Software development: Learning better software design practices.</pre>
             </article>
         </section>
 
+        <section>
+            <h2>Definitions</h2>
+            <dl>
+                <dt>PBR</dt>
+                <dd>physically based rendering</dd>
+            </dl>
+        </section>
+
     </main>
     <!-- Content that will usually be at the side of the page may be repeated content-->
     <aside class="semantic-section">
+        <section>
+            <article>
+                <h3>Short audio track</h3>
+                <audio controls>
+                    <source src="Media/Ljud/synth.mp3">
+                </audio>
+            </article>
 
-        <article>
-            <h3>Short audio track</h3>
-            <audio controls>
-                <source src="Media/Ljud/synth.mp3">
-            </audio>
-        </article>
-
-        <article>
-            <h3>Rain video</h3>
-            <video width="360" controls>
-                <source src="Media/video/Rain.mp4">
-            </video>
-        </article>
+            <article>
+                <h3>Rain video</h3>
+                <video controls>
+                    <source src="Media/video/Rain.mp4">
+                </video>
+            </article>
+        </section>
 
     </aside>
 
     <footer class="semantic-section">
         <pre>
-<a href="mailto:tenshilupus@hotmail.com">Send an email</a>
-Copyright Angel Cardenas Martinez 2022
+<a href="mailto:tenshilupus@hotmail.com">Send an email</a>  Copyright Angel Cardenas Martinez 2022
         </pre>
     </footer>
 
