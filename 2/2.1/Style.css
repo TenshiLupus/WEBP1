@@ -17,6 +17,7 @@
     margin: 0;
     box-sizing: border-box;
 }
+/* Semantic tags */
 
 /* Primary tags using flexbox */
 body, header, main, aside, footer{
@@ -39,14 +40,15 @@ body{
 
 header{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
     flex-grow: 1;
     width:100%;
-    height: 5rem;
+    padding: 100px 0;
 }
+
 nav{
-   
+   align-self: center;
 }
 
 ul {
@@ -58,23 +60,19 @@ ul {
 
 li{
     letter-spacing: 0.12em;
-    border-bottom: 1px solid white;
-}
 
-.semantic-section{
-    margin: 0 auto;
 }
 
 main{
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     width: 70%;
 }
 
 h2, h3{
     margin: 20px 0px 10px 0px;
+    width: 100%;
 }
 
 h3{
@@ -90,15 +88,9 @@ figcaption{
     margin-top: 10px;
 }
 
-form{
-    height: 100vh;
-    max-width: 500px;
-}
-
 fieldset{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     padding-top: 20px;
     border: none;
   
@@ -117,23 +109,32 @@ footer{
     flex-grow: 1;
 }
 
-.section-padding {
-    padding: 0 200px;
+footer article{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    width: 100%;
+}
+
+footer > section{
+    display: flex;
+    flex-direction: column;
 }
 
 video,audio{
-    max-width: 100%;
+    max-width: 80%;
 }
 
-a:link,
-a:visited {
-    text-decoration: none;
+a, a:link, a:hover a:active, a:visited, a:focus {
+    text-decoration: none !important;
     color: var(--link-color);
     font-size: 1.5rem;
     font-weight: 700;
 }
 
 legend{
+    font-size: 1.5rem;
+    font-weight: 600;
     position: relative; 
     top:1.5rem;
     padding: 0;
@@ -141,29 +142,24 @@ legend{
     text-align: center;
 }
 
+pre{
+    text-align: center;
+    font-size: 1rem;
+}
+
 label {
     font-size: 1.5rem;
     font-weight: 600;
-    margin-bottom: 0.2rem;
-
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
 }
 
-form>input{ 
-  
-    padding: 0.5rem;
-    flex: 0;
-    background-color: var(--text-color);
-    border: none;
-    border-radius: 1px;
-    padding: 10px 0;
-    justify-content: center;
-    align-items: center;
-    width: 120px;
-    font-size: 1rem;
-    font-weight: 600;
-    
-    color: var(--background-color);
-    box-shadow: -0.01rem 0.6rem 0.6rem black;
+label[for="checkbox-input"]{
+    margin: 0 auto;
+}
+
+input[id="checkbox-input"]{
+    margin: 0 auto;
 }
 
 form>input:hover{
@@ -177,9 +173,7 @@ input:required {
 fieldset input{
     align-self: flex-start;
     text-decoration: none;
-    border: 2.2px solid var(--greyish);
-    border-radius: 2px;
-    margin-bottom: 1rem;
+    width: 50%;
 }
 
 fieldset input:focus{
@@ -188,6 +182,9 @@ fieldset input:focus{
 
 textarea{
     resize: none;
+    height: 5rem;
+    overflow: auto;
+    margin-bottom: 1rem;;
 }
 
 table {
@@ -234,23 +231,39 @@ dd{
 
 section{
     max-width: 100%;
-    margin: 20px;
+    margin: 0 20px;
+}
+
+/* Classes */
+
+.semantic-section{
+    display: flex;
+    margin: 0 auto;
+    background: var(--white-grey);
 }
 
 .content-section{
-    height: 100vh;
-    width:100%;
+    max-height: 100%; 
 }
 
 .horizontal-radio-buttons{
     display: flex;
-    justify-content: space-between;
-    padding: 0 150px;
-
+    justify-content: center;
+    gap: 0 0.1rem;  
+    text-align: center;
+    margin: 0;
 }
 .horizontal-radio-buttons div{
+    width: 3.5rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+}
+
+.horizontal-radio-buttons input{
+    position: relative;
+    left: 50%;  
+    transform: translateX(-50%);
 }
 
 .image-container{
@@ -258,8 +271,19 @@ section{
     max-width: 100%;
 }
 
+/* IDs */
+
 #logos{
     display: flex;
+}
+
+#copyright-section{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 50px;
+    padding-bottom: 10px;
+    gap: 20px 0;
 }
 
 #logos figure{
@@ -270,6 +294,19 @@ section{
     text-align: center;
 }
 
+#contact-form{
+    flex-grow: 2;
+    align-self: center;
+    width:50%;
+    padding: 0 20px;
+}
+
+#submit-button{
+    margin: 0 auto;
+    margin-top: 0.5rem;
+    height: 3rem;
+    width: 6rem; 
+}
 
 
 /* Format for devices with a width lower than 600px */
@@ -287,14 +324,15 @@ section{
     main, aside{
         width: 100%;
     }
+
     video, audio{
-        max-width: 200px ;
+        max-width: 100px ;
         margin: 0 auto;
     }
 
     pre{
         text-align: center;
-        font-size: 1rem;
+
         overflow: auto;
         white-space: normal;
     }
