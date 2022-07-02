@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="application-name" content="Personal homepage">
+    <meta name="author" content="Angel Cardenas Martinez">
+    <meta name="description" content="site that describes me">
+    <meta name="generator" content="Visual Studio Code">
+    <meta name="keywords" content="webprog,site">
     <title>Future</title>
+
+    <link href="Style.css" rel="stylesheet">
 </head>
+
 <body>
-    <header> 
-        <h1>This is my site </h1>
+    <header class="semantic-section content-section">
         <nav>
             <ul>
                 <li>
@@ -23,22 +30,54 @@
                 <li>
                     <a href="now.html">Now</a>
                 </li>
-                
+
             </ul>
         </nav>
     </header>
 
     <!-- Content has to be unique-->
-    <main>
-        <p>this is Home</p>
+    <main class="semantic-section">
+        <section>
+            <article>
+                <h2>To improve</h3>
+                <table>
+                    <caption>Subjects</caption>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+
+                            <th>Why?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Maya</td>
+                            <td rowspan="2">Produce better optimized 3d models</td>
+                        </tr>
+                        <tr>
+                            <td>Substance Painter</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">In list</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">2</td>
+                        </tr>
+
+                    </tfoot>
+                </table>
+            </article>
     </main>
-  
-   
-    <footer>
+
+
+    <footer class="semantic-section">
         <pre>
 <a href="mailto:tenshilupus@hotmail.com">Send an email</a>
 Copyright Angel Cardenas Martinez 2022
         </pre>
     </footer>
 </body>
+
 </html>

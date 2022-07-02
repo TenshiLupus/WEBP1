@@ -5,9 +5,10 @@
     --text-color: #fff;
     --background-color: #000;
     --h-orange: #ffb254;
-    --white-grey: #bcbcbc;
-    --h-grey: #d4cac8;
-    --greyish: #454545;
+    --text-color-light: #a1afc8;
+    --bg-color-dark: #18191c;
+    --text-color-dark: #5a6770;
+    --bg-color-light: #d9d8d6;
 } 
 
 *{ 
@@ -28,21 +29,20 @@ body{
     /* Positioning */
     display: flex;
     flex-wrap: wrap;
-    max-width: 1920px;
-    min-height: 2000px;
+    min-height: 100vh;
     /* font / styling */
     font-family: Helvetica, Arial, sans-serif;
     font-size: 1rem;
-    background-color: var(--h-grey);
-    color: var(--greyish);
-    margin: 0 100px;
+    color: var(--text-color-dark);
+    background: var(--bg-color-light);
+    margin: 0 auto;
+    gap: 20px 20px;
 }
 
 header{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex-grow: 1;
     width:100%;
     padding: 100px 0;
 }
@@ -58,6 +58,10 @@ ul {
     list-style-type: none;
 }
 
+ol{
+    list-style: none;
+}
+
 li{
     letter-spacing: 0.12em;
 
@@ -67,7 +71,7 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 70%;
+    max-width: 70%;
 }
 
 h2, h3{
@@ -86,6 +90,9 @@ h2{
 figcaption{
     font-style: italic;
     margin-top: 10px;
+    justify-content: center;    
+    align-self:flex-end;
+    width: 100%;
 }
 
 fieldset{
@@ -101,10 +108,17 @@ aside{
     flex:1;
 }
 
+aside section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
 footer{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: end;
     width: 100%;
     flex-grow: 1;
 }
@@ -122,7 +136,11 @@ footer > section{
 }
 
 video,audio{
-    max-width: 80%;
+    max-width: 100%;   
+}
+
+p{
+    margin: 5px 0;
 }
 
 a, a:link, a:hover a:active, a:visited, a:focus {
@@ -148,18 +166,23 @@ pre{
 }
 
 label {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
     margin-top: 1rem;
 }
 
 label[for="checkbox-input"]{
-    margin: 0 auto;
+    margin: 1rem auto 0.5rem auto;
+}
+
+select{
+    width: 50%;
 }
 
 input[id="checkbox-input"]{
     margin: 0 auto;
+    height: 1rem;
 }
 
 form>input:hover{
@@ -174,17 +197,30 @@ fieldset input{
     align-self: flex-start;
     text-decoration: none;
     width: 50%;
+    height: 2rem;
+    
 }
 
 fieldset input:focus{
     border-color: var(--h-orange);
 }
 
+blockquote{
+    margin: 50px auto;
+    font-weight: 700;
+    font-style: italic;
+}
+
 textarea{
     resize: none;
     height: 5rem;
     overflow: auto;
-    margin-bottom: 1rem;;
+}
+
+caption{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
 }
 
 table {
@@ -192,6 +228,7 @@ table {
     border: 2px solid rgb(200, 200, 200);
     letter-spacing: 1px;
     font-size: 0.8rem;
+    width: 100%;
 }
 
 td,th {
@@ -230,8 +267,8 @@ dd{
 }
 
 section{
-    max-width: 100%;
-    margin: 0 20px;
+    width: 100%;
+
 }
 
 /* Classes */
@@ -239,7 +276,8 @@ section{
 .semantic-section{
     display: flex;
     margin: 0 auto;
-    background: var(--white-grey);
+    gap: 20px 0;
+    padding: 20px;
 }
 
 .content-section{
@@ -264,10 +302,14 @@ section{
     position: relative;
     left: 50%;  
     transform: translateX(-50%);
+    height: 1rem;
 }
 
 .image-container{
-    object-fit: cover;
+    max-height: 80%;
+}
+
+.render-image{
     max-width: 100%;
 }
 
@@ -275,6 +317,9 @@ section{
 
 #logos{
     display: flex;
+    gap: 3rem 3rem;
+
+
 }
 
 #copyright-section{
@@ -288,9 +333,9 @@ section{
 
 #logos figure{
     display: flex;
-    flex-direction: column;
-    flex: 1;
-    padding: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
     text-align: center;
 }
 
@@ -308,25 +353,28 @@ section{
     width: 6rem; 
 }
 
+#file-input{
+    height: 2rem;
+}
+
 
 /* Format for devices with a width lower than 600px */
 /* Extra small devices (phones, 600px and down) */
 
 @media only screen and (max-width: 600px){
-    .semantic-section{
-        
-    }
 
     body{
         font-size: 2rem;
+        min-width: 300px;
     }
 
     main, aside{
-        width: 100%;
+        max-width: 100%;
     }
 
     video, audio{
-        max-width: 100px ;
+        max-width: 100%;
+        width: 100%;
         margin: 0 auto;
     }
 
@@ -336,27 +384,149 @@ section{
         overflow: auto;
         white-space: normal;
     }
+
+    #contact-form{
+        width:90%;
+    }
+
+    
+    #logos{
+        flex-direction: column;
+    }
+
+    ul{
+        flex-direction: column;
+    }
 }
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+    body{
+        min-width: 300px;
+    }
+
+    main{
+        max-width: 100%;
+    }
+
+    aside{
+        max-width: 100%;
+        justify-content: center;
+    }
+
+    fieldset input, textarea{
+        width: 100%;
+    }
+
+    select{
+        width: 100%;
+    }
+
+    nav{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    ul{
+        flex-direction: column;
+    }
+
+    aside section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 60%;
+    }
+
+    video, audio{
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    #logos{
+        flex-direction: column;
+    }
 
 } 
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+    body{
+        min-width: 700px;
+    }
 
+    fieldset input, textarea{
+        width: 100%;
+    }
+
+    select{
+        width: 50%;
+    }
+
+    video, audio{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    aside section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 60%;
+    }
 } 
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+    body{
+        max-width: 900px;
+    }
 
+    main, aside{
+        max-width: 100%;
+    }
+
+    main{
+        width: 70%;
+    }
+
+    aside{
+        width: 30%;
+    }
+
+    video, audio{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #logos{
+        flex-direction: row;
+    }
+
+    aside section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 100%;
+    }
+
+    ul {
+        flex-direction: row;
+    }
 } 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    
+
+    fieldset input, textarea{
+        width: 50%;
+    }
+
+    body{
+        max-width: 1400px;
+    }
 }
 
 /* This is the syntax to change the styling of classes: . followed by the name of the class.*/

@@ -9,7 +9,7 @@
     <meta name="description" content="site that describes me">
     <meta name="generator" content="Visual Studio Code">
     <meta name="keywords" content="webprog,site">
-    <title>Angel Portfolio</title>
+    <title>Angel Portfolio Home</title>
 
     <link href="Style.css" rel="stylesheet">
 </head>
@@ -52,7 +52,7 @@ Software development: Learning better software design practices.</pre>
             <article class="content-section">
                 <h3>DA 1</h3>
                 <figure>
-                    <img class="image-container" src="Media/Bilder/angel-cardenas-martinez-highresscreenshot00004.jpg">
+                    <img class="render-image image-container" src="Media/Bilder/angel-cardenas-martinez-highresscreenshot00004.jpg">
                     <figcaption>Mountains</figcaption>
                 </figure>
             </article>
@@ -115,11 +115,11 @@ Software development: Learning better software design practices.</pre>
 
                         <!-- Input tag gives the option for the user to write down data for usage, what the content is then used for is up to the user.-->
                         <label for="name-input">Name</label>
-                        <input id="name-input" type="text" placeholder="michael" autofocus>
+                        <input id="name-input" type="text" placeholder="Name" autofocus>
 
                         <!-- Since an email is necessary if the user wnat to be contanced. Then it is reasonable to deman an email to reply to-->
                         <label for="email-input">Email</label>
-                        <input id="email-input" name="Email" list="domains" type="email" placeholder="email"
+                        <input id="email-input" name="Email" list="domains" type="email" placeholder="Email"
                             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" required>
 
                         <datalist id="domains">
@@ -128,15 +128,13 @@ Software development: Learning better software design practices.</pre>
                             <option value="@hotmail.com">
                         </datalist>
                         <label for="URL-input">Homepage link</label>
-                        <input id="URL-input" name="URL" type="url" placeholder="webpage">
+                        <input id="URL-input" name="URL" type="url" placeholder="Webpage">
 
                         <label for="textarea-input">Message content</label>
-                        <textarea id="textarea-input" name="message"
-                            title="Used to write the main content of the message" required>
-                        </textarea>
+                        <textarea id="textarea-input" name="message" placeholder="Write your message here" title="Used to write the main content of the message" placeholder="Write your message here" required></textarea>
 
                         <!-- Response field goes here-->
-                        <label for="checkbox-input">Response?</label>
+                        <label for="checkbox-input">Get response?</label>
                         <input id="checkbox-input" title="checked if you want to hear a response back" type="checkbox">
 
                         <fieldset>
