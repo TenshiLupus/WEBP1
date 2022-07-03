@@ -37,6 +37,8 @@ body{
     background: var(--bg-color-light);
     margin: 0 auto;
     gap: 20px 20px;
+    letter-spacing: 0.05em;
+    line-height: 1.6;
 }
 
 header{
@@ -364,7 +366,7 @@ section{
 @media only screen and (max-width: 600px){
 
     body{
-        font-size: 2rem;
+        font-size: 3rem;
         min-width: 300px;
     }
 
@@ -396,6 +398,17 @@ section{
 
     ul{
         flex-direction: column;
+    }
+
+    a, a:link, a:hover a:active, a:visited, a:focus {
+        text-decoration: none !important;
+        color: var(--link-color);
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .semantic-section, label, input{
+        font-size: 1rem;
     }
 }
 
@@ -468,7 +481,7 @@ section{
     video, audio{
         width: 100%;
         margin: 0 auto;
-    }
+    } 
 
     aside section{
         display: flex;
