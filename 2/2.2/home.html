@@ -3,233 +3,191 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="application-name" content="Personal homepage">
+    <meta name="author" content="Angel Cardenas Martinez">
+    <meta name="description" content="site that describes me">
+    <meta name="generator" content="Visual Studio Code">
+    <meta name="keywords" content="webprog,site">
+    <title>Angel Portfolio Home</title>
+
+    <link href="Style.css" rel="stylesheet">
 </head>
 
+<!--
+2.1 Modern css will be used for layout position, flexbox is less prone to break layout responsiveness.
+Managed to implement the layout with float, but i feel flexbox is more effective for this task.
+-->
+
 <body>
-    <div class="home-page">
-        <header>
-            <h1><p></p>This is my site</h1>p> </h1>
-            <h2><p><mark>Projects</mark>, and <mark>Thoughts</mark> about them will be displayed in this site.<p></h2>
 
-            <div class="nav-section">
-                <nav>
-                    <ul>
+    <header class="semantic-section content-section">
+        
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="future.html">Future</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="now.html">Now</a></li>
+                </ul>
+            </nav>
 
-                        <li>
-                            <div>
-                                <a href="home.html">Home</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <a href="future.html">Future</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <a href="history.html">history</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <a href="now.html">now</a>
-                            </div>
-                        </li>
+                <details open="open">
 
-                    </ul>
-                </nav>
-            </div>
+                    <summary><mark>Status</mark></summary>
 
-            <div>
-                <details>
-                    <summary>items</summary>
-                    <p>
-                        this part is hidden under a details tag
-                    </p>
+                    <pre>Digital art: Improving PBR workdlow
+Software development: Learning better software design practices.</pre>
 
                 </details>
-
-                <div class="pre-align">
-                    <pre>*******</pre>
-                </div>
-            </div>
-        </header>
-
-        <div class="clear-header">
-        </div>
+    </header>
 
 
+    <!-- Main used for non repeated content-->
+    <main class="semantic-section">
 
-        <main>
-            <div class="project-section">
-
-                <div class="project-items">
-                    <section>
-                        <!-- Content has to be unique-->
-                        <!--This is where the main content is supposed to go apparently. Maybe read some old documentation -->
-                        <p>this is Home</p>
-
-
-                        <h2>Projects</h2>
-                        <section>
-                            <h2>Individual projects</h2>
-                            <article class="project-item">
-                                <h3>Project 1</h3>
-                            </article>
-                            <article class="project-item">
-                                <h3>Project 2</h3>
-                            </article>
-                        </section>
-
-
-                        <section>
-                            <h2>Group Projects</h2>
-                            <article class="project-item">
-                                <h3>Group Project 1</h3>
-                            </article>
-                            <article class="project-item">
-                                <h3>Group Project 2</h3>
-                            </article>
-                        </section>
-                    </section>
-                </div>
-
-
-                <!-- Content that will usually be at the side of the page-->
-                <aside class="aside-section">
-                    <h2>Software proficiency</h2>
-                </aside>
-            </div>
-
-
-            <div class="contact-form">
-                <section>
-                    <h2>Contact</h2>
-                    <form method="post" enctype="multipart/form-data"
-                        action="https://people.dsv.su.se/~pierre/i/05_ass/ip3/1/1.10/example.php">
-
-                        <!-- The fielset tag encapsulates related form elements in a group-->
-                        <fieldset>
-
-                            <!-- Legend tag gives a description of the content of the form-->
-                            <legend>Provide contact information</legend>
-                            <!-- As the name implies, gives a label to an input tag, attrbiutes can be manipulated to specify input tag. -->
-
-                            <div class="input-fields">
-                                <div class="form-item">
-                                    <!-- Input tag gives the option for the user to write down data for usage, what the content is then used for is up to the user.-->
-                                    <label for="fname">Name</label>
-                                    <input type="text" id="fname" placeholder="michael" autofocus>
-                                </div>
-
-
-                                <div class="form-item">
-                                    <!-- Since an email is necessary if the user wnat to be contanced. Then it is reasonable to deman an email to reply to-->
-                                    <label for="mail">Email</label>
-                                    <input name="Email" list="email-domains" type="email" id="mail" placeholder="email"
-                                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" required>
-
-                                    <datalist id="email-domains">
-                                        <option value="@gmail.com">
-                                        <option value="@yahoo.com">
-                                        <option value="@hotmail.com">
-                                    </datalist>
-                                </div>
-
-                                <div class="form-item">
-                                    <label>Homepage link</label>
-                                    <input name="URL" type="url" placeholder="webpage">
-                                </div>
-
-                            </div>
-
-
-                            <!-- Message section -->
-                            <div class="message">
-
-                                <!-- Break tags give space inbetween the rows in the document-->
-                                <div class="form-item">
-                                    <label for="message-content"> Message content</label>
-
-                                    <!-- Message field goes here-->
-                                    <textarea name="message" id="message-content" pattern="[A-z]{1}" title="Used to write the main content of the message" required>
-                                </textarea>
-                                </div>
-
-                                <div class="form-item">
-
-                                    <label for="feedback">subject of message</label>
-                                    <select id="feedback">
-                                        <optgroup label="Critique">
-                                            <option value="ugly">looks ugly</option>
-                                            <option value="weird">looks weird</option>
-                                        </optgroup>
-                                        <optgroup label="Suggestion">
-                                            <option value="add">add something</option>
-                                            <option value="remove">remove something</option>
-                                        </optgroup>
-                                    </select>
-
-                                </div>
-
-                            </div>
-
-                            <div class="separator"></div>
-
-                            <div class="boxes">
-
-                                <div class="form-item">
-                                    <!-- Response field goes here-->
-                                    <label for="re">Response?</label>
-                                    <input title="checked if you want to hear a response back" id="re" type="checkbox">
-                                </div>
-
-                                <div class="form-item" id="yes-no">
-                                    <fieldset>
-                                        <label>Recieve a copy of the message?</label>
-                                        <br>
-                                        <label>yes</label>
-                                        <!-- Title attribute is being used to explain differences between the 2 radio buttons-->
-                                        <input title="Press, when wanting a copy of the sent message" type="radio"
-                                            name="copys" value="yes">
-                                        <label>no</label>
-                                        <input title="Ignore, when not seeking a copy of the sent message" type="radio"
-                                            name="copys" value="no" checked>
-                                    </fieldset>
-                                </div>
-
-                                <div class="input-button">
-                                    <div class="form-item">
-                                        <!-- This section uploads a file, can be an txt file for example-->
-                                        <label for="up-file">Upload file</label>
-                                        <input type="file" id="up-file" name="file">
-                                    </div>
-                                </div>
-                                <div class="submit-button">
-                                    <div class="form-item" id="ok-button">
-                                        <input type="submit" value="ok" id="submitter">
-                                    </div>
-                                </div>
-                            </div>
-
-                        </fieldset>
-                    </form>
+        <section>
+            <h2>Digital Art projects</h2>
+            <!-- Image properties manipulated in photoshop-->
+            <article class="content-section">
+                <h3>DA 1</h3>
+                <figure>
+                    <img class="render-image image-container" src="Media/Bilder/angel-cardenas-martinez-highresscreenshot00004.jpg">
+                    <figcaption>Mountains</figcaption>
+                </figure>
+            </article>
+            <article class="content-section">
+                <h3>Logos</h3>
+                <section id="logos">
+                    <figure>
+                        <img class="image-container" src="Media/Bilder/Emblem.png">
+                        <figcaption>fictional emblem PNG</figcaption>
+                    </figure>
+                    <figure>
+                        <img class="image-container" src="Media/Bilder/Logo.jpg">
+                        <figcaption>Main logo JPG</figcaption>
+                    </figure>
                 </section>
-            </div>
-        </main>
+            </article>
 
-    </div>
+        </section>
 
-    <footer>
-        Copyright Angel Cardenas Martinez 2021
-        <a href="mailto:angelcardenasmartinez00@gmail.com">My email</a>
-        <blockquote cite="https://www.youtube.com/c/lexfridman"> In life you won't have time to do
-            everything you want.</blockquote>
+        <section class="content-section">
+            <h2>Definitions</h2>
+            <dl>
+                <dt>PBR</dt>
+                <dd>physically based rendering</dd>
+            </dl>
+        </section>
+
+    </main>
+    <!-- Content that will usually be at the side of the page may be repeated content-->
+    <aside class="semantic-section content-section">
+        <section>
+            <article>
+                <h3>Short audio track</h3>
+                <audio controls>
+                    <source src="Media/Ljud/synth.mp3">
+                </audio>
+            </article>
+
+            <article>
+                <h3>Rain video</h3>
+                <video controls>
+                    <source src="Media/video/Rain.mp4">
+                </video>
+            </article>
+        </section>
+
+    </aside>
+
+    <footer class="semantic-section">
+        <section class="content-section">
+            <article>
+                <h3>Contact form</h3>
+                
+                <form id="contact-form" method="post" enctype="multipart/form-data"
+                    action="https://people.dsv.su.se/~pierre/i/05_ass/ip3/1/1.10/example.php">
+                    <!-- The fielset tag encapsulates related form elements in a group-->
+                    <fieldset>
+                        <!-- Legend tag gives a description of the content of the form-->
+                        <legend>Provide contact information</legend>
+
+                        <!-- Input tag gives the option for the user to write down data for usage, what the content is then used for is up to the user.-->
+                        <label for="name-input">Name</label>
+                        <input id="name-input" type="text" placeholder="Name" autofocus>
+
+                        <!-- Since an email is necessary if the user wnat to be contanced. Then it is reasonable to deman an email to reply to-->
+                        <label for="email-input">Email</label>
+                        <input id="email-input" name="Email" list="domains" type="email" placeholder="Email"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" required>
+
+                        <datalist id="domains">
+                            <option value="@gmail.com">
+                            <option value="@yahoo.com">
+                            <option value="@hotmail.com">
+                        </datalist>
+                        <label for="URL-input">Homepage link</label>
+                        <input id="URL-input" name="URL" type="url" placeholder="Webpage">
+
+                        <label for="textarea-input">Message content</label>
+                        <textarea id="textarea-input" name="message" title="Used to write the main content of the message" placeholder="Write your message here" required></textarea>
+
+                        <!-- Response field goes here-->
+                        <label for="checkbox-input">Get response?</label>
+                        <input id="checkbox-input" title="checked if you want to hear a response back" type="checkbox">
+
+                        <fieldset>
+                            <legend>Receive a copy of the message?</legend>
+                            <section class="horizontal-radio-buttons">
+                                <!-- Title attribute is being used to explain differences between the 2 radio buttons-->
+                                <div>
+                                    <label for="yes">yes</label>
+                                    <input id="yes" title="Press when wanting a copy of the sent message" type="radio"
+                                        name="copy" value="yes">
+                                </div>
+                                <div>
+                                    <label for="no">no</label>
+                                    <input id="no" title="Ignore when not seeking a copy of the sent message"
+                                        type="radio" name="copy" value="no" checked>
+                                </div>
+                            </section>
+                        </fieldset>
+
+                        <!-- Message field goes here-->
+                        <label for="options">Subject of message</label>
+                        <select id="options">
+                            <optgroup label="Critique">
+                                <option value="ugly">looks ugly</option>
+                                <option value="weird">looks weird</option>
+                            </optgroup>
+                            <optgroup label="Suggestion">
+                                <option value="add">add something</option>
+                                <option value="remove">remove something</option>
+                            </optgroup>
+                        </select>
+
+                        <!-- This section uploads a file, can be an txt file for example-->
+                        <label for="file-input">Upload file</label>
+                        <input id="file-input" type="file" name="file">
+
+                        <!--Sends input to server-->
+                        <input id="submit-button" type="submit" value="Send">
+
+                    </fieldset>
+                </form>
+
+                
+            </article>
+            <section id="copyright-section">
+    <a href="mailto:tenshilupus@hotmail.com">Send an email</a>  
+    Copyright Angel Cardenas Martinez 2022
+            
+            </section>
+        </section>
+
     </footer>
+
 </body>
 
 </html>
