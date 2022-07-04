@@ -58,7 +58,7 @@ ul {
     display: flex;
     font-size: 1.5rem;
     gap: 20px;
-    list-style-type: none;
+    list-style: none;
 }
 
 ol{
@@ -151,6 +151,7 @@ a, a:link, a:hover a:active, a:visited, a:focus {
     color: var(--link-color);
     font-size: 1.5rem;
     font-weight: 700;
+    cursor: pointer;
 }
 
 legend{

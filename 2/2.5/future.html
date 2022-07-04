@@ -3,96 +3,81 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="application-name" content="Personal homepage">
+    <meta name="author" content="Angel Cardenas Martinez">
+    <meta name="description" content="site that describes me">
+    <meta name="generator" content="Visual Studio Code">
+    <meta name="keywords" content="webprog,site">
     <title>Future</title>
-    <link rel="stylesheet" href="Style.css">
+
+    <link href="Style.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="home-page">
-        <!-- Think of id's as elements that aren't going to be used anywhere else. -->
-        <!-- classes can be used to apply styling to similar components in the document, but id's are meant to be specifically unique.-->
-        <!-- Frameworks like bootstrap don't use id for anything. Its all classes -->
-        <header>
-            <h1>This is Future </h1>
+    <header class="semantic-section content-section">
+        <nav>
+            <ul>
+                <li>
+                    <a href="home.html">Home</a>
+                </li>
+                <li>
+                    <a href="future.html">Future</a>
+                </li>
+                <li>
+                    <a href="history.html">History</a>
+                </li>
+                <li>
+                    <a href="now.html">Now</a>
+                </li>
 
-            <nav>
-                <ul>
-                    <li>
-                        <a href="home.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="future.html">Future</a>
-                    </li>
-                    <li>
-                        <a href="history.html">history</a>
-                    </li>
-                    <li>
-                        <a href="now.html">now</a>
-                    </li>
+            </ul>
+        </nav>
+    </header>
 
-                </ul>
-            </nav>
-
-            <details>
-                <summary>items</summary>
-                <p>
-                    this part is hidden under a details tag
-                </p>
-
-            </details>
-        </header>
-
-        <div class="separator"></div>
+    <!-- Content has to be unique-->
+    <main class="semantic-section">
         <section>
             <article>
-                <!-- this article is meant to individually describe the status and additional information of the current projects that im working on-->
-                <h2>Plans/WIP</h2>
-                
-                <div class ="project-section">
-                    <table class="table-container">
-                        <caption>Ongoing working projects</caption>
-                            <thead>
-                                <tr>
-                                    <th>Project name</th>
-                                    <th>Learning outcome</th>
-                                </tr>
-                            </thead>    
-                            <tbody>
-                                <tr>
-                                    <td data-label="Project name" >Website development</td>
-                                    <td data-label="Learning Outcome">To learn to create modern websites, and workflow</td>
-                                </tr>
-                                <tr>
-                                    <td data-label="Project name">Hard surface Prop</td>
-                                    <td data-label="Learning-outcome">To improve current 3D asset creation workflow</td>
-                                </tr>
-                            </tbody>
-                            
-                            <tfoot>
-                                <tr>
-                                    <td>total time spent in projects</td>
-                                    <td>x hours</td>
-                                </tr>
-                            </tfoot>
-                    </table>
-                    <aside class="aside-section">The projects reflect the areas that i focus on</aside>
-                </div>
+                <h2>To improve</h3>
+                <table>
+                    <caption>Subjects</caption>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+
+                            <th>Why?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Maya</td>
+                            <td rowspan="2">Produce better optimized 3d models</td>
+                        </tr>
+                        <tr>
+                            <td>Substance Painter</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">In list</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">2</td>
+                        </tr>
+
+                    </tfoot>
+                </table>
             </article>
+    </main>
 
-            <article class="inspiration">
-                <h2>Inspirations and style</h2>
-            </article>
 
-            <!-- Content that will usually be at the side of the page-->
-        </section>
-
-        <footer id="footer_bottom">
-            <p>Copyright Angel Cardenas Martinez 2021</p>
-            <a href="mailto:angelcardenasmartinez00@gmail.com">My email</a>
-        </footer>
-    </div>
+    <footer id="copyright-section">
+        <pre>
+<a href="mailto:tenshilupus@hotmail.com">Send an email</a>
+Copyright Angel Cardenas Martinez 2022
+        </pre>
+    </footer>
 </body>
 
 </html>
