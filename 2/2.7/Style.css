@@ -1,551 +1,562 @@
-/*padding adds space away form the nested elements under the root tag. */
-:root{
-    --text-color: #a1afc8;
-    --bg-color: #18191c;
-    --text-color: #5a6770;
-    --bg-color: #d9d8d6;
-}   
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&display=swap');
 
-*{  
-    padding: 0px;
-    margin:0;
+/*padding adds space away form the nested elements under the root tag. */
+:root, *{
+
+    --text-color: #fff;
+    --background-color: #000;
+    --h-orange: #ffb254;
+    --text-color-light: #a1afc8;
+    --bg-color-dark: #18191c;
+    --text-color-dark: #5a6770;
+    --bg-color-light: #d9d8d6;
+} 
+
+*{ 
+    font-size: 14px;
+    outline: none !important;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
+/* Semantic tags */
 
-video{
-    width:100%;
-    height: auto;
+/* Primary tags using flexbox */
+body, header, main, aside, footer{
+    display: flex;
 }
 
-img{
-    clear: both;
-}
-
-h2{
-    text-align: left;
-    margin: 1em 1em;
-}
-
-div{
-    display: block;
-}
-
-body,html{
-    background-color: var(--bg-color);
-    font: 18px Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", sans-serif;
-    max-width: 1300px;
+body{
+    /* Positioning */
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    /* font / styling */
+    font-family: Helvetica, Arial, sans-serif;
+    font: 600 1rem 'Noto Sans';
+    color: var(--text-color-dark);
+    background: var(--bg-color-light);
     margin: 0 auto;
-    /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
-    letter-spacing: 0.1em;
-    background: url("Media/Bilder/tiling\ background.png") repeat;
+    gap: 20px 20px;
+    letter-spacing: 0.05em;
+    line-height: 1.6;
 }
 
-article{
-    margin: 6em;
-}
-
-details{
-    float:left;
-    clear:both;
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width:100%;
+    padding: 100px 0;
 }
 
 nav{
-    clear:both;
-    display: inline;
-    text-align: center;
-    text-transform: uppercase;
+   align-self: center;
 }
 
-nav li{
-    width: 25%;
-    float: left;
-    margin:0 auto;
-    padding: 2em;
-    line-height: 1.5em;
+ul {
+    display: flex;
+    font-size: 1.5rem;
+    gap: 20px;
+    list-style-type: none;
 }
 
-.nav-section{
-    float:left;  
-    margin: 0 auto;  
-    width:100%;
-}
-
-p{
-    margin: 1em;
-}
-
-nav a:link{
-    margin: 0 1em;  
-    cursor: pointer;
-    text-decoration: none;
-    background-color: #d9d8d6;
-    padding:1em;
-    color: #546570;
-    border-color:#18191c;
-    border: 0.2em solid #5a6770;
-}
-
-nav a:active{
-    cursor: pointer;
-    text-decoration: none;
-    background-color: #d9d8d6;
-    padding:1.4em;
-    color: #546570;
-    border-color:#18191c;
-    border: 0.3em solid #5a6770;
-}
-
-nav a:visited{
-    cursor: pointer;
-    text-decoration: none;
-    background-color: #d9d8d6;
-    padding:1em;
-    color: #546570;
-    border-color:#18191c;
-    border: 0.2em solid #5a6770;
-}
-
-nav a:hover{
-    cursor: pointer;
-    text-decoration: none;
-    background-color: #d9d8d6;
-    padding:1.4em;
-    color: #738896;
-    border-color:#32343a;
-    border: 0.3em solid #7c8e9b;
-
-}
-
-ul li{
+ol{
     list-style: none;
-    display: inline-block;
+}
+
+li{
+    letter-spacing: 0.12em;
+
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 70%;
+}
+
+h2, h3{
+    margin: 20px 0px 10px 0px;
+    width: 100%;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+figcaption{
+    font-style: italic;
+    margin-top: 10px;
+
+    width: 50%;
+    margin: 0 10%;
 }
 
 fieldset{
-
-    border-style:none;
-}
-
-caption{
-    font-size: 2em;
-    margin-bottom: 1em;
-}
-
-table{
-    padding: 0 0.5em;
-    margin: 1em auto 0;
-}
-
-.table-container{
-    float: left;
-    width:50%;
-    table-layout: fixed;
-}
-
-table thead{
-    text-transform: uppercase;
-}
-
-.table-heading{
-    font-size: 2em;
-    text-align: center;
-    margin-bottom: 2em;
-}
-
-table thead tr th{
-    padding: 0.8em;
-    vertical-align: top;
-    border: 0.05em solid black;
-}
-
-table tbody tr td{
-    font-size: 0.9em;
-    letter-spacing: 0.01em;
-    font-weight: normal;
-    padding: 0.5em;
-    text-align: center;
-    border: 1px solid black;
-}
-
-.home-page{
-    background-color: var(--bg-color);
-    z-index: 5;
-    color: var(--text-color);
-    padding: 1.5em;
-
-}
-
-.project-section{
-    display: block;
-    width: auto;
-    height: 20em;
-    margin-bottom: 3em;
-    width: 100%;
-    
-}
-
-.project-items{
-    width: 60%;
-    float: left;
-    text-align: center;
-    /* background-color: green; */
-}
-
-.aside-section{
-    float: right;
-    margin-bottom: 2em;
-    width: 40%;
-    text-align: center;
-    /* background-color: red; */
-}
-
-.project-item img{
-    clear: both;
-    width: 100%;
-    height:auto;
-}
-
-
-
-.contact-information{
-    position: relative;
-    transform:translateY(5em);
-    margin-top: 5em;
-    clear: both;
-    line-height: 1.2em;
-    /* background-color:azure; */
-    column-count: 1;
-}
-
-.contact-form{
-    clear: both;
-    margin-left: 1em;
-    width:100%;
-    line-height: 1.2em;
-    /* background-color: red; */
-}
-
-.contact-form label{
-    clear: both;
-    float: left;
-}
-
-.forms{
-    margin: 0.5em auto;
-}
-
-.form-item{
-    /* background-color:pink; */
-    text-align: left;
-    padding: 0.5em; 
-    clear: both;
-}
-
-label{
-    width: 100%;
-}
-
-
-.input-fields{
-    float: left;
-    width: 50%;
-    /* background-color: red; */
-}
-
-input[type="file"]{
-    display: none;
-}
-
-input[type="radio"]{
-    width: 100%;
-    float:left;
-}
-
-#yes-no-radio{
-}
-
-#ok-button{
-    width:5em;
-    margin:0 auto;
-}
-
-#submitter{
-    cursor: pointer;
-    margin: 0 auto;
-}
-
-#myVideo{
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-}
-
-#myBtn{
-    width: 200px;
-    font-size: 18px;
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
     border: none;
-    background: #000;
-    color: #fff;
-    cursor: pointer;
+  
 }
 
-#myBtn:hover{
-    background: #ddd;
-    color: black;
+aside{
+    width: 30%;
+    flex:1;
 }
 
-.content{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    background: rgba(0,0,0,0.5);
-    color: #f1f1f1;
+aside section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     width: 100%;
-    padding: 20px;
-}
-
-.radio-container{
-    float:left;
-    width: 50%;
-    padding-right: 1em;
-}
-
-.submit-button{
-    margin: 0 auto;
-    width: 50%;
-}
-
-.input-button{
-    margin: 0 auto;
-    width: 50%;
-}
-
-.input-button label{
-    /* background-color: white; */
-    border: 0.5em solid;
-    cursor: pointer;
-}
-
-.message input{
-    padding: 15px;
-    float: left;
-    width: 100%;
-}
-
-.separator{
-    height:10em;
-    clear:both;
-}
-
-.social-section{
-    width: 50%;
-    float: right;
-    /* background-color: red; */
-    margin-right: 2em;
 }
 
 footer{
-    background-color: inherit;
-    clear: both;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 100%;
+    flex-grow: 1;
+}
+
+footer article{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    width: 100%;
+}
+
+footer > section{
+    display: flex;
+    flex-direction: column;
+}
+
+video,audio{
+    max-width: 100%;   
+}
+
+p{
+    margin: 5px 0;
+}
+
+a, a:link, a:hover a:active, a:visited, a:focus {
+    text-decoration: none !important;
+    color: var(--link-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+legend{
+    font-size: 1.5rem;
+    font-weight: 600;
+    position: relative; 
+    top:1.5rem;
+    padding: 0;
+    width: 100%;
     text-align: center;
-    margin-top: 100vh;
-    margin-bottom: 2em;
 }
 
-.pre-align{
-    /* background-color: yellow; */
-    clear:both;
-    margin: 3em 0;
+pre{
+    text-align: center;
+    font-size: 1rem;
 }
 
-.message{
-    width: 100%;
-    /*  background-color: blue; */
+label {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
 }
 
-.message textarea{
-    width: 100%;
-    height: 6em;
+label[for="checkbox-input"]{
+    margin: 1rem auto 0.5rem auto;
 }
 
-.boxes{
-
-    /* background-color: yellow; */
-    display: block;
-    margin: 0 auto;
-
-}
-
-.boxes .form-item{
+select{
     width: 50%;
+}
+
+input[id="checkbox-input"]{
     margin: 0 auto;
-    text-align: center;
+    height: 1rem;
 }
 
-.boxes label{
-    margin: 0 auto;
+form>input:hover{
+    cursor: pointer;
 }
 
-
-
-
-/* @media screen and (max-width: 1080px){
-    body, html{
-        width: 100%;
-    }
-} */
-
-
-/* Format for devices lower than a 992px */
-@media screen and (max-width: 992px){
-    body,html{
-        width: 100%;
-    }
-
-    .aside-section{
-        float: right;
-        margin-top: 2em;
-        width: 100%;
-        right: 0;
-    }
-
-    .project-section{
-        width: 100%;
-        text-align: center;
-    }
-
-
-    .project-items{
-        width: 100%;
-        text-align: center;
-    }
-
-    nav li{
-    
-    }
-
-    .forms{
-        column-count: 1;
-        margin-bottom: 10em;
-    }
-
-    .table-container{
-        width:100%;
-        margin: 0 auto;
-        margin-left: 1em;
-    
-    }
-
-    table thead{
-        display: none;
-    }
-
-    caption{
-        display:none;
-    }
-
-    table, table tbody, table tr, table td{
-        display: block;
-        width: 100%;
-        font-size: 1.1em;
-    }
-
-    table tr{
-        margin-bottom: 1em;
-    }
-
-    table tbody tr td{
-        text-align: right;
-        padding-left: 50%;
-        position: relative;
-    }
-    
-    table td::before{
-        content: attr(data-label);
-        position: absolute;
-        left: 0;
-        width: 50%;
-        text-align: left;
-        padding-left: 1em;
-        font-weight: 600;
-        font-size: 1em;
-    }
+input:required {
+    border: 3px solid var(--greyish);
 }
 
-.inspiration{
-    text-align: center;
+fieldset input{
+    align-self: flex-start;
+    text-decoration: none;
+    width: 50%;
+    height: 2rem;
+    
+}
+
+fieldset input:focus{
+    border-color: var(--h-orange);
+}
+
+blockquote{
+    margin: 50px auto;
+    font-weight: 700;
+    font-style: italic;
+}
+
+textarea{
+    resize: none;
+    height: 5rem;
+    overflow: auto;
+}
+
+caption{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200, 200, 200);
+    letter-spacing: 1px;
+    font-size: 0.8rem;
     width: 100%;
-    margin: 0 auto;
+    table-layout: fixed;
 }
 
-.inspiration h2{
+td,th {
+    border: 1px solid rgb(190, 190, 190);
+    padding: 10px 20px;
+}
+
+th {
+    background-color: rgb(235, 235, 235);
+}
+
+td {
     text-align: center;
 }
+
+tr:nth-child(even) td {
+    background-color: rgb(250, 250, 250);
+}
+
+tr:nth-child(odd) td {
+    background-color: rgb(245, 245, 245);
+}
+
+dl{
+    margin: 20px 0;
+}
+
+dt{
+    margin: 20px 0;
+    font-weight: 600;
+}
+
+dd{
+    margin-left: 40px;
+    max-width: 20rem;
+}
+
+section{
+    width: 100%;
+
+}
+
+/* Classes */
+
+.semantic-section{
+    display: flex;
+    margin: 0 auto;
+    gap: 20px 0;
+    padding: 20px;
+}
+
+.content-section{
+    height: auto;
+}
+
+.horizontal-radio-buttons{
+    display: flex;
+    justify-content: center;
+    gap: 0 0.1rem;  
+    text-align: center;
+    margin: 0;
+}
+.horizontal-radio-buttons div{
+    width: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.horizontal-radio-buttons input{
+    position: relative;
+    left: 50%;  
+    transform: translateX(-50%);
+    height: 1rem;
+}
+
+.image-container{
+    width: 50%;
+    max-height: 100%;
+}
+
+.render-image{
+    max-width: 100%;
+}
+
+/* IDs */
+
+#logos{
+    display: flex;
+    gap: 3rem 3rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#copyright-section{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 50px;
+    padding-bottom: 10px;
+    gap: 20px 0;
+}
+
+#logos figure{
+    display: flex;
+    height: 80%;
+    align-items: center;
+    width: 20rem;
+}
+
+#contact-form{
+    flex-grow: 2;
+    align-self: center;
+    width:50%;
+    padding: 0 20px;
+}
+
+#submit-button{
+    margin: 0 auto;
+    margin-top: 0.5rem;
+    height: 3rem;
+    width: 6rem; 
+}
+
+#file-input{
+    height: 2rem;
+}
+
 
 /* Format for devices with a width lower than 600px */
-@media screen and (max-width: 600px){
-    body,html{
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 600px){
+
+    body{
+        font-size: 3rem;
+        min-width: 300px;
+    }
+
+    main, aside{
+        max-width: 100%;
+    }
+
+    video, audio{
+        max-width: 100%;
         width: 100%;
-        min-width: 500px;
+        margin: 0 auto;
+    }
+
+    pre{
+        text-align: center;
+
+        overflow: auto;
+        white-space: normal;
+    }
+
+    #contact-form{
+        width:90%;
+    }
+
+    
+    #logos{
+        flex-direction: column;
+    }
+
+    ul{
+        flex-direction: column;
+    }
+
+    a, a:link, a:hover a:active, a:visited, a:focus {
+        text-decoration: none !important;
+        color: var(--link-color);
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .semantic-section, label, input{
+        font-size: 1rem;
+    }
+
+    #logos figure{
+        display: flex;
+        flex-direction: column;
+        height: 80%;
+        align-items: center;
+        width: 20rem;
+    }
+
+    figcaption{
+        margin: 10% 0;
+    }
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    body{
+        min-width: 300px;
+    }
+
+    main{
+        max-width: 100%;
+    }
+
+    aside{
+        max-width: 100%;
+        justify-content: center;
+    }
+
+    fieldset input, textarea{
+        width: 100%;
+    }
+
+    select{
+        width: 100%;
     }
 
     nav{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    ul{
+        flex-direction: column;
+    }
+
+    aside section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 60%;
+    }
+
+    video, audio{
+        max-width: 100%;
         width: 100%;
-        column-count: 1;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    .project-section{
-        width: auto;
-        text-align: center;
-    }
-
-    .contact-information{
-        column-count: 1;
-        float: left;
-        height: auto;
-        vertical-align: top;
-    }
-
-    .message{
-        
-        width: 100%;
-    }
-
-    .input-fields{
-        width:100%;
-    }
-
-    .project-items{
-        width: 100%;
-    }
-
-    input{
-        width:100%;
-        float: left;
-    }
-
-    .boxes{
-        text-align: center;
-    }
-
-    .boxes label{
-        text-align: center;
         margin: 0 auto;
     }
-
-    .table-container{
-        text-align: center;
+    
+    #logos{
+        flex-direction: column;
     }
 
-    caption{
-        display: none;
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    body{
+        min-width: 700px;
+    }
+
+    fieldset input, textarea{
+        width: 100%;
+    }
+
+    select{
+        width: 50%;
+    }
+
+    video, audio{
+        width: 100%;
+        margin: 0 auto;
+    } 
+
+    aside section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 60%;
+    }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    body{
+        max-width: 900px;
+    }
+
+    main, aside{
+        max-width: 100%;
+    }
+
+    main{
+        width: 70%;
+    }
+
+    aside{
+        width: 30%;
+    }
+
+    video, audio{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #logos{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    aside section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 100%;
+    }
+
+    ul {
+        flex-direction: row;
+    }
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+    fieldset input, textarea{
+        width: 50%;
+    }
+
+    body{
+        max-width: 1400px;
     }
 }
+
 /* This is the syntax to change the styling of classes: . followed by the name of the class.*/
 /* Use % when dealing with something like containers or something like that*/
 /*
@@ -564,60 +575,3 @@ footer{
      position: relative;  
  }
  */
-
- /*
-.bottombar{
-     
-     background-color: #18191c;
-     text-align:center;
-     color:#a1afc8;
-     width: 80%;
-     border:none;
-     margin-top: 10px;
-     height:123px;
-     margin:0px auto;
-     padding-bottom: 5px;
-    
- }
- */
-
-/*
-.sites{
-    width: auto;
-    border:none;
-    margin-bottom: 20px;
-    height:123px;
-    padding-top:1px;
-    margin:0px;
-
-}
-*/
-
-/*
-.tablecenter{
-    margin-left: auto;
-    margin-right: auto;
-    padding: 5px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-*/
-
-/*
-table{
-    align-self: center;
-    text-align: center;
-    margin:20%;
-    padding: 20%;
-
-}
-*/
-/*
-.projects{
-    margin:0px auto;
-    background-color: #18191c;
-    padding: 10%;
-    line-height: 20px;
-    text-align:center;
-}
-*/
