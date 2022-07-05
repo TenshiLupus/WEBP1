@@ -147,10 +147,15 @@ p{
 }
 
 a, a:link, a:hover a:active, a:visited, a:focus {
+    display: block;
     text-decoration: none !important;
     color: var(--link-color);
     font-size: 1.5rem;
     font-weight: 700;
+    background-color: var(--text-color-light);
+    width: 10rem;
+    text-align: center;
+    padding: 0.5rem;
 }
 
 legend{
@@ -359,6 +364,12 @@ section{
 
 #file-input{
     height: 2rem;
+}
+
+#fullscreen-video{
+        
+    var(--background-color)
+   
 }
 
 
