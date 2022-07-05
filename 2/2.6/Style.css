@@ -93,9 +93,9 @@ h2{
 figcaption{
     font-style: italic;
     margin-top: 10px;
-    justify-content: center;    
-    align-self:flex-end;
-    width: 100%;
+
+    width: 50%;
+    margin: 0 10%;
 }
 
 fieldset{
@@ -285,7 +285,7 @@ section{
 }
 
 .content-section{
-    max-height: 100%; 
+    height: auto;
 }
 
 .horizontal-radio-buttons{
@@ -310,7 +310,8 @@ section{
 }
 
 .image-container{
-    max-height: 80%;
+    width: 50%;
+    max-height: 100%;
 }
 
 .render-image{
@@ -322,8 +323,8 @@ section{
 #logos{
     display: flex;
     gap: 3rem 3rem;
-
-
+    justify-content: space-around;
+    align-items: center;
 }
 
 #copyright-section{
@@ -337,10 +338,9 @@ section{
 
 #logos figure{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0 auto;
-    text-align: center;
+    height: 80%;
+    align-items: center;
+    width: 20rem;
 }
 
 #contact-form{
@@ -518,6 +518,7 @@ section{
 
     #logos{
         flex-direction: row;
+        justify-content: space-evenly;
     }
 
     aside section{

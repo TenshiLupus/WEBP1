@@ -22,24 +22,24 @@ Managed to implement the layout with float, but i feel flexbox is more effective
 <body>
 
     <header class="semantic-section content-section">
-        
-            <nav>
-                <ul>
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="future.html">Future</a></li>
-                    <li><a href="history.html">History</a></li>
-                    <li><a href="now.html">Now</a></li>
-                </ul>
-            </nav>
 
-                <details open="open">
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="future.html">Future</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="now.html">Now</a></li>
+            </ul>
+        </nav>
 
-                    <summary><mark>Status</mark></summary>
+        <details open="open">
 
-                    <pre>Digital art: Improving PBR workdlow
+            <summary><mark>Personal status</mark></summary>
+
+            <pre>Digital art: Improving PBR workdlow
 Software development: Learning better software design practices.</pre>
 
-                </details>
+        </details>
     </header>
 
 
@@ -52,7 +52,7 @@ Software development: Learning better software design practices.</pre>
             <article class="content-section">
                 <h3>DA 1</h3>
                 <figure>
-                    <img class="render-image image-container" src="Media/Bilder/angel-cardenas-martinez-highresscreenshot00004.jpg">
+                    <img class="render-image" src="Media/Bilder/angel-cardenas-martinez-highresscreenshot00004.jpg">
                     <figcaption>Mountains</figcaption>
                 </figure>
             </article>
@@ -105,7 +105,7 @@ Software development: Learning better software design practices.</pre>
         <section class="content-section">
             <article>
                 <h3>Contact form</h3>
-                
+
                 <form id="contact-form" method="post" enctype="multipart/form-data"
                     action="https://people.dsv.su.se/~pierre/i/05_ass/ip3/1/1.10/example.php">
                     <!-- The fielset tag encapsulates related form elements in a group-->
@@ -131,7 +131,9 @@ Software development: Learning better software design practices.</pre>
                         <input id="URL-input" name="URL" type="url" placeholder="Webpage">
 
                         <label for="textarea-input">Message content</label>
-                        <textarea id="textarea-input" name="message" title="Used to write the main content of the message" placeholder="Write your message here" required></textarea>
+                        <textarea id="textarea-input" name="message"
+                            title="Used to write the main content of the message" placeholder="Write your message here"
+                            required></textarea>
 
                         <!-- Response field goes here-->
                         <label for="checkbox-input">Get response?</label>
@@ -177,12 +179,12 @@ Software development: Learning better software design practices.</pre>
                     </fieldset>
                 </form>
 
-                
+
             </article>
             <section id="copyright-section">
-    <a href="mailto:tenshilupus@hotmail.com">Send an email</a>  
-    Copyright Angel Cardenas Martinez 2022
-            
+                <a href="mailto:tenshilupus@hotmail.com">Send an email</a>
+                Copyright Angel Cardenas Martinez 2022
+
             </section>
         </section>
 
