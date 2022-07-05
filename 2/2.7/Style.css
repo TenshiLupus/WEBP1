@@ -368,7 +368,10 @@ section{
 
 #fullscreen-video{
         
-    var(--background-color)
+    background: var(--text-color-light);
+    align-self: center;
+    width: 100%;
+    font-size: 0.8rem;
    
 }
 
