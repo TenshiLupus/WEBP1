@@ -10,6 +10,10 @@
     --bg-color-dark: #18191c;
     --text-color-dark: #5a6770;
     --bg-color-light: #d9d8d6;
+    --text-color: #a1afc8;
+    --bg-color: #18191c;
+    --text-color: #5a6770;
+    --bg-color: #d9d8d6;
 } 
 
 *{ 
@@ -34,8 +38,8 @@ body{
     /* font / styling */
     font-family: Helvetica, Arial, sans-serif;
     font: 600 1rem 'Noto Sans';
-    color: var(--text-color-dark);
-    background: var(--bg-color-light);
+    color: var(--text-color-light);
+    background: var(--bg-color-dark);
     margin: 0 auto;
     gap: 20px 20px;
     letter-spacing: 0.05em;
@@ -146,16 +150,20 @@ p{
     margin: 5px 0;
 }
 
-a, a:link, a:hover a:active, a:visited, a:focus {
+a, a:link, a:hover a:active, a:visited, a:focus,a:hover {
     display: inline-block;
     text-decoration: none !important;
-    color: var(--link-color);
+    background-color: var(--text-color-dark);
+    color: var(--bg-color-light);
     font-size: 1rem;
     font-weight: 700;
-    background-color: var(--text-color-light);
     width: 10rem;
     text-align: center;
     padding: 0.5rem;
+    height: 3rem;
+    text-align: center;
+    line-height: normal;
+    border-radius: 5px;
 }
 
 legend{
@@ -244,20 +252,21 @@ caption{
 
 table {
     border-collapse: collapse;
-    border: 2px solid rgb(200, 200, 200);
+    border: 2px solid var(--text-color-dark);
     letter-spacing: 1px;
     font-size: 0.8rem;
     width: 100%;
     table-layout: fixed;
+    color: var(--text-color-light-)
 }
 
 td,th {
-    border: 1px solid rgb(190, 190, 190);
+    border: 1px solid var(--text-color-dark);
     padding: 10px 20px;
 }
 
 th {
-    background-color: rgb(235, 235, 235);
+    background-color: var(--bg-color-dark);
 }
 
 td {
@@ -265,11 +274,11 @@ td {
 }
 
 tr:nth-child(even) td {
-    background-color: rgb(250, 250, 250);
+    background-color:  var(--bg-color-dark);
 }
 
 tr:nth-child(odd) td {
-    background-color: rgb(245, 245, 245);
+    background-color:  var(--bg-color-dark);
 }
 
 dl{
@@ -377,12 +386,17 @@ section{
 }
 
 #fullscreen-video{
-
-    background: var(--text-color-light);
+    background-color: var(--text-color-dark);
+    color: var(--bg-color-light);
     align-self: center;
     width: 100%;
     font-size: 0.8rem;
-   
+    transition: background-color 0.2s;
+}
+
+#fullscreen-video:hover{
+    background: var(--bg-color-dark);
+    color: var(--h-orange);
 }
 
 
@@ -464,11 +478,13 @@ section{
     }
 
     a, a:link, a:hover a:active, a:visited, a:focus {
-        display: inline-block;
-        text-decoration: none !important;
-        color: var(--link-color);
+        
+        background-color: var(--text-color-dark);
+        color: var(--bg-color-light);
         font-size: 2rem;
         font-weight: 700;
+        width: 20rem;
+        height: 4rem;
     }
 
     .semantic-section, label, input{
@@ -506,6 +522,15 @@ section{
 
     fieldset input, textarea{
         width: 100%;
+    }
+
+    a, a:link, a:hover a:active, a:visited, a:focus {   
+        background-color: var(--text-color-dark);
+        color: var(--bg-color-light);
+        font-size: 1.5rem;
+        font-weight: 700;
+        width: 15rem;
+        height: 4rem;
     }
 
     select{
@@ -564,6 +589,19 @@ section{
         flex-direction: column;
         justify-content: center;
         max-width: 60%;
+    }
+
+    a{
+        font-size: 2rem;
+    }
+
+    a, a:link, a:hover a:active, a:visited, a:focus {   
+        background-color: var(--text-color-dark);
+        color: var(--bg-color-light);
+        font-size: 1rem;
+        font-weight: 700;
+        width: 10rem;
+        height: 3rem;
     }
 } 
 

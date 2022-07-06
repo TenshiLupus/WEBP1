@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="application-name" content="Personal homepage">
+    <meta name="author" content="Angel Cardenas Martinez">
+    <meta name="description" content="site that describes me">
+    <meta name="generator" content="Visual Studio Code">
+    <meta name="keywords" content="webprog,site">
+    <title>Angel Portfolio Home</title>
+
+    <link href="Style.css" rel="stylesheet">
+</head>
+
+<!--
+2.1 Modern css will be used for layout position, flexbox is less prone to break layout responsiveness.
+Managed to implement the layout with float, but i feel flexbox is more effective for this task.
+-->
+
+<body>
+
+    <header class="semantic-section content-section">
+
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="future.html">Future</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="now.html">Now</a></li>
+            </ul>
+        </nav>
+
+        <details open="open">
+
+            <summary><mark>Personal status</mark></summary>
+
+            <pre>Digital art: Improving PBR workdlow
+Software development: Learning better software design practices.</pre>
+
+        </details>
+    </header>
+
+
+    <!-- Main used for non repeated content-->
+    <main class="semantic-section">
+
+        <section>
+            <h2>Digital Art projects</h2>
+            <!-- Image properties manipulated in photoshop-->
+            <article class="content-section">
+                <h3>DA 1</h3>
+                <figure>
+                    <img class="render-image" src="Media/Bilder/angel-cardenas-martinez-highresscreenshot00004.jpg">
+                    <figcaption>Mountains</figcaption>
+                </figure>
+            </article>
+            <article class="content-section">
+                <h3>Logos</h3>
+                <section id="logos">
+                    <figure>
+                        <img class="image-container" src="Media/Bilder/Emblem.png">
+                        <figcaption>fictional emblem PNG</figcaption>
+                    </figure>
+                    <figure>
+                        <img class="image-container" src="Media/Bilder/Logo.jpg">
+                        <figcaption>Main logo JPG</figcaption>
+                    </figure>
+                </section>
+            </article>
+
+        </section>
+
+        <section class="content-section">
+            <h2>Definitions</h2>
+            <dl>
+                <dt>PBR</dt>
+                <dd>physically based rendering</dd>
+            </dl>
+        </section>
+
+    </main>
+    <!-- Content that will usually be at the side of the page may be repeated content-->
+    <aside class="semantic-section content-section">
+        <section>
+            <article>
+                <h3>Short audio track</h3>
+                <audio controls>
+                    <source src="Media/Ljud/synth.mp3">
+                </audio>
+            </article>
+
+            <article>
+                <h3>Rain video</h3>
+                <video controls>
+                    <source src="Media/video/Rain.mp4">
+                </video>
+
+            </article>
+            <article>
+                <a href="fullscreen-video.html" id="fullscreen-video">View fullscreen in another page</a>
+            </article>
+        </section>
+
+    </aside>
+
+    <footer class="semantic-section">
+        <section class="content-section">
+            <article>
+                <h3>Contact form</h3>
+
+                <form id="contact-form" method="post" enctype="multipart/form-data"
+                    action="https://people.dsv.su.se/~pierre/i/05_ass/ip3/1/1.10/example.php">
+                    <!-- The fielset tag encapsulates related form elements in a group-->
+                    <fieldset>
+                        <!-- Legend tag gives a description of the content of the form-->
+                        <legend>Provide contact information</legend>
+
+                        <!-- Input tag gives the option for the user to write down data for usage, what the content is then used for is up to the user.-->
+                        <label for="name-input">Name</label>
+                        <input id="name-input" type="text" placeholder="Name" autofocus>
+
+                        <!-- Since an email is necessary if the user wnat to be contanced. Then it is reasonable to deman an email to reply to-->
+                        <label for="email-input">Email</label>
+                        <input id="email-input" name="Email" list="domains" type="email" placeholder="Email"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" required>
+
+                        <datalist id="domains">
+                            <option value="@gmail.com">
+                            <option value="@yahoo.com">
+                            <option value="@hotmail.com">
+                        </datalist>
+                        <label for="URL-input">Homepage link</label>
+                        <input id="URL-input" name="URL" type="url" placeholder="Webpage">
+
+                        <label for="textarea-input">Message content</label>
+                        <textarea id="textarea-input" name="message"
+                            title="Used to write the main content of the message" placeholder="Write your message here"
+                            required></textarea>
+
+                        <!-- Response field goes here-->
+                        <label for="checkbox-input">Get response?</label>
+                        <input id="checkbox-input" title="checked if you want to hear a response back" type="checkbox">
+
+                        <fieldset>
+                            <legend>Receive a copy of the message?</legend>
+                            <section class="horizontal-radio-buttons">
+                                <!-- Title attribute is being used to explain differences between the 2 radio buttons-->
+                                <div>
+                                    <label for="yes">yes</label>
+                                    <input id="yes" title="Press when wanting a copy of the sent message" type="radio"
+                                        name="copy" value="yes">
+                                </div>
+                                <div>
+                                    <label for="no">no</label>
+                                    <input id="no" title="Ignore when not seeking a copy of the sent message"
+                                        type="radio" name="copy" value="no" checked>
+                                </div>
+                            </section>
+                        </fieldset>
+
+                        <!-- Message field goes here-->
+                        <label for="options">Subject of message</label>
+                        <select id="options">
+                            <optgroup label="Critique">
+                                <option value="ugly">looks ugly</option>
+                                <option value="weird">looks weird</option>
+                            </optgroup>
+                            <optgroup label="Suggestion">
+                                <option value="add">add something</option>
+                                <option value="remove">remove something</option>
+                            </optgroup>
+                        </select>
+
+                        <!-- This section uploads a file, can be an txt file for example-->
+                        <label for="file-input">Upload file</label>
+                        <input id="file-input" type="file" name="file">
+
+                        <!--Sends input to server-->
+                        <input id="submit-button" type="submit" value="Send">
+
+                    </fieldset>
+                </form>
+
+
+            </article>
+            <section id="copyright-section">
+                <p><a href="mailto:tenshilupus@hotmail.com">Send an email</a></p>
+                <p>&copy; Copyright Angel Cardenas Martinez 2022</p>
+
+            </section>
+        </section>
+
+    </footer>
+
+</body>
+
+</html>

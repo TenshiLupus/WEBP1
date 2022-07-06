@@ -1,0 +1,694 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&display=swap');
+
+/*padding adds space away form the nested elements under the root tag. */
+:root, *{
+
+    --text-color: #fff;
+    --background-color: #000;
+    --h-orange: #ffb254;
+    --text-color-light: #a1afc8;
+    --bg-color-dark: #18191c;
+    --text-color-dark: #5a6770;
+    --bg-color-light: #d9d8d6;
+    --text-color: #a1afc8;
+    --bg-color: #18191c;
+    --text-color: #5a6770;
+    --bg-color: #d9d8d6;
+} 
+
+*{ 
+    font-size: 14px;
+    outline: none !important;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* Semantic tags */
+
+/* Primary tags using flexbox */
+body, header, main, aside, footer{
+    display: flex;
+}
+
+body{
+    /* Positioning */
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    /* font / styling */
+    font-family: Helvetica, Arial, sans-serif;
+    font: 600 1rem 'Noto Sans';
+    color: var(--text-color-light);
+    background: var(--bg-color-dark);
+    margin: 0 auto;
+    gap: 20px 20px;
+    letter-spacing: 0.05em;
+    line-height: 1.6;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width:100%;
+    padding: 100px 0;
+}
+
+nav{
+   align-self: center;
+}
+
+ul {
+    display: flex;
+    font-size: 1.5rem;
+    gap: 20px;
+    list-style-type: none;
+}
+
+ol{
+    list-style: none;
+}
+
+li{
+    letter-spacing: 0.12em;
+
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 70%;
+}
+
+h2, h3{
+    margin: 20px 0px 10px 0px;
+    width: 100%;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+figcaption{
+    font-style: italic;
+    margin-top: 10px;
+
+    width: 50%;
+    margin: 0 10%;
+}
+
+fieldset{
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    border: none;
+  
+}
+
+aside{
+    width: 30%;
+    flex:1;
+}
+
+aside section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 100%;
+    flex-grow: 1;
+}
+
+footer article{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    width: 100%;
+}
+
+footer > section{
+    display: flex;
+    flex-direction: column;
+}
+
+video,audio{
+    max-width: 100%;   
+}
+
+p{
+    margin: 5px 0;
+}
+
+a, a:link, a:active, a:visited, a:focus {
+    display: inline-block;
+    text-decoration: none !important;
+    color: var(--bg-color-light);
+    font-size: 1rem;
+    font-weight: 700;
+    width: 10rem;
+    text-align: center;
+    padding: 0.5rem;
+    transition: background-color 0.2s;
+    height: 3rem;
+    text-align: center;
+    line-height: normal;
+    border-radius: 5px;
+}
+
+a:hover{
+    background-color: var(--bg-color-dark);
+    color: var(--h-orange);
+    border-bottom: 5px solid var(--h-orange);
+}
+
+legend{
+    font-size: 1.5rem;
+    font-weight: 600;
+    position: relative; 
+    top:1.5rem;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+pre{
+    text-align: center;
+    font-size: 1rem;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+}
+
+label[for="checkbox-input"]{
+    margin: 1rem auto 0.5rem auto;
+}
+
+select{
+    width: 50%;
+}
+
+input[id="checkbox-input"]{
+    margin: 0 auto;
+    height: 1rem;
+}
+
+form>input:hover{
+    cursor: pointer;
+}
+
+input:required {
+    border: 6px solid var(--greyish);
+}
+
+fieldset input{
+    align-self: flex-start;
+    text-decoration: none;
+    width: 50%;
+    height: 2.5rem;
+}
+
+fieldset input[type="text"], input[type="url"], input[type="email"]{
+    background-image: url(Media/Bilder/Input-icon.jpg);
+    background-position: 0 ;
+    background-repeat: no-repeat;
+    padding-left: 3rem;
+    border: 2.5px solid var(--text-color-light);
+}
+
+fieldset input:focus{   
+    border-color: var(--text-color-dark);
+    background-color: var(--h-orange);
+
+}
+
+
+blockquote{
+    margin: 50px auto;
+    font-weight: 700;
+    font-style: italic;
+}
+
+textarea{
+    resize: none;
+    height: 5rem;
+    overflow: auto;
+    padding: 0.5rem;
+}
+
+caption{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid var(--text-color-dark);
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    width: 100%;
+    table-layout: fixed;
+    color: var(--text-color-light-)
+}
+
+td,th {
+    border: 1px solid var(--text-color-dark);
+    padding: 10px 20px;
+}
+
+th {
+    background-color: var(--bg-color-dark);
+}
+
+td {
+    text-align: center;
+}
+
+tr:nth-child(even) td {
+    background-color:  var(--bg-color-dark);
+}
+
+tr:nth-child(odd) td {
+    background-color:  var(--bg-color-dark);
+}
+
+dl{
+    margin: 20px 0;
+}
+
+dt{
+    margin: 20px 0;
+    font-weight: 600;
+}
+
+dd{
+    margin-left: 40px;
+    max-width: 20rem;
+}
+
+section{
+    width: 100%;
+
+}
+
+/* Classes */
+
+.semantic-section{
+    display: flex;
+    margin: 0 auto;
+    gap: 20px 0;
+    padding: 20px;
+}
+
+.content-section{
+    height: auto;
+}
+
+.horizontal-radio-buttons{
+    display: flex;
+    justify-content: center;
+    gap: 0 0.1rem;  
+    text-align: center;
+    margin: 0;
+}
+.horizontal-radio-buttons div{
+    width: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.horizontal-radio-buttons input{
+    position: relative;
+    left: 50%;  
+    transform: translateX(-50%);
+    height: 1rem;
+}
+
+.image-container{
+    width: 50%;
+    max-height: 100%;
+}
+
+.render-image{
+    max-width: 100%;
+}
+
+/* IDs */
+
+#logos{
+    display: flex;
+    gap: 3rem 3rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#logos img:hover{
+    transform: rotatez(45deg);
+}
+#logos img{
+    transition: transform 0.5s;
+}
+
+#copyright-section{
+    text-align: center;
+    margin-top: 50px;
+    padding-bottom: 10px;
+    gap: 20px 0;
+    font-size: 1rem;
+}
+
+#logos figure{
+    display: flex;
+    height: 80%;
+    align-items: center;
+    width: 20rem;
+}
+
+#contact-form{
+    flex-grow: 2;
+    align-self: center;
+    width:50%;
+    padding: 0 20px;
+}
+
+#submit-button{
+    margin: 0 auto;
+    margin-top: 0.5rem;
+    height: 3rem;
+    width: 6rem; 
+}
+
+#file-input{
+    height: 2rem;
+}
+
+#fullscreen-video{
+    background-color: var(--text-color-dark);
+    color: var(--bg-color-light);
+    align-self: center;
+    width: 100%;
+    font-size: 0.8rem;
+    transition: background-color 0.2s;
+}
+
+#fullscreen-video:hover{
+    background: var(--bg-color-dark);
+    color: var(--h-orange);
+}
+
+
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-height: 100%;
+    min-width: 100%;
+  }
+  
+  /* Add some content at the bottom of the video/page */
+  .content {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100vw;
+    padding: 20px;
+  }
+  
+  /* Styling for fullscreen video in other page  */
+  #myBtn {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  #myBtn:hover {
+    background: #ddd;
+    color: black;
+  }
+
+
+/* Format for devices with a width lower than 600px */
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 600px){
+
+    body{
+        font-size: 3rem;
+        min-width: 300px;
+    }
+
+    main, aside{
+        max-width: 100%;
+    }
+
+    video, audio{
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    pre{
+        text-align: center;
+
+        overflow: auto;
+        white-space: normal;
+    }
+
+    #contact-form{
+        width:90%;
+    }
+
+    
+    #logos{
+        flex-direction: column;
+    }
+
+    ul{
+        flex-direction: column;
+    }
+
+    a, a:link, a:hover a:active, a:visited, a:focus {
+        
+        background-color: var(--text-color-dark);
+        color: var(--bg-color-light);
+        font-size: 2rem;
+        font-weight: 700;
+        width: 20rem;
+        height: 4rem;
+    }
+
+    .semantic-section, label, input{
+        font-size: 1rem;
+    }
+
+    #logos figure{
+        display: flex;
+        flex-direction: column;
+        height: 80%;
+        align-items: center;
+        width: 20rem;
+    }
+
+    figcaption{
+        margin: 10% 0;
+    }
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    body{
+        min-width: 300px;
+    }
+
+    main{
+        max-width: 100%;
+    }
+
+    aside{
+        max-width: 100%;
+        justify-content: center;
+    }
+
+    fieldset input, textarea{
+        width: 100%;
+    }
+
+    a, a:link, a:hover a:active, a:visited, a:focus {   
+        background-color: var(--text-color-dark);
+        color: var(--bg-color-light);
+        font-size: 1.5rem;
+        font-weight: 700;
+        width: 15rem;
+        height: 4rem;
+    }
+
+    select{
+        width: 100%;
+    }
+
+    nav{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    ul{
+        flex-direction: column;
+    }
+
+    aside section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 60%;
+    }
+
+    video, audio{
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    #logos{
+        flex-direction: column;
+    }
+
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    body{
+        min-width: 700px;
+    }
+
+    fieldset input, textarea{
+        width: 100%;
+    }
+
+    select{
+        width: 50%;
+    }
+
+    video, audio{
+        width: 100%;
+        margin: 0 auto;
+    } 
+
+    aside section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 60%;
+    }
+
+    a{
+        font-size: 2rem;
+    }
+
+    a, a:link, a:hover a:active, a:visited, a:focus {   
+        color: var(--bg-color-light);
+        font-size: 1rem;
+        font-weight: 700;
+        width: 10rem;
+        height: 3rem;
+    }
+
+    a:hover, input[type="submit"]{
+        background-color: var(--bg-color-dark-);
+    }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    body{
+        max-width: 900px;
+    }
+
+    main, aside{
+        max-width: 100%;
+    }
+
+    main{
+        width: 70%;
+    }
+
+    aside{
+        width: 30%;
+    }
+
+    video, audio{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #logos{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    aside section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 100%;
+    }
+
+    ul {
+        flex-direction: row;
+    }
+    
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+    fieldset input, textarea{
+        width: 50%;
+    }
+
+    body{
+        max-width: 1400px;
+    }
+}
+
+/* This is the syntax to change the styling of classes: . followed by the name of the class.*/
+/* Use % when dealing with something like containers or something like that*/
+/*
+.topbar ul{
+     
+     background-color: #18191c;
+     text-align:center;
+     color:#a1afc8;
+     width: 80%;
+     border:none;
+     margin-bottom: 10px;
+     height:123px;
+     margin:0px auto;
+     padding-top: 5px;
+     list-style: none;
+     position: relative;  
+ }
+ */
