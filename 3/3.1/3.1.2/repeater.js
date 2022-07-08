@@ -78,19 +78,19 @@ document.querySelector("#timer").addEventListener('click', e => {
 
     let number = 0;
     //set interval at which numbers will appear 
-    interval = setInterval(function () {
+    let interval = setInterval(function () {
         alert(number = number + 1);
 
     }, 1500);
 
     // Initialize steps to stop timer
-    stopInterval = setInterval(function () {
+    let stopInterval = setInterval(function () {
         if (confirm("stop timer?")) {
             clearInterval(interval);
             clearInterval(stopInterval);
 
             // setup log item to log
-            logItem = document.createElement('li');
+            const logItem = document.createElement('li');
             logItem.textContent = 'timer stopped';
             document.querySelector('#log').appendChild(logItem);
         }
