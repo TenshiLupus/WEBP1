@@ -10,7 +10,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <script defer src="page.js"></script>
+    <script src="page.js" defer></script>
   </head>
 
   <body>
@@ -19,7 +19,7 @@
       <h2 class="task-list-title">My lists</h2>
       <ul class="task-list" data-lists></ul>
 
-      <form action="" data-new-list-form>
+      <form data-new-list-form>
         <input 
           type="text"
           class="new list"
@@ -42,7 +42,7 @@
         <div class="tasks" data-tasks></div>
 
         <div class="new-task-creator">
-            <form action="" data-new-task-form>
+            <form data-new-task-form>
                 <input 
                   type="text"
                   data-new-task-input
@@ -61,8 +61,6 @@
       </div>
     </div>
 
-   
-    </div>
     <template id="task-template">
       <div class="task">
         <input type="checkbox" />
