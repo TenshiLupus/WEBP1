@@ -1,0 +1,25 @@
+#photos {
+    display: grid;
+    gap: 1rem;
+    background-color:beige;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-auto-rows: 50vh;
+}
+
+/*Medium screens*/
+@media screen and (min-width: 600px) {
+
+    .card-tall {
+        grid-row: span 2 / auto;
+    }
+
+    .card-wide {
+        grid-column: span 2 / auto;
+    }
+}
+
+section div{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
