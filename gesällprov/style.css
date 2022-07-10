@@ -1,0 +1,233 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+.section {
+    min-height: 100vh;
+    display: flex;
+}
+
+/*Helper class too add padding to each section*/
+.section-padding {
+    padding: 0 5vw;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 810px;
+    margin: 5rem auto 0 auto;
+}
+
+.intro {
+    background-image: url(/Images/Kraken-24.jpg);
+    color: #fff;
+}
+
+.intro p {
+    font-size: 36px;
+    line-height: 1.2;
+}
+
+.logo {
+    display: block;
+    text-align: center;
+    margin-bottom: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 112px;
+
+}
+
+.logo img {
+    width: 100%;
+}
+
+.bg-cover {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* support class to make a section fade in slowly*/
+.appear {
+
+    /* Here we set the opacity as a stating point*/
+    opacity: 0;
+    animation-name: fadeIn;
+    animation-duration: 3s;
+    animation-delay: 2s;
+
+    /*Retains the property values at the end of the animation */
+    animation-fill-mode: forwards;
+}
+
+.marquee {
+    position: absolute;
+    top: 3vh;
+    left: 0;
+    width: 100%;
+    font-size: 5vw;
+    line-height: 1;
+    overflow: hidden;
+}
+
+
+@keyframes moveLeft {
+    0% {
+        transform: translateX(0vw);
+    }
+
+    100% {
+        transform: translateX(-2000vw);
+    }
+}
+
+.marquee span {
+    white-space: nowrap;
+    /*Span is in-line by default, so here tell it to be block */
+    display: block;
+    position: relative;
+    animation: moveLeft 250s infinite;
+}
+
+.service-1 {
+    background-image: url(/Images/portfolio+2019-10.jpg);
+}
+
+.service-2 {
+    background-image: url(/Images/Andres+&+Lesbia-176.jpg);
+}
+
+.service-3 {
+    background-image: url(/Images/Kraken-13.jpg);
+}
+
+.service {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.service .container{
+    position: relative;
+    z-index: 2;
+}
+
+.date{
+    font-size: 5rem;
+    position: absolute;
+    color: white;
+    
+    top: 3vh;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 48px;
+    line-height: 1;
+}
+
+.lineup h2 {
+    font-size: 56px;
+    line-height: 1;
+    margin-bottom: 6px;
+}
+
+.lineup p {
+    font-size: 21px;
+}
+
+.lineup li {
+    margin-bottom: 24px;
+    list-style: none;
+}
+
+.page-links{
+    margin-top: 5rem;
+    min-width: 100vh;
+    display: flex;
+    justify-content: space-between;
+ 
+}
+
+.page-links a{
+    font-size: 3rem;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+a,a:visited, a:focus{
+    text-align: center;
+    min-width: 3rem;
+}
+
+.container a {
+    min-width: 15rem;
+    text-align: center;
+}
+
+.section-scroll {
+    position: absolute;
+    left: 50%;
+    bottom: 3vh;
+
+    width: 64px;
+    height: 32px;
+
+    background-image: url(/Images/arrow.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    transform: translateX(-50%);  
+}
+
+@media (max-width: 640px){
+    .marquee{
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 90vw;
+        margin-bottom: 24px; 
+    }
+
+   
+    .logo{
+        max-width: 64px; 
+        margin-bottom: 24px;
+    }
+
+    .intro p{
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .scroll-to{
+        display: none;
+    }
+    
+    .lineup h2{
+        font-size: 30px;  
+    }
+}
