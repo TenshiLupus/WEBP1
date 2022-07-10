@@ -1,29 +1,24 @@
-document.addEventListener('DOMContentLoaded', function(){
+// Execute script once the document has been loaded and parsed.
+document.addEventListener('DOMContentLoaded', function () {
 
+    // Obatain references to elements that will be used
     const toggleButton = document.getElementById("visibility");
     const animationButton = document.getElementById("animation");
-    const moverButton = document.getElementById("object-mover");
-
     const visibilityDiv = document.getElementById("visibility-block");
     const animationDiv = document.getElementById("animation-block");
-    
 
+    // toggle classes of elements
     toggleButton.addEventListener("click", changeVisibility);
     animationButton.addEventListener("click", fadeItem);
-    moverButton.addEventListener("click", animateObject);
-    
-    function changeVisibility(){
-        $(visibilityDiv).toggle();
-    } 
 
-    function fadeItem(){
-        $(animationDiv).fadeToggle();
+    // Change the visibility property of the element, still remaining inline
+    function changeVisibility() {
+        visibilityDiv.classList.toggle('hidden');
     }
 
-    function animateObject(){
-        visibilityDiv.animate({left: "400px"}, 1000, "linear", fadeItem());
-        animationDiv.animate({left: "400px"}, 300, "linear", fadeItem());
+    // fade the opacity of the object while still remaining inline.
+    function fadeItem() {
+        animationDiv.classList.toggle('fade-block');
     }
-
 
 });

@@ -1,13 +1,13 @@
 
-var i = 0;
-var catImages = [];
+let i = 0;
+const catImages = [];
 
 catImages[0] = 'media/images/cat.jpg';
 catImages[1] = 'media/images/cat2.jpg';
 
 function changeImgAuto(){
-    $("#catAuto").attr("src", catImages[i]);
-
+    document.querySelector('#catAuto').setAttribute("src", catImages[i]);
+    
     if (i < catImages.length - 1) {
         i++;
     } else {
@@ -18,7 +18,7 @@ function changeImgAuto(){
 }
 
 function changeImgEnter(){
-    $("#catEnter").attr("src", catImages[i]);
+    document.querySelector('#catEnter').setAttribute("src", catImages[i]);
 
     if(i < catImages.length - 1){
         i++;
@@ -28,6 +28,6 @@ function changeImgEnter(){
 
 }
 
-$('#catEnter').click(changeImgEnter)
+document.querySelector('#catEnter').addEventListener('click',changeImgEnter);
 
-$(document).ready(changeImgAuto());
+document.addEventListener('DOMContentLoaded',changeImgAuto);

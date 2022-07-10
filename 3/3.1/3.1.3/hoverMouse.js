@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', event => {
     // Allow button to break color change of the cube
     breakButton.addEventListener('click', () => {
         cube.removeEventListener('mouseover', changeToYellow);
-        alert("Lights has been turned off")
+        alert("Lights has been turned off");
     });
  
 });
