@@ -18,6 +18,12 @@
     height: 100vh;
     position: fixed;
     background-color: #ffeed1;
+    transition: width 1s ease;
+}
+
+.content-bar:hover{
+    width: 16rem;
+    background-color: #ffeed1;
 }
 
 .content-bar-list{
@@ -27,15 +33,14 @@
     margin: 0;
     display: flex;   
     flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
     height: 100%;
     color: #111118;
 }
 
 .content-bar-item{
-    display: flex;
-    justify-content: center;
-    width: 100%;
+    width: 100vh;
 }
 
 .content-bar-link{
@@ -50,14 +55,13 @@
     margin-left: 1rem;
 }
 .content-bar-link svg{
-    min-width: 2rem;
+    max-width: 2rem;
     margin: 0 1.5rem;
 }
 
-.content-bar:hover{
+.content-bar:hover .content-bar-link-text{
     width: 16rem;
 }
-
 
 .semantic-section {
     min-height: 100vh;
