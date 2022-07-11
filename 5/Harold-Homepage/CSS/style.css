@@ -4,10 +4,65 @@
     border: none;
     box-sizing: border-box;
 }
+.header-dimensions{
+    position:relative;
+}
 
-.section {
+.content-bar-margin{
+    margin-left: 5rem;
+    padding: 0 1rem;
+}
+
+.content-bar{
+    width: 5rem;
+    height: 100vh;
+    position: fixed;
+    background-color: #ffeed1;
+}
+
+.content-bar-list{
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;   
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    color: #111118;
+}
+
+.content-bar-item{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.content-bar-link{
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    text-decoration: none;
+}
+
+.content-bar-link-text{
+    display: none;
+    margin-left: 1rem;
+}
+.content-bar-link svg{
+    min-width: 2rem;
+    margin: 0 1.5rem;
+}
+
+.content-bar:hover{
+    width: 16rem;
+}
+
+
+.semantic-section {
     min-height: 100vh;
     display: flex;
+
 }
 
 /*Helper class too add padding to each section*/
@@ -18,7 +73,7 @@
 .container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
     max-width: 810px;
     margin: 5rem auto 0 auto;
 }
@@ -128,27 +183,23 @@
     overflow: hidden;
 }
 
-.service .container{
-    position: relative;
-    z-index: 2;
-}
 
-.date{
+.title{
     font-size: 5rem;
     position: absolute;
-    color: white;
-    
     top: 3vh;
     left: 50%;
     transform: translateX(-50%);
     margin-bottom: 48px;
     line-height: 1;
+    
 }
 
-.lineup h2 {
+.container center{
     font-size: 56px;
     line-height: 1;
     margin-bottom: 6px;
+    align-self: center;
 }
 
 .lineup p {

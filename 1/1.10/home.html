@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="application-name" content="Personal homepage"   >
+    <meta name="application-name" content="Personal homepage">
     <meta name="author" content="Angel Cardenas Martinez">
     <meta name="description" content="site that describes me">
     <meta name="generator" content="Visual Studio Code">
     <meta name="keywords" content="webprog,site">
-    
+
     <title>Angel Portfolio</title>
 </head>
+
 <body>
-    <header> 
+    <header>
         <nav>
-            <ul>        
+            <ul>
                 <li>
                     <a href="home.html">Home</a>
                 </li>
@@ -27,7 +29,7 @@
                 <li>
                     <a href="now.html">Now</a>
                 </li>
-                
+
             </ul>
         </nav>
     </header>
@@ -35,124 +37,129 @@
 
     <!-- Main used for non repeated content-->
     <main>
+        
+        <details open="open">
 
-    <details open="open">
-        
-        <summary><mark>Status</mark></summary>
-        
-        <pre>
+            <summary><mark>Status</mark></summary>
+
+            <pre>
             Digital art: Improving PBR workdlow
 
             Software development: Learning better software design practices.
         </pre>
 
-       
 
-    </details>
-    
-    <section>
-        <h2>Software Development projects</h2>
 
-        <dl>
-            <dt>Vanilla javascript</dt>
-            <dd>Library</dd>
+        </details>
 
-            <dt>Java</dt>
-            <dd>transportation map marker</dd>
-        </dl>
-     
-    </section>
-    
-    <section>
+        <section>
+            <h2>Software Development projects</h2>
 
-        <h2>Digital Art projects</h2>
-        <!-- Image properties manipulated in photoshop-->
-        <article> 
-            <h3>DA 1</h3> 
-        </article>
-        <article>
-            <h3>Logos</h3>  
-            <figure>
-                <img src="Bilder/Emblem.png"> 
-                <figcaption>fictional emblem PNG</figcaption>
-            </figure>
-            <figure>
-                <img src="Bilder/Logo.jpg"> 
-                <figcaption>Main logo JPG</figcaption>
-            </figure>
-        </article>
-    
-    </section>
+            <dl>
+                <dt>Vanilla javascript</dt>
+                <dd>Library</dd>
 
-    <section>
-        <article>
-            <h3>Contact form</h3>
-            <form method="post" enctype="multipart/form-data" action="https://people.dsv.su.se/~pierre/i/05_ass/ip3/1/1.10/example.php">
-                <!-- The fielset tag encapsulates related form elements in a group-->
-                <fieldset>
-                    <!-- Legend tag gives a description of the content of the form-->
-                    <legend>Provide contact information</legend>
-                    
-                    <!-- Input tag gives the option for the user to write down data for usage, what the content is then used for is up to the user.-->
-                    <label for="name-input" >Name</label>
-                    <input id="name-input" type="text" placeholder="michael" autofocus>
+                <dt>Java</dt>
+                <dd>transportation map marker</dd>
+            </dl>
 
-                    <!-- Since an email is necessary if the user wnat to be contanced. Then it is reasonable to deman an email to reply to-->
-                    <label for="email-input">Email</label>
-                    <input id="email-input" name="Email" list="domains" type="email" placeholder="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" required>
-            
-                    <datalist id="domains">
-                        <option value="@gmail.com">
-                        <option value="@yahoo.com">
-                        <option value="@hotmail.com">
-                    </datalist>
-                    <label for="URL-input">Homepage link</label>
-                    <input id="URL-input" name="URL" type="url" placeholder="webpage">
-                    
-                    <label for="textarea-input">Message content</label>
-                    <textarea id="textarea-input" name="message" title="Used to write the main content of the message" required>
+        </section>
+
+        <section>
+
+            <h2>Digital Art projects</h2>
+            <!-- Image properties manipulated in photoshop-->
+            <article>
+                <h3>DA 1</h3>
+            </article>
+            <article>
+                <h3>Logos</h3>
+                <figure>
+                    <img src="Bilder/Emblem.png">
+                    <figcaption>fictional emblem PNG</figcaption>
+                </figure>
+                <figure>
+                    <img src="Bilder/Logo.jpg">
+                    <figcaption>Main logo JPG</figcaption>
+                </figure>
+            </article>
+
+        </section>
+
+        <section>
+            <article>
+                <h3>Contact form</h3>
+                <form method="post" enctype="multipart/form-data"
+                    action="https://people.dsv.su.se/~pierre/i/05_ass/ip3/1/1.10/example.php">
+                    <!-- The fielset tag encapsulates related form elements in a group-->
+                    <fieldset>
+                        <!-- Legend tag gives a description of the content of the form-->
+                        <legend>Provide contact information</legend>
+
+                        <!-- Input tag gives the option for the user to write down data for usage, what the content is then used for is up to the user.-->
+                        <label for="name-input">Name</label>
+                        <input id="name-input" type="text" placeholder="michael" autofocus>
+
+                        <!-- Since an email is necessary if the user wnat to be contanced. Then it is reasonable to deman an email to reply to-->
+                        <label for="email-input">Email</label>
+                        <input id="email-input" name="Email" list="domains" type="email" placeholder="email"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" required>
+
+                        <datalist id="domains">
+                            <option value="@gmail.com">
+                            <option value="@yahoo.com">
+                            <option value="@hotmail.com">
+                        </datalist>
+                        <label for="URL-input">Homepage link</label>
+                        <input id="URL-input" name="URL" type="url" placeholder="webpage">
+
+                        <label for="textarea-input">Message content</label>
+                        <textarea id="textarea-input" name="message"
+                            title="Used to write the main content of the message" required>
                     </textarea>
 
-                    <!-- Response field goes here-->
-                    <label for="checkbox-input">Response?</label>
-                    <input id="checkbox-input" title="checked if you want to hear a response back" type="checkbox">
-            
-                    <fieldset>
+                        <!-- Response field goes here-->
+                        <label for="checkbox-input">Response?</label>
+                        <input id="checkbox-input" title="checked if you want to hear a response back" type="checkbox">
 
-                        <legend>Receive a copy of the message</legend>
-                        <!-- Title attribute is being used to explain differences between the 2 radio buttons-->
-                        
-                        <label for="yes">yes</label>
-                        <input id="yes" title="Press when wanting a copy of the sent message" type="radio" name="copy" value="yes">
-                        <label>no</label>
-                        <input id="no" title="Ignore when not seeking a copy of the sent message" type="radio" name="copy" value="no" checked>
-                        
+                        <fieldset>
+
+                            <legend>Receive a copy of the message</legend>
+                            <!-- Title attribute is being used to explain differences between the 2 radio buttons-->
+
+                            <label for="yes">yes</label>
+                            <input id="yes" title="Press when wanting a copy of the sent message" type="radio"
+                                name="copy" value="yes">
+                            <label>no</label>
+                            <input id="no" title="Ignore when not seeking a copy of the sent message" type="radio"
+                                name="copy" value="no" checked>
+
+                        </fieldset>
+
+                        <!-- Message field goes here-->
+                        <label for="options">Subject of message</label>
+                        <select id="options">
+                            <optgroup label="Critique">
+                                <option value="ugly">looks ugly</option>
+                                <option value="weird">looks weird</option>
+                            </optgroup>
+                            <optgroup label="Suggestion">
+                                <option value="add">add something</option>
+                                <option value="remove">remove something</option>
+                            </optgroup>
+                        </select>
+
+                        <!-- This section uploads a file, can be an txt file for example-->
+                        <label for="file-input">Upload file</label>
+                        <input id="file-input" type="file" name="file">
+
+                        <!--Sends input to server-->
+                        <input type="submit" value="ok">
+
                     </fieldset>
-
-                    <!-- Message field goes here-->
-                    <label for="options">Subject of message</label>
-                    <select id="options">
-                        <optgroup label="Critique">
-                            <option value="ugly">looks ugly</option>
-                            <option value="weird">looks weird</option>
-                        </optgroup>
-                        <optgroup label="Suggestion">
-                            <option value="add">add something</option>
-                            <option value="remove">remove something</option>
-                        </optgroup>
-                    </select>
-
-                    <!-- This section uploads a file, can be an txt file for example-->
-                    <label for="file-input">Upload file</label>
-                    <input id="file-input" type="file" name="file">
-
-                    <!--Sends input to server-->
-                    <input type="submit" value="ok">
-
-                </fieldset>
-            </form>
-        </article>
-    </section>
+                </form>
+            </article>
+        </section>
 
     </main>
     <!-- Content that will usually be at the side of the page may be repeated content-->
@@ -180,5 +187,6 @@
 Copyright Angel Cardenas Martinez 2022
         </pre>
     </footer>
-</body> 
+</body>
+
 </html>

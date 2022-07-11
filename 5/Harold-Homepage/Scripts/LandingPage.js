@@ -1,19 +1,19 @@
 
 
 // creates a continous string that is repeatedly scrolled accros the screen
-const elongateMarquee = () => {
+// const elongateMarquee = () => {
 
-    const services = 'Portrait - Weddings - Events';
+//     const services = 'Portrait - Weddings - Events';
 
-    const marqueeText = new Array(50).fill(services).join(' — ');
-    console.log
+//     const marqueeText = new Array(50).fill(services).join(' — ');
+//     console.log
 
-    const marquee = document.querySelector('.marquee span');
-    console.log(marquee);
-    marquee.textContent = marqueeText;
-    console.log("all working");
+//     const marquee = document.querySelector('.marquee span');
+//     console.log(marquee);
+//     marquee.textContent = marqueeText;
+//     console.log("all working");
 
-}
+// }
 
 // Create a pulsating animation for each circle
 const animateCircles = () => {
@@ -53,8 +53,8 @@ const animateSquiggles = () => {
 }
 
 const popupElement = () => {
-    /*NPM Github library */
-    inView('.section')
+    /*NPM library */
+    inView('.semantic-section')
         .on('enter', viewportSection => {
             viewportSection.classList.add('in-viewport');
         })
@@ -113,6 +113,6 @@ animateSquiggles();
 popupElement();
 popupContent();
 smoothScroll();
-elongateMarquee();
+// elongateMarquee();
 
 
