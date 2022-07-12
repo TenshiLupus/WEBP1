@@ -216,7 +216,7 @@
 
 .page-links{
     margin-top: 5rem;
-    min-width: 100vh;
+    min-width: 100%;
     display: flex;
     justify-content: space-between;
  
@@ -259,6 +259,17 @@ a,a:visited, a:focus{
 
 @media (max-width: 600px){
 
+    .page-links{
+        margin-top: 5rem;
+        min-width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        height: 20rem;
+    }
+
     .content-bar{
         bottom: 0;
         width: 100vw;
@@ -285,6 +296,14 @@ a,a:visited, a:focus{
         margin-bottom: 24px; 
     }
 
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 600px;
+        margin: 5rem auto 0 auto;
+    }
+    
    
     .logo{
         max-width: 64px; 
