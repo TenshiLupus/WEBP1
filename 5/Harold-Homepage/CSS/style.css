@@ -9,21 +9,17 @@
 }
 
 .content-bar-margin{
-    margin-left: 5rem;
-    padding: 0 1rem;
+    margin-left: 6rem;
 }
 
 .content-bar{
-    width: 5rem;
-    height: 100vh;
     position: fixed;
-    background-color: #ffeed1;
-    transition: width 1s ease;
+    background: #ffeed1;
+    transition: width 0.5s ease;
 }
 
 .content-bar:hover{
-    width: 16rem;
-    background-color: #ffeed1;
+    z-index: 1;
 }
 
 .content-bar-list{
@@ -40,7 +36,7 @@
 }
 
 .content-bar-item{
-    width: 100vh;
+    width: 100%;
 }
 
 .content-bar-link{
@@ -53,20 +49,23 @@
 .content-bar-link-text{
     display: none;
     margin-left: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 .content-bar-link svg{
-    max-width: 2rem;
+    min-width: 3rem;
     margin: 0 1.5rem;
 }
 
 .content-bar:hover .content-bar-link-text{
-    width: 16rem;
+    display: inline; 
+    transition: 0.2s;
 }
 
 .semantic-section {
     min-height: 100vh;
     display: flex;
-
+    z-index: -1;
 }
 
 /*Helper class too add padding to each section*/
@@ -258,7 +257,26 @@ a,a:visited, a:focus{
     transform: translateX(-50%);  
 }
 
-@media (max-width: 640px){
+@media (max-width: 600px){
+
+    .content-bar{
+        bottom: 0;
+        width: 100vw;
+        height: 5rem;
+    }
+
+    .content-bar-list{
+        flex-direction: row;
+    }
+
+    .content-bar-link{
+        justify-content: center;
+    }
+
+    .content-bar-margin{
+        margin: 0;
+    }
+
     .marquee{
         position: relative;
         top: auto;
@@ -285,4 +303,18 @@ a,a:visited, a:focus{
     .lineup h2{
         font-size: 30px;  
     }
+}
+
+@media only screen and (min-width: 600px){
+    .content-bar{
+        top: 0;
+        width: 6rem;
+        height: 100vh;
+    }
+
+    .content-bar:hover{
+        width: 16rem;
+
+    }
+
 }
