@@ -21,7 +21,7 @@
 .content-bar{
     position: fixed;
     background: #ffeed1;
-    transition: width 0.7s ease ;
+    transition: width 0.2s ease ;
     z-index: 1;
 }
 
