@@ -3,13 +3,13 @@
 }
 
 .register{
-    min-height: 65vh;
+    height: calc(65vh - 3rem);
     display: flex;
     background-color:beige;
 }
 
 .footer {
-    min-height: 35vh;
+    height: calc(35vh - 3rem);
     display: flex;
     background-color: #111118;
     text-align: center;
@@ -65,13 +65,14 @@ input:focus{
 .email-input{
     /*This will tell our input to stretch and fill our available space*/
     flex: 1;
+    
 }
 
 .form{
     margin: 48px 24px;
 }
 
-@media (max-width: 780px){
+@media (max-width: 768px){
     .register .container{
         flex-direction: column;
     }
@@ -81,7 +82,23 @@ input:focus{
     }
 
     .form{
+        position: relative;
         margin: 24px 0;
+    }
+
+    .submit{
+        position: absolute;
+        transform: translateX(-50%);
+        left: 50%;
+        top: 150%;
+        border: 2px solid #00b290;
+        padding: 5px 10px;
+        font-weight: 550;
+        font-size: 1.5rem;
+    }
+
+    .footer{
+        margin-bottom: 6rem;
     }
 }
 
