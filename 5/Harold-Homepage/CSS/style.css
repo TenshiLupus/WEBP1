@@ -12,6 +12,8 @@
 }
 .header-dimensions{
     position:relative;
+    background: #111118;
+    height: 6rem;
 }
 
 .content-bar-margin{
@@ -25,29 +27,21 @@
     z-index: 1;
 }
 
-.content-bar:hover{
-    width: 16rem;
-}
-
 .content-bar-list{
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;   
     flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
     height: 100%;
     color: #111118;
 
 }
 
-.content-bar-item:last-child{
-    margin-top:auto;
-}
-
 .content-bar-item{
     width: 100%;
-    margin: 3rem 0;
 }
 
 
@@ -76,10 +70,6 @@ ul,ol{
     margin: 0 1.5rem;
 }
 
-.content-bar:hover .content-bar-link-text{
-    display: inline; 
-}
-
 .semantic-section {
     height: 100vh;
     display: flex;
@@ -100,6 +90,7 @@ ul,ol{
 }
 
 .intro {
+    height: calc(100vh - 6rem);
     background-image: url(/Images/Kraken-24.jpg);
     color: #fff;
 }
@@ -113,7 +104,7 @@ ul,ol{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    max-width: 50%;
+    max-width: 20rem;
 }
 
 .logo img {
@@ -279,10 +270,10 @@ a,a:visited, a:focus{
 }
 
 .more-button{
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 0.7rem;
-    border:3px solid #ffeed1;
-    background-color:#00b290;
+    border:3px solid #00b290;
+    color:#00b290;
     border-radius: 1px;
 }
 
@@ -360,4 +351,16 @@ a,a:visited, a:focus{
         height: 100vh;
     }
 
+    .content-bar:hover{
+        width: 16rem;
+    }
+
+    .content-bar:hover .content-bar-link-text{
+        display: inline; 
+    }
+
+    .content-bar-item{
+        margin: 0;
+    }
+    
 }
