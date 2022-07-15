@@ -1,6 +1,7 @@
 #photos {
     display: grid;
     margin-top: 1rem;
+    width: 100%;
     gap: 1rem;
     background-color:beige;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
