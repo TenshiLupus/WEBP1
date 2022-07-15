@@ -9,12 +9,12 @@
 }
 
 /*Medium screens*/
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 768px) {
 
     .card-tall {
         grid-row: span 2 / auto;
     }
-
+    
     .card-wide {
         grid-column: span 2 / auto;
     }
@@ -23,5 +23,5 @@
 section figure{
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 0% 20%;
 }

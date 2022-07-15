@@ -14,7 +14,6 @@
 
   <title>Harold Cardenas Photography</title>
 
-
   <!--CSS files -->
   <link rel="stylesheet" href="/CSS/fonts.css">
   <link rel="stylesheet" href="/CSS/style.css">
@@ -33,25 +32,13 @@
     <nav>
       <ul class="header-links">
 
-        <li>
-          <a href="about.html">About</a>
-        </li>
-
-        <li>
-          <a href="portraits.html">Portraits</a>
-        </li>
-
-        <li>
-          <a href="weddings.html">Weddings</a>
-        </li>
-
-        <li>
-          <a href="events.html">Events</a>
-        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="pricing.html">Pricings</a></li>
 
       </ul>
     </nav>
   </header>
+
 
   <aside class="content-bar">
 
@@ -106,36 +93,61 @@
           <span class="content-bar-link-text">Home</span>
         </a>
       </li>
-
+      
     </ul>
   </aside>
 
   <main class="content-bar-margin">
 
-    <section class="semantic-section section-padding service bg-cover" id="intro">
+    
+    <section class="semantic-section section-padding" id="about">
+      
+      <figure>
+        <img src="Images/Harold.jpg" alt="Picture of Harold" id="harold-picture">
+        <figcaption>Harold</figcaption>
+      </figure>
 
-        <dl>
+      <section>
+        <article>
+          <dl>
             <dt>Hobbies</dt>
             <dd>Reading books</dd>
             <dd>Listening to music</dd>
-        </dl>
+          </dl>
+        </article>
+
+        <article>
+          <h2>Aspirations</h2>
+          <ol>
+            <li>
+              <p>Living life to the best of my capacity</p>
+            </li>
+            <li>
+              <p>Becoming a better CNC operator</p>
+            </li>
+            <li>
+              <p>Mastering a craft</p>
+            </li>
+          </ol>
+        </article>
+
+      </section>
 
 
+      <a href="#register" class="js-scroll section-scroll"></a>
     </section>
 
     <section class="register section-padding flex-column" id="register">
       <section class="container">
 
-        <h2 class="medium-font">
-          Get in contact
-        </h2>
+        <h2 class="medium-font">Get in contact</h2>
 
         <form action="" method="post" class="sign-up form">
           <input placeholder="Enter your email" id="fieldEmail" name="email-i" type="email" required
             class="email-input">
           <input type="submit" value="Submit" class="submit">
         </form>
-        
+
       </section>
 
     </section>

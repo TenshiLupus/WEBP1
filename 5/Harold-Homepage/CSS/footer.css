@@ -20,6 +20,11 @@
     max-width: 87px;
     margin-bottom: 1rem;
 }
+.footer p{
+    font-size: 0.7rem;
+    max-width: 250px;
+    margin-top: 0.2rem;
+}
 
 .button {
     border: solid 2px #ffeed1;
@@ -106,6 +111,10 @@ input:focus{
         margin-bottom: 6rem;
     }
     
+    .footer img{
+        max-width: 87px;
+        margin-bottom: 0;
+    }
 }
 
 @media (min-width: 768px){
