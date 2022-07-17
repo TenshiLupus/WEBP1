@@ -9,7 +9,7 @@
 * {
     padding: 0;
     margin: 0;
-    border: none;
+    border: none;   
     box-sizing: border-box;
 }
 
@@ -128,7 +128,6 @@ ol {
     display: flex;
 }
 
-/*Helper class too add padding to each section*/
 .section-padding {
     padding: 0 5vw;
 }
@@ -185,7 +184,6 @@ ol {
     }
 }
 
-/* support class to make a section fade in slowly*/
 .appear {
     opacity: 0;
     animation-name: fadeIn;
@@ -320,8 +318,7 @@ dt,
     letter-spacing: 0.2rem;
 }
 
-#about,
-#pricing {
+#about, #pricing {
     height: calc(100vh - 6rem);
     background-color: #111118;
     padding: 0 5rem;
@@ -335,7 +332,7 @@ dt,
 }
 
 .submit {
-    margin-top: 2rem;
+    margin-top: 1rem;
     border: none;
 }
 
@@ -604,9 +601,7 @@ input:focus{
 }
 
 .email-input{
-    /*This will tell our input to stretch and fill our available space*/
     flex: 1;
-    
 }
 
 .submit{
@@ -820,5 +815,23 @@ label{
 
     .register .container{
         min-width: 550px;
+        gap:2rem;
+    }
+
+    .register .container form, .sign-up{
+        flex: 1;
+    }
+
+    .submit{
+        margin-top: 5rem;
+    }
+
+    h3, .container .more-button{
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+
+    .in-viewport h3, .in-viewport .container .more-button{
+        opacity: 1;
     }
 }

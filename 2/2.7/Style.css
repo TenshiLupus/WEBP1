@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&display=swap');
 
-/*padding adds space away form the nested elements under the root tag. */
 :root, *{
 
     --text-color: #fff;
@@ -19,19 +18,17 @@
     margin: 0;
     box-sizing: border-box;
 }
-/* Semantic tags */
 
-/* Primary tags using flexbox */
 body, header, main, aside, footer{
     display: flex;
 }
 
 body{
-    /* Positioning */
+
     display: flex;
     flex-wrap: wrap;
     min-height: 100vh;
-    /* font / styling */
+
     font-family: Helvetica, Arial, sans-serif;
     font: 600 1rem 'Noto Sans';
     color: var(--text-color-dark);
@@ -280,8 +277,6 @@ section{
 
 }
 
-/* Classes */
-
 .semantic-section{
     display: flex;
     margin: 0 auto;
@@ -322,8 +317,6 @@ section{
 .render-image{
     max-width: 100%;
 }
-
-/* IDs */
 
 #logos{
     display: flex;
@@ -374,8 +367,6 @@ section{
    
 }
 
-
-/* Style the video: 100% width and height to cover the entire window */
 #myVideo {
     position: fixed;
     right: 0;
@@ -384,7 +375,7 @@ section{
     min-width: 100%;
   }
   
-  /* Add some content at the bottom of the video/page */
+
   .content {
     position: fixed;
     bottom: 0;
@@ -395,7 +386,7 @@ section{
     padding: 20px;
   }
   
-  /* Styling for fullscreen video in other page  */
+
   #myBtn {
     width: 200px;
     font-size: 18px;
@@ -410,10 +401,6 @@ section{
     background: #ddd;
     color: black;
   }
-
-
-/* Format for devices with a width lower than 600px */
-/* Extra small devices (phones, 600px and down) */
 
 @media only screen and (max-width: 600px){
 
@@ -477,12 +464,7 @@ section{
     }
 }
 
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-    body{
-        min-width: 300px;
-    }
+@media only screen and (min-width: 768px) {
 
     main{
         max-width: 100%;
@@ -529,7 +511,6 @@ section{
 
 } 
 
-/* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     body{
         min-width: 700px;
@@ -556,7 +537,6 @@ section{
     }
 } 
 
-/* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     body{
         max-width: 900px;
