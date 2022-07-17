@@ -1,28 +1,26 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="Visual studio code">
   <meta name="robots" content="index">
-
   <meta name="application-name" content="Personal homepage">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Angel Cardenas Martinez">
-  <meta name="description" content="site that describes me">
+  <meta name="description" content="Wedding images">
   <meta name="generator" content="Visual Studio Code">
   <meta name="keywords" content="photography,site,freelance,portraits">
 
-  <title>Portraits</title>
-
+  <title>Weddings</title>
 
   <!--CSS files -->
 
-  <link rel="stylesheet" href="CSS/photos.css">
-  <link rel="stylesheet" href="CSS/wedding-photos.css">
-  <link rel="stylesheet" href="CSS/style.css">
-  <link rel="stylesheet" href="CSS/fonts.css">
-  <link rel="stylesheet" href="CSS/footer.css">
+  <link rel="stylesheet" href="./CSS/photos.css">
+  <link rel="stylesheet" href="./CSS/wedding-photos.css">
+  <link rel="stylesheet" href="./CSS/style.css">
+  <link rel="stylesheet" href="./CSS/fonts.css">
+  <link rel="stylesheet" href="./CSS/footer.css">
 
   <!--Scripts-->
   <script defer src="https://unpkg.com/in-view@0.6.1/dist/in-view.min.js"></script>
@@ -102,26 +100,34 @@
 
   <main class="content-bar-margin">
     <section class="section-padding service" id="photos">
-      <figure class="card-tall" id="i1"></figure>
-      <figure class="card-tall" id="i2"></figure>
-      <figure class="card-tall" id="i3"></figure>
-      <figure class="card-tall" id="i4"></figure>
+      <figure class="card-tall" id="wi1"></figure>
+      <figure class="card-tall" id="wi2"></figure>
+      <figure class="card-tall" id="wi3"></figure>
+      <figure class="card-tall" id="wi4"></figure>
     </section>
 
     <section class="register section-padding flex-column" id="register">
 
       <section class="container">
+        <h2 class="medium-font">Get in contact</h2>
+        <form method="post" enctype="multipart/form-data"
+          action="https://people.dsv.su.se/~pierre/i/05_ass/ip3/1/1.10/example.php">
+          <fieldset class="sign-up form">
+           
+            <label for="name-input">Name</label>
+            <input id="name-input" name="first-name" type="text" placeholder="Tom" required>
 
-        <figure class="form">
-          <h2 class="medium-font">
-            Get in contact
-          </h2>
-          <form action="" method="post" class="sign-up">
-            <input placeholder="Enter your email" id="fieldEmail" name="email-i" type="email" required
-              class="email-input">
+            <label for="last-name-input">Last name</label>
+            <input id="last-name-input" name="last-name" type="text" placeholder="Tompson" required>
+
+          
+            <label for="email-input">Email</label>
+            <input class="email-input" placeholder="Enter your email" id="email-input" name="email-address" type="email"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" required>
+
             <input type="submit" value="Submit" class="submit">
-          </form>
-        </figure>
+          </fieldset>
+        </form>
 
       </section>
     </section>
@@ -131,7 +137,7 @@
   <footer class="content-bar-margin footer section-padding">
     <section class="container">
       <figure>
-        <img src="Images/harold-steadycam-.png">
+        <img alt="footer page logo" src="./Images/harold-steadycam-.png">
       </figure>
       <a class="js-scroll button" href="#intro">
         Back to top
@@ -139,7 +145,6 @@
     </section>
   </footer>
 
-  </section>
 </body>
 
 </html>

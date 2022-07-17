@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
 :root {
     font-size: 14px;
     --register-height: 65vh;
@@ -11,16 +13,42 @@
     box-sizing: border-box;
 }
 
-.header-dimensions{
+body{
+    font-family: 'Noto Sans',helvetica, sans-serif;
+    line-height: 1.5rem;
+    font-weight: 400;
+    color: #ffeed1;
+    background: beige;
+}
+
+body::-webkit-scrollbar{
+    width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track{
+    background: beige;
+}
+
+body::-webkit-scrollbar-thumb{
+    background: black;
+}
+
+.medium-font, .service h3 .date, .button, .register h3, .submit, a,a:visited, a:focus{
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 500;
+    text-align: center;
+}
+
+.header-dimensions {
     background: #111118;
     height: 6rem;
 }
 
-.header-dimensions nav{
+.header-dimensions nav {
     height: 100%;
 }
 
-.header-links{
+.header-links {
     display: flex;
     height: 100%;
     align-items: center;
@@ -30,25 +58,26 @@
     gap: 0 2rem;
 }
 
-.header-links li{
-    border: 2px solid #00b290;
+.header-links li {
+    border: 3px solid #00b290;
+    color: #00b290;
     padding: 0.5rem 1rem;
     min-width: 120px;
     text-align: center;
 }
 
-.content-bar-margin{
+.content-bar-margin {
     margin-left: 6rem;
 }
 
-.content-bar{
+.content-bar {
     position: fixed;
     background: #ffeed1;
     transition: width 0.2s ease;
     z-index: 1;
 }
 
-.content-bar-list{
+.content-bar-list {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -60,64 +89,65 @@
     color: #111118;
 }
 
-.content-bar-item{
+.content-bar-item {
     width: 100%;
 }
 
 
-.content-bar-item:hover{
+.content-bar-item:hover {
     cursor: pointer;
 }
 
-.content-bar-link{
+.content-bar-link {
     display: flex;
     align-items: center;
     height: 5rem;
     text-decoration: none;
 }
 
-ul, ol{
+ul,
+ol {
     list-style: none;
 }
 
-.content-bar-link-text{
+.content-bar-link-text {
     display: none;
     margin-left: 1rem;
     font-size: 1.5rem;
     font-weight: 700;
 }
 
-.content-bar-link svg{
+.content-bar-link svg {
     min-width: 3rem;
     margin: 0 1.5rem;
 }
 
-.semantic-section{
+.semantic-section {
     position: relative;
     height: 100vh;
     display: flex;
 }
 
 /*Helper class too add padding to each section*/
-.section-padding{
+.section-padding {
     padding: 0 5vw;
 }
 
-.container{
+.container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     max-width: 810px;
-    margin: 5rem auto 5rem auto;
+    margin: 2rem auto 2rem auto;
 }
 
-.intro{
+.intro {
     height: calc(100vh - 6rem);
-    background-image: url(/Images/Kraken-24.jpg);
+    background-image: url(../Images/Kraken-24.jpg);
     color: #fff;
 }
 
-.intro p{
+.intro p {
     font-size: 36px;
     line-height: 1.2;
 }
@@ -129,11 +159,11 @@ ul, ol{
     max-width: 20rem;
 }
 
-.logo img{
+.logo img {
     max-width: 100%;
 }
 
-.bg-cover{
+.bg-cover {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -145,9 +175,11 @@ ul, ol{
         opacity: 0;
         transform: translateY(20px);
     }
+
     50% {
         transform: translateY(0);
     }
+
     100% {
         opacity: 1;
     }
@@ -155,12 +187,10 @@ ul, ol{
 
 /* support class to make a section fade in slowly*/
 .appear {
-    /* Here we set the opacity as a stating point*/
     opacity: 0;
     animation-name: fadeIn;
     animation-duration: 3s;
-    animation-delay: 2s;
-    /*Retains the property values at the end of the animation */
+    animation-delay: 0.7s;
     animation-fill-mode: forwards;
 }
 
@@ -174,7 +204,6 @@ ul, ol{
     overflow: hidden;
 }
 
-
 @keyframes moveLeft {
     0% {
         transform: translateX(0vw);
@@ -187,22 +216,21 @@ ul, ol{
 
 .marquee span {
     white-space: nowrap;
-    /*Span is in-line by default, so here tell it to be block */
     display: block;
     position: relative;
     animation: moveLeft 250s infinite;
 }
 
 .service-1 {
-    background-image: url(/Images/portfolio+2019-10.jpg);
+    background-image: url(../Images/portfolio+2019-10.jpg);
 }
 
 .service-2 {
-    background-image: url(/Images/Andres+&+Lesbia-176.jpg);
+    background-image: url(../Images/Andres+&+Lesbia-176.jpg);
 }
 
 .service-3 {
-    background-image: url(/Images/Kraken-13.jpg);
+    background-image: url(../Images/Kraken-13.jpg);
 }
 
 .service {
@@ -210,7 +238,6 @@ ul, ol{
     position: relative;
     overflow: hidden;
 }
-
 
 .title {
     font-size: 5rem;
@@ -222,7 +249,6 @@ ul, ol{
     transform: translateX(-50%);
     margin-bottom: 48px;
     line-height: 1;
-
 }
 
 .center {
@@ -231,13 +257,11 @@ ul, ol{
     align-self: center;
 }
 
-.page-links{
+.page-links {
     display: flex;
     text-align: center;
     min-width: 100%;
     justify-content: space-between;
-    margin-top: 2rem;
-    margin-bottom: 8rem;
 }
 
 .page-links li {
@@ -271,7 +295,7 @@ a:focus {
     bottom: 3vh;
     width: 64px;
     height: 32px;
-    background-image: url(/Images/arrow.svg);
+    background-image: url(../Images/arrow.svg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -286,46 +310,53 @@ a:focus {
     border-radius: 1px;
 }
 
-dt, #about h2{
+dt,
+#about h2 {
     font-size: 1.5rem;
     padding-bottom: 1rem;
-    border-bottom:2px solid #00b290;
+    border-bottom: 2px solid #00b290;
     margin-bottom: 0.7rem;
     font-weight: 600;
     letter-spacing: 0.2rem;
 }
 
-#about, #pricing{
+#about,
+#pricing {
     height: calc(100vh - 6rem);
-    background-color:#111118;
+    background-color: #111118;
     padding: 0 5rem;
     flex-direction: row;
     justify-content: center;
     gap: 7rem;
 }
 
-#about article{
-    margin-top: 2rem;
+#about article {
+    margin-bottom: 2rem;
 }
 
+.submit {
+    margin-top: 2rem;
+    border: none;
+}
 
-caption{
+caption {
     font-size: 1.5rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 table {
-    border: 2px solid #00b290;
     letter-spacing: 1px;
-    font-size: 0.8rem;
-    width: 100%;
+    font-size: 1rem;
+    min-width: 200px;
     table-layout: fixed;
     color: #ffeed1;
+    margin-top: 1rem;
 }
 
-td,th {
-    border: 1px solid  #00b290;
+td,
+th {
+    border: 1px solid #00b290;
     padding: 10px 20px;
 }
 
@@ -333,68 +364,308 @@ td {
     text-align: center;
 }
 
-dl{
-    margin: 20px 0;
-}
-
-dt{
-    margin: 20px 0;
+dt {
     font-weight: 600;
 }
 
-dd{
-    margin-left: 40px;
-    max-width: 20rem;
-}
-
-
-#harold-picture{
+#harold-picture {
     object-fit: cover;
     min-height: 30rem;
     max-width: 20rem;
     border: 1px solid #00b290;
 }
 
+.sign-up input:focus,
+input[type="email"]:focus {
+    background-color: #ffeed1;
+}
+
+#ei1 {
+    background-image: url("../Images/Event-photos/Kraken-11.jpg");
+}
+
+#ei2 {
+    background-image: url("../Images/Event-photos/Kraken-13.jpg");
+}
+
+#ei3 {
+    background-image: url("../Images/Event-photos/Kraken-14.jpg");
+}
+
+#ei4 {
+    background-image: url("../Images/Event-photos/Kraken-16.jpg");
+}
+
+#ei5 {
+    background-image: url("../Images/Event-photos/Kraken-24.jpg");
+}
+
+#ei6 {
+    background-image: url("../Images/Event-photos/zumba-24.jpg");
+}
+
+#ei7 {
+    background-image: url("../Images/Event-photos/zumba-30.jpg");
+}
+
+#ei8 {
+    background-image: url("../Images/Event-photos/zumba-38.jpg");
+}
+
+#ei9 {
+    background-image: url("../Images/Event-photos/zumba-46.jpg");
+}
+
+#wi1 {
+    background-image: url("../Images/Wedding-photos/Andres+&+Lesbia+-1.jpg");
+}
+
+#wi2 {
+    background-image: url("../Images/Wedding-photos/Andres+&+Lesbia+-3.jpg");
+}
+
+#wi3 {
+    background-image: url("../Images/Wedding-photos/melvy-14.jpg");
+}
+
+#wi4 {
+    background-image: url("../Images/Wedding-photos/melvy-15.jpg");
+}
+
+#pi1 {
+    background-image: url("../Images/Portrait-photos/Cristian+BICI-3.jpg");
+}
+
+#pi2 {
+    background-image: url("../Images/Portrait-photos/Vashal-5.jpg");
+}
+
+#pi3 {
+    background-image: url("../Images/Portrait-photos/david+Gonzales-4.jpg");
+}
+
+#pi4 {
+    background-image: url("../Images/Portrait-photos/Sebastian-3.jpg");
+}
+
+#pi5 {
+    background-image: url("../Images/Portrait-photos/Gianella-17.jpg");
+}
+
+#pi6 {
+    background-image: url("../Images/Portrait-photos/Harold+Guitarra-3.jpg");
+}
+
+#pi7 {
+    background-image: url("../Images/Portrait-photos/harold-1.jpg");
+}
+
+#pi8 {
+    background-image: url("../Images/Portrait-photos/ike+split+3.jpg");
+}
+
+#pi9 {
+    background-image: url("../Images/Portrait-photos/iliada-1.jpg");
+}
+
+#pi10 {
+    background-image: url("../Images/Portrait-photos/KILBER+ZLAP-1.jpg");
+}
+
+#pi11 {
+    background-image: url("../Images/Portrait-photos/Sebastian.jpg");
+}
+
+#pi12 {
+    background-image: url("../Images/Portrait-photos/Cristian+BICI-5.jpg");
+}
+
+#pi13 {
+    background-image: url("../Images/Portrait-photos/david+Gonzales-8.jpg");
+}
+
+#pi14 {
+    background-image: url("../Images/Portrait-photos/Gianella-8.jpg");
+}
+
+#pi15 {
+    background-image: url("../Images/Portrait-photos/Gianella-35.jpg");
+}
+
+#pi16 {
+    background-image: url("../Images/Portrait-photos/harold-2.jpg");
+}
+
+#pi17 {
+    background-image: url("../Images/Portrait-photos/ike+split-2.jpg");
+}
+
+#pi18 {
+    background-image: url("../Images/Portrait-photos/ike+split.jpg");
+}
+
+#pi19 {
+    background-image: url("../Images/Portrait-photos/iliada-9.jpg");
+}
+
+#pi20 {
+    background-image: url("../Images/Portrait-photos/Narco+Bolivia.jpg");
+}
+
+#pi21 {
+    background-image: url("../Images/Portrait-photos/Retrado+rgb+Harold-4.jpg");
+}
+
+#pi22 {
+    background-image: url("../Images/Portrait-photos/Retrado+rgb+Harold-6.jpg");
+}
+
+#pi23 {
+    background-image: url("../Images/Portrait-photos/Vashal-3.jpg");
+}
+
+#photos {
+    display: grid;
+    margin-top: 1rem;
+    width: 100%;
+    gap: 1rem;
+    background-color: beige;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-auto-rows: 50vh;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+.register{
+    height: 65vh;
+    display: flex;
+    flex-grow: 1;
+    background-color:beige;
+}
+
+.footer {
+    height: 35vh;
+    display: flex;
+    background-color: #111118;
+    text-align: center;
+}
+
+.footer img{
+    max-width: 87px;
+    margin-bottom: 1rem;
+}
+.footer p{
+    font-size: 0.7rem;
+    max-width: 250px;
+    margin-top: 0.2rem;
+}
+
+.button {
+    border: solid 2px #ffeed1;
+    color: #ffeed1;
+    padding: 1rem 1rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+.register .container{
+    display: flex;
+    flex-grow: 1;
+    justify-content: start;
+}
+
+.register h2{
+    font-size: 40px;
+    color: #111118;
+    line-height: 1.1;
+}
+
+.sign-up{
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    background: none;
+    border: none;
+    font-size: 21px;
+    font-weight: 300;
+    outline: none; 
+    border-bottom: 2px solid #00b290;
+    padding-bottom: 0.3rem;
+}
+
+input:focus{
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.email-input{
+    /*This will tell our input to stretch and fill our available space*/
+    flex: 1;
+    
+}
+
+.submit{
+    border: 3px solid #00b290;
+    padding: 5px 10px;
+    font-weight: 550;
+    font-size: 1.5rem;
+    max-width: 10rem;
+    align-self: center;
+}
+
+label{
+    color: #111118;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
 @media only screen and (max-width: 768px) {
 
-    .page-links{
+    .page-links {
         min-width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        height: 15rem;
-        margin-bottom: 4rem;
+        padding: 1rem 0;
+        height: 20rem;
     }
 
-    .header-links{
+    .header-links {
         justify-content: center;
         margin: 0;
     }
 
-    .content-bar{
+    .content-bar {
         bottom: 0;
         width: 100vw;
         height: 6rem;
     }
 
-    .content-bar-list{
+    .content-bar-list {
         flex-direction: row;
     }
 
-    .content-bar-link{
+    .content-bar-link {
         justify-content: center;
     }
 
-    .content-bar-margin{
+    .content-bar-margin {
         margin: 0;
     }
 
-    .content-bar:hover .content-bar-link-text{
+    .content-bar:hover .content-bar-link-text {
         display: none;
     }
 
-    .marquee{
+    .marquee {
         position: relative;
         top: auto;
         left: auto;
@@ -402,83 +673,152 @@ dd{
         margin-bottom: 24px;
     }
 
-    .semantic-section{
+    .semantic-section {
         position: relative;
         max-height: calc(100vh - 6rem);
     }
 
-    .logo{
+    .logo {
         max-width: 10rem;
-        margin-bottom: 24px;
     }
 
-    .intro{
+
+    .logo img {
+        display: none;
+    }
+
+
+    .intro {
         height: calc(100vh - 12rem);
     }
 
-    .intro p{
+    .intro p {
         font-size: 20px;
         text-align: center;
     }
 
-    .scroll-to{
+    .scroll-to {
         display: none;
     }
 
     h2 {
         font-size: 30px;
+        text-align: center;
     }
 
     .center {
         max-width: 300px;
     }
 
-    #about{
+    #about {
         height: calc(100vh - 12rem);
         flex-direction: column;
-        justify-content:flex-start;
+        justify-content: flex-start;
         align-items: center;
         gap: 1rem;
     }
-    
-    #harold-picture{
+
+    dt,
+    #about h2 {
+        font-size: 1.5rem;
+        padding-bottom: 0;
+        border-bottom: 2px solid #00b290;
+        margin-bottom: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.2rem;
+    }
+
+    #harold-picture {
         object-fit: cover;
-        min-height: 10rem;
-        max-width: 15rem;
+        min-height: 5rem;
+        max-width: 10rem;
+    }
+
+    .intro .container {
+        height: 100%;
+        margin: 0;
+    }
+
+    .register .container{
+        flex-direction: column;
+        width: 80%;
+        margin-top: 0;
+    }
+
+    .register h2{
+        margin-top: 1rem;
+        font-size: 30px;
+        margin-bottom: 1rem;
+    }
+
+    .register{
+        height: calc(65vh - 3rem);
+    }
+    
+    .footer {
+        height: calc(35vh - 3rem);
+        margin-bottom: 6rem;
+    }
+    
+    .footer img{
+        max-width: 87px;
+        margin-bottom: 0;
     }
 }
 
 @media only screen and (min-width: 768px) {
-    .content-bar{
+    .content-bar {
         top: 0;
         width: 6rem;
         height: 100vh;
     }
 
-    .content-bar:hover{
+    .content-bar:hover {
         width: 16rem;
     }
 
-    .content-bar:hover .content-bar-link-text{
+    .content-bar:hover .content-bar-link-text {
         display: inline;
     }
 
-    .content-bar-item{
+    .content-bar-item {
         margin: 0;
     }
 
-    .page-links{
+    .page-links {
         min-width: 100%;
         justify-content: space-between;
         margin-top: 2rem;
         margin-bottom: 8rem;
     }
 
-    .center{
+    .center {
         line-height: 1;
         margin-bottom: 6px;
         align-self: center;
         max-width: 800px;
     }
-    
+
+    .sign-up {
+        min-width: 500px;
+    }
+
+    .card-tall {
+        grid-row: span 2 / auto;
+    }
+
+    .card-wide {
+        grid-column: span 2 / auto;
+    }
+
+
+    section figure {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 0% 20%;
+    }
+
+    .register .container{
+        min-width: 550px;
+    }
 }

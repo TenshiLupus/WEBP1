@@ -12,15 +12,15 @@
   <meta name="generator" content="Visual Studio Code">
   <meta name="keywords" content="photography,site,freelance,portraits">
 
-  <title>Harold Cardenas Photography</title>
+  <title>About</title>
 
-  <!--CSS files -->
-  <link rel="stylesheet" href="/CSS/fonts.css">
-  <link rel="stylesheet" href="/CSS/style.css">
-  <link rel="stylesheet" href="/CSS/viewport.css">
-  <link rel="stylesheet" href="/CSS/footer.css">
 
-  <!--Scripts-->
+  <link rel="stylesheet" href="./CSS/fonts.css">
+  <link rel="stylesheet" href="./CSS/style.css">
+  <link rel="stylesheet" href="./CSS/viewport.css">
+  <link rel="stylesheet" href="./CSS/footer.css">
+
+
   <script defer src="https://unpkg.com/in-view@0.6.1/dist/in-view.min.js"></script>
   <script defer src="Scripts/LandingPage.js"></script>
 
@@ -93,15 +93,15 @@
           <span class="content-bar-link-text">Home</span>
         </a>
       </li>
-      
+
     </ul>
   </aside>
 
   <main class="content-bar-margin">
 
-    
+
     <section class="semantic-section section-padding" id="about">
-      
+
       <figure>
         <img src="Images/Harold.jpg" alt="Picture of Harold" id="harold-picture">
         <figcaption>Harold</figcaption>
@@ -139,13 +139,24 @@
 
     <section class="register section-padding flex-column" id="register">
       <section class="container">
-
         <h2 class="medium-font">Get in contact</h2>
+        <form method="post" enctype="multipart/form-data"
+          action="https://people.dsv.su.se/~pierre/i/05_ass/ip3/1/1.10/example.php">
+          <fieldset class="sign-up form">
+            
+            <label for="name-input">Name</label>
+            <input id="name-input" name="first-name" type="text" placeholder="Tom" required>
 
-        <form action="" method="post" class="sign-up form">
-          <input placeholder="Enter your email" id="fieldEmail" name="email-i" type="email" required
-            class="email-input">
-          <input type="submit" value="Submit" class="submit">
+            <label for="last-name-input">Last name</label>
+            <input id="last-name-input" name="last-name" type="text" placeholder="Tompson" required>
+
+          
+            <label for="email-input">Email</label>
+            <input class="email-input" placeholder="Enter your email" id="email-input" name="email-address" type="email"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" required>
+
+            <input type="submit" value="Submit" class="submit">
+          </fieldset>
         </form>
 
       </section>
@@ -156,7 +167,7 @@
   <footer class="content-bar-margin footer section-padding">
     <section class="container">
       <figure>
-        <img src="Images/harold-steadycam-.png">
+        <img alt="footer page logo" src="./Images/harold-steadycam-.png">
       </figure>
       <a class="js-scroll button" href="#intro">
         Back to top

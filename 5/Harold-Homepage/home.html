@@ -8,22 +8,19 @@
   <meta name="application-name" content="Personal homepage">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Angel Cardenas Martinez">
-  <meta name="description" content="site that describes me">
+  <meta name="description" content="Landing page of site">
   <meta name="generator" content="Visual Studio Code">
   <meta name="keywords" content="photography,site,freelance,portraits">
 
   <title>Harold Cardenas Photography</title>
 
+  <link rel="stylesheet" href="./CSS/fonts.css">
+  <link rel="stylesheet" href="./CSS/style.css">
+  <link rel="stylesheet" href="./CSS/viewport.css">
+  <link rel="stylesheet" href="./CSS/footer.css">
 
-  <!--CSS files -->
-  <link rel="stylesheet" href="/CSS/fonts.css">
-  <link rel="stylesheet" href="/CSS/style.css">
-  <link rel="stylesheet" href="/CSS/viewport.css">
-  <link rel="stylesheet" href="/CSS/footer.css">
-
-  <!--Scripts-->
   <script defer src="https://unpkg.com/in-view@0.6.1/dist/in-view.min.js"></script>
-  <script defer src="Scripts/LandingPage.js"></script>
+  <script defer src="./Scripts/LandingPage.js"></script>
 
 </head>
 
@@ -105,7 +102,7 @@
 
         <article class="logo appear">
           <figure>
-            <img alt="intro page logo" src="/Images/harold-steadycam-.png">
+            <img alt="intro page logo" src="./Images/harold-steadycam-.png">
 
           </figure>
         </article>
@@ -131,7 +128,7 @@
     </section>
 
     <section class="semantic-section section-padding service service-2 bg-cover" id="service-2">
-      <h3 class="title">weddingss</h3>
+      <h3 class="title">Weddings</h3>
       <section class="container">
         <a href="weddings.html" class="more-button">View more</a>
       </section>
@@ -148,16 +145,25 @@
     </section>
 
     <section class="register section-padding flex-column" id="register">
-      <section class="container center">
+      <section class="container">
+        <h2 class="medium-font">Get in contact</h2>
+        <form method="post" enctype="multipart/form-data"
+          action="https://people.dsv.su.se/~pierre/i/05_ass/ip3/1/1.10/example.php">
+          <fieldset class="sign-up form">
+          
+            <label for="name-input">Name</label>
+            <input id="name-input" name="first-name" type="text" placeholder="Tom" required>
 
-        <h2 class="medium-font">
-          Get in contact
-        </h2>
+            <label for="last-name-input">Last name</label>
+            <input id="last-name-input" name="last-name" type="text" placeholder="Tompson" required>
 
-        <form method="post" class="sign-up form">
-          <input placeholder="Enter your email" id="fieldEmail" name="email-i" type="email" required
-            class="email-input">
-          <input type="submit" value="Submit" class="submit">
+           
+            <label for="field-email">Email</label>
+            <input class="email-input" placeholder="Enter your email" id="field-email" name="email-address" type="email"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" required>
+
+            <input type="submit" value="Submit" class="submit">
+          </fieldset>
         </form>
 
       </section>
@@ -169,7 +175,7 @@
     <section class="container">
 
       <figure>
-        <img alt="footer page logo" src="Images/harold-steadycam-.png">
+        <img alt="footer page logo" src="./Images/harold-steadycam-.png">
       </figure>
 
       <a class="js-scroll button" href="#intro">
