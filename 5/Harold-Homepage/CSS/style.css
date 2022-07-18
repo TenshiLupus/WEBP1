@@ -529,7 +529,7 @@ input[type="email"]:focus {
     width: 100%;
     gap: 1rem;
     background-color: beige;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-auto-rows: 50vh;
 }
 
@@ -761,6 +761,12 @@ label{
         max-width: 87px;
         margin-bottom: 0;
     }
+
+    section figure {
+        background-size:auto;
+        background-repeat: no-repeat;
+        background-position: 50% 20%;
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -812,7 +818,7 @@ label{
     section figure {
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: 0% 20%;
+        background-position: 20% 20%;
     }
 
     .register .container{
