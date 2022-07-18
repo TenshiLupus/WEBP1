@@ -345,16 +345,18 @@ caption {
 table {
     letter-spacing: 1px;
     font-size: 1rem;
-    min-width: 200px;
+    width: 80%;
+    height: 50%;
     table-layout: fixed;
     color: #ffeed1;
-    margin-top: 1rem;
+    margin: 1rem auto 0 auto;
+    text-align: center;
 }
 
 td,
 th {
     border: 1px solid #00b290;
-    padding: 10px 20px;
+    padding: 3px 7px;
 }
 
 td {
